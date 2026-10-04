@@ -85,8 +85,8 @@
         70
       ],
       "geometry": "rect",
-      "text": "工具接续与导师培养",
-      "textPreview": "工具接续与导师培养",
+      "text": "工具接续与团队能力",
+      "textPreview": "工具接续与团队能力",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -109,14 +109,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "工具接续与导师培养"
+            "text": "工具接续与团队能力"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "工具接续与导师培养",
+          "text": "工具接续与团队能力",
           "resolvedTextStyle": {
             "fontSize": 44,
             "typeface": "Arial Unicode MS",
@@ -127,7 +127,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "工具接续与导师培养",
+              "text": "工具接续与团队能力",
               "fontSize": 44,
               "typeface": "Arial Unicode MS",
               "color": "#17333C",
@@ -692,8 +692,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "导师培养",
-      "textPreview": "导师培养",
+      "text": "团队能力",
+      "textPreview": "团队能力",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -716,14 +716,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "导师培养"
+            "text": "团队能力"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "导师培养",
+          "text": "团队能力",
           "resolvedTextStyle": {
             "fontSize": 31,
             "typeface": "Arial Unicode MS",
@@ -734,7 +734,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "导师培养",
+              "text": "团队能力",
               "fontSize": 31,
               "typeface": "Arial Unicode MS",
               "color": "#3767AA",

@@ -212,7 +212,7 @@ def make_server(store, port=8765):
             except BookingConflict as exc:
                 self._error(409, "booking_conflict", str(exc))
             except sqlite3.OperationalError:
-                self._error(503, "database_unavailable", "数据库暂时不可用，请稍后刷新检查结果；如仍失败，请联系讲师。")
+                self._error(503, "database_unavailable", "数据库暂时不可用，请稍后刷新检查结果；如仍失败，请记录错误并查阅运行说明。")
 
         def do_GET(self):
             self._run(self._get)

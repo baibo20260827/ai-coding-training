@@ -1,18 +1,18 @@
 # 在自己的 GitHub 发布完整学习网站
 
-版本：1.0；日期：2026-10-04。适用：在 Mac 上维护本项目，并将完整学习材料发布为 GitHub Pages 网站。
+版本：1.1；日期：2026-10-04。适用：在 Mac 上维护本项目，并将完整学习材料发布为 GitHub Pages 网站。
 
 **当前状态：全量学习材料已按用户授权公开发布。** 账号 `baibo20260827`；[发布仓库](https://github.com/baibo20260827/ai-coding-training)；[在线学习站](https://baibo20260827.github.io/ai-coding-training/)。实际部署与检查记录见 [发布证据](../evidence/publishing/VALIDATION.md)。下文首次发布步骤保留供参考，后续维护使用第 5 节的增量更新流程。
 
 ## 1. 本次发布什么
 
-本网站提供培训入口、学员与讲师手册、完整材料的网页阅读、3 套 PPT、讲师备注、6 项练习与答案、AI 任务卡、分层指南、FAQ、7 份模板、4A 图源与图片、案例源码和验证记录，并提供完整学习包下载。
+本网站提供自学路径、自主学习手册与参考解析、完整材料的网页阅读、3 套 PPT、逐页阅读补充、6 项练习与自检、AI 任务卡、分层指南、FAQ、7 份模板、4A 图源与图片、案例源码和验证记录，并提供完整学习包下载。
 
 本地生成位置：
 
 - `dist/github-pages/`：静态网站，包含 `index.html`、`.nojekyll`、材料 HTML、PPT、源码和下载包；保持整个目录结构。
 - `dist/github-pages-full.zip`：完整网站发布压缩包，用于分发或转移。
-- `dist/harness-ai-coding-training-v1.0.zip`：可离线学习、运行 Python 示例的完整培训包。
+- `dist/harness-ai-coding-training-v1.1.zip`：可离线学习、运行 Python 示例的完整自学包。
 
 `dist/` 是生成产物目录，会在重建时更新。**不要在 `dist/github-pages/` 中初始化 Git，也不要把它当作长期维护的发布仓库。** 使用一个独立发布目录保存 Git 历史；重建后把新产物同步进去。构建器若发现输出目录内已有 `.git`，会拒绝覆盖，应先保留并迁移该仓库。
 
@@ -32,11 +32,12 @@ Pages 用于托管 HTML、CSS、JavaScript 等静态文件；本项目的学习�
 
 ```bash
 cd "/Users/baibo/Documents/ChatGPT/软件harness研究"
+node scripts/build_reader.mjs
 python3 scripts/package_delivery.py
 node scripts/build_github_pages.mjs
 ```
 
-顺序有意义：先更新完整培训包，再把最新下载包和全部材料纳入网站。若项目已能解析 `marked` 模块，第二条命令直接运行；若提示找不到模块，使用实际安装位置替换下方占位路径：
+顺序有意义：先重建阅读手册，再更新完整自学包，最后把最新下载包和全部材料纳入网站。若修改了 PPT，先按课件维护说明重建并检查。若项目已能解析 `marked` 模块，Node 命令可直接运行；若提示找不到模块，为两条 Node 命令使用实际模块路径，例如：
 
 ```bash
 MARKED_MODULE="/替换为实际安装位置/marked" node scripts/build_github_pages.mjs
@@ -113,11 +114,12 @@ git status --short
 
 ```bash
 cd "/Users/baibo/Documents/ChatGPT/软件harness研究"
+MARKED_MODULE="/替换为实际安装位置/marked" node scripts/build_reader.mjs
 python3 scripts/package_delivery.py
 MARKED_MODULE="/替换为实际安装位置/marked" node scripts/build_github_pages.mjs
 ```
 
-如果 `marked` 已能直接解析，最后一行用 `node scripts/build_github_pages.mjs` 即可。若更改的是本地示例行为，先按[运行说明](../demo/README.md)完成相关验证；网页重建不能替代工程检查。
+如果 `marked` 已能直接解析，两条 Node 命令均可省略 `MARKED_MODULE` 设置。若更改的是本地示例行为，先按[运行说明](../demo/README.md)完成相关验证；网页重建不能替代工程检查。
 
 然后进入独立发布仓库，确认没有未处理的本地改动，并拉取现有历史：
 
@@ -177,3 +179,7 @@ python3 demo/app.py --port 8765
 - 公网检查：2026-10-04T04:12:54.821492+00:00，21 项 HTTPS GET、内容类型与完整文件 SHA-256 比对通过；详见[发布记录](../evidence/publishing/VALIDATION.md)及[机器检查结果](../evidence/publishing/online-check.json)。
 
 后续更新保留材料版本、发布提交和检查时间的对应关系。本节记录首次已核实部署；补充状态文档后的后续构建与部署应另行检查。网站上线不表示 Python 后端已在 Pages 运行，也不代表已完成网站浏览器视觉/交互验证、真实客户验收或培训成效验证。
+
+## 自学版 v1.1 的入口兼容
+
+主要入口为 `学习手册.html` 与 `参考解析.html`，材料按独立阅读、操作和自检组织。原 `讲师手册.html` 保留当前自学内容、参考解析及原章节锚点，`training/facilitator-guide.html` 保留地址并改为自学实践指南。完整包使用 v1.1 文件名；原 v1.0 ZIP 下载地址保留为当前包的兼容副本，避免已分享链接失效。旧发布记录中的哈希只证明对应历史版本，不能用于核对更新后的文件。

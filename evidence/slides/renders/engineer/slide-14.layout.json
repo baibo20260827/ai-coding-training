@@ -85,8 +85,8 @@
         70
       ],
       "geometry": "rect",
-      "text": "本地演示与恢复",
-      "textPreview": "本地演示与恢复",
+      "text": "本地运行与恢复",
+      "textPreview": "本地运行与恢复",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -109,14 +109,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "本地演示与恢复"
+            "text": "本地运行与恢复"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "本地演示与恢复",
+          "text": "本地运行与恢复",
           "resolvedTextStyle": {
             "fontSize": 44,
             "typeface": "Arial Unicode MS",
@@ -127,7 +127,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "本地演示与恢复",
+              "text": "本地运行与恢复",
               "fontSize": 44,
               "typeface": "Arial Unicode MS",
               "color": "#17333C",

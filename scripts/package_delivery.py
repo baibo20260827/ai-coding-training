@@ -10,10 +10,10 @@ import tempfile
 from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
-NAME = 'harness-ai-coding-training-v1.0'
+NAME = 'harness-ai-coding-training-v1.1'
 DIRECTORIES = ('demo', 'docs', 'evidence', 'faq', 'scripts', 'templates', 'training')
 ROOT_FILES = ('.gitignore', 'AGENTS.md', 'README.md', 'START_HERE.html', 'STATUS.md',
-              '学习手册.html', '讲师手册.html')
+              '学习手册.html', '参考解析.html', '讲师手册.html')
 OMIT = {'.git', '.DS_Store', '__pycache__', 'node_modules', '.venv', 'dist'}
 EXTENSIONS = {'.md', '.html', '.py', '.js', '.mjs', '.css', '.json', '.svg', '.png', '.pptx', '.txt'}
 
@@ -35,9 +35,9 @@ def main():
     subprocess.run([sys.executable, str(ROOT / 'scripts/check_delivery.py')], check=True, cwd=ROOT)
     files = selected_files()
     manifest = {
-        'version': '1.0',
+        'version': '1.1',
         'created_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
-        'description': 'Training material and verified local teaching example; real training outcomes pending.',
+        'description': 'Self-study material with practice, reference answers and a verified local example; real learning outcomes pending.',
         'files': [{'path': p.relative_to(ROOT).as_posix(), 'bytes': p.stat().st_size,
                    'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in files],
     }

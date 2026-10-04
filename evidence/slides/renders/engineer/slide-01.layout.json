@@ -85,8 +85,8 @@
         50
       ],
       "geometry": "rect",
-      "text": "工程师课程",
-      "textPreview": "工程师课程",
+      "text": "工程师自学",
+      "textPreview": "工程师自学",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -109,14 +109,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "工程师课程"
+            "text": "工程师自学"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "工程师课程",
+          "text": "工程师自学",
           "resolvedTextStyle": {
             "fontSize": 28,
             "typeface": "Arial Unicode MS",
@@ -126,7 +126,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "工程师课程",
+              "text": "工程师自学",
               "fontSize": 28,
               "typeface": "Arial Unicode MS",
               "color": "#A8CCCA"

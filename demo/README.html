@@ -1,7 +1,7 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>会议室预约：可运行的 Harness 教学案例 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="README.md" download>下载 Markdown 源文件</a></nav><main><h1>会议室预约：可运行的 Harness 教学案例</h1>
-<p>版本：1.0，2026-10-03。适用对象：讲师、工程师、新手及查看交付证据的主管。</p>
-<p>本案例把“客户场景 → 验收例子 → 设计 → 实现 → 失败定位 → 回归 → 交付与恢复”连起来。数据和业务情境均为虚构教学用途；实现与测试已形成，客户接受和培训效果尚待真实参与者验证。</p>
-<h2>5 分钟启动</h2>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>会议室预约：可运行的 Harness 教学案例 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">自学首页</a><a href="../materials.html">全量材料目录</a><a href="README.md" download>下载 Markdown 源文件</a></nav><main><h1>会议室预约：可运行的 Harness 教学案例</h1>
+<p>文档版本：v1.1，2026-10-04。适用对象：独立实践的工程师、新手及查看交付证据的主管；本次更新调整学习方式，应用基线行为保持不变。</p>
+<p>本案例把“客户场景 → 验收例子 → 设计 → 实现 → 失败定位 → 回归 → 交付与恢复”连起来。数据和业务情境均为虚构学习用途；实现与测试已形成，客户接受和学习效果仍需实际证据。第一次实践可将本页与<a href="WALKTHROUGH.html">端到端步骤</a>一起使用，每做一步保存预期、实际结果和未验证项。</p>
+<h2>首次启动</h2>
 <ol>
 <li><p>将完整项目保存到本机，打开终端并进入项目根目录。确认 <code>python3 --version</code> 可用；代码兼容 Python 3.9+，实际使用组织准入且仍受维护的 Python 3 版本。无需 <code>pip install</code> 或 <code>npm install</code>。</p>
 </li>
@@ -105,7 +105,7 @@ python3 demo/backup.py exercise
 </tr>
 <tr>
 <td><a href="WALKTHROUGH.html">WALKTHROUGH.md</a></td>
-<td>讲师演示、复现、修复与恢复步骤</td>
+<td>独立端到端操作、预期结果、自检与恢复步骤</td>
 </tr>
 </tbody></table>
 <p>数据库的 <code>bookings</code> 保存预约；<code>slots</code> 为预约占用的每个半小时建立一行，主键 <code>(day, start_minute)</code>。<code>BEGIN IMMEDIATE</code> 将创建操作串行进入事务；预约及其全部时段在一个事务内写入，唯一约束拒绝重叠，失败回滚全部写入。取消通过外键级联释放时段。代码中的 <code>overlaps()</code> 用于教学对照；实际一致性保证来自数据库事务与约束。</p>
@@ -120,6 +120,6 @@ python3 demo/backup.py restore --source demo/backups/before-change.sqlite3 --out
 <p>比较快照时间、预约条数和目标记录，确认满足预期后才将新路径作为后续教学环境。<strong>恢复到旧快照不会保留快照后的修改</strong>；原数据库仍留存，必要时可停止服务并重新指向它。脚本不迁移 schema，也不合并两份数据。</p>
 <p>代码回退与数据恢复分别处理：开始练习前保留本项目的已验证副本或自己批准的 Git 版本；变更失败时停止服务，用新的工作目录取出该版本，运行检查，再用兼容数据库启动。不要对未知工作区执行 <code>reset --hard</code>，不要假定旧代码兼容新 schema。本版故障演练不改主应用，因此无须实际回退代码。</p>
 <h2>完成标准与限制</h2>
-<p>案例工程完成标准：上述检查通过；他人能按说明启动、复现预设故障、验证正确行为、恢复到新文件，并说清证据的适用范围。实际界面操作情况见验证记录，自动测试不能替代真实客户验收。</p>
+<p>个人实践的完成标准：按说明启动、复现预设故障、验证正确行为、恢复到新文件，并说清证据的适用范围。把自己的实际结果与<a href="../evidence/demo/VALIDATION.html">验证记录</a>比较，差异作为排查线索；已有记录不代替你本次的检查。自动测试与个人练习均不能替代真实客户验收。</p>
 <p>部署环境、数据库准入、备份责任和 DfX 目标仍需与真实客户对齐。本案例选择 SQLite 只是为了本地无外部依赖教学，不构成客户选型结论。未实现身份认证、审批、生产运维、高可用、跨时区、迁移流程或性能容量承诺。真实项目需要另外确认这些范围与责任。</p>
 </main></body></html>

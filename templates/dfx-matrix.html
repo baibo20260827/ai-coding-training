@@ -1,5 +1,7 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模板：简明 DfX 规划与验收矩阵 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="dfx-matrix.md" download>下载 Markdown 源文件</a></nav><main><h1>模板：简明 DfX 规划与验收矩阵</h1>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模板：简明 DfX 规划与验收矩阵 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">自学首页</a><a href="../materials.html">全量材料目录</a><a href="dfx-matrix.md" download>下载 Markdown 源文件</a></nav><main><h1>模板：简明 DfX 规划与验收矩阵</h1>
+<p>模板版本：1.1；日期：2026-10-04。</p>
 <p>DfX 在这里指按场景规划所需的性能、安全性、可靠性、可维护性、可运维性等属性。本表用于规划、交流与交付，按项目适用性裁剪，不展开专题选型或详细技术规范。</p>
+<p>自学时选“正确性”和“可维护性”两行，写出验证步骤与不能证明的结论，再对照表内限制。真实项目的阈值、责任人与风险接受仍需实际确认。</p>
 <p>项目/版本/日期：待填写。业务、技术、IT/安全、运维确认人：待填写。以下目标是<strong>教学示例或待讨论值</strong>，不是已经达到的性能或生产承诺。</p>
 <table>
 <thead>
@@ -31,7 +33,7 @@
 <tr>
 <td>访问边界</td>
 <td>仅本机教学；无身份授权能力</td>
-<td>教学必需；讲师</td>
+<td>教学必需；本机操作者</td>
 <td>绑定 127.0.0.1，使用虚构数据</td>
 <td>启动地址检查及说明审查，A07</td>
 <td>不宣称已完成完整安全评估</td>
@@ -47,15 +49,15 @@
 <tr>
 <td>可维护性：小修改</td>
 <td>另一人可定位规则并运行相关检查</td>
-<td>教学重点；导师</td>
+<td>教学重点；代码维护者</td>
 <td>需求编号、职责说明、检查命令</td>
-<td>学员独立改一个未讲过的任务</td>
-<td>待试讲；材料可用不等于人员已掌握</td>
+<td>读者独立完成一个不同于参考例子的新任务</td>
+<td>待独立实践；材料可用不等于人员已掌握</td>
 </tr>
 <tr>
 <td>可运维性：接管</td>
 <td>接收者按说明可启停、识别失败和恢复练习</td>
-<td>教学重点；讲师</td>
+<td>教学重点；本机操作者</td>
 <td>运行说明、隔离故障、恢复步骤</td>
 <td>由他人实际操作</td>
 <td>待独立演练；不覆盖生产值守</td>

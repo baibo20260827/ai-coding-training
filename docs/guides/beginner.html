@@ -1,5 +1,5 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>新手指南：从一句想法走到可以验收的小功能 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="beginner.md" download>下载 Markdown 源文件</a></nav><main><h1>新手指南：从一句想法走到可以验收的小功能</h1>
-<p>版本：1.0；日期：2026-10-03。适用：没有编码经验、希望参与需求与软件改进的同事。目标：看懂软件最基本的组成，描述一个小任务，亲手验证并清楚求助。正式业务交付中的技术把关由具备相应能力的人承担。</p>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>新手指南：从一句想法走到可以验收的小功能 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">自学首页</a><a href="../../materials.html">全量材料目录</a><a href="beginner.md" download>下载 Markdown 源文件</a></nav><main><h1>新手指南：从一句想法走到可以验收的小功能</h1>
+<p>版本：1.1；日期：2026-10-04。适用：没有编码经验、希望参与需求与软件改进的同事。目标：看懂软件最基本的组成，描述一个小任务，亲手验证并清楚求助。正式业务交付中的技术把关由具备相应能力的人承担。</p>
 <p>先读<a href="../../training/00-opening.html">共同开篇</a>中的虚构故事：页面出现了，预约却在刷新后消失。接下来要学会说清“输入是什么、遵守什么规则、数据存在哪里、怎样看到结果”。不要求先学完整门编程语言。</p>
 <h2>1. 六个概念，贯穿一个动作</h2>
 <table>
@@ -41,14 +41,8 @@
 <td>已有10—11，再约10:30—11:30必须失败</td>
 </tr>
 </tbody></table>
-<pre><code class="language-mermaid">flowchart LR
-    A[你输入日期时间姓名主题] --&gt; B[页面发送请求]
-    B --&gt; C[服务端检查规则]
-    C --&gt;|合法且无冲突| D[(数据库保存)]
-    C --&gt;|不满足规则| E[返回原因]
-    D --&gt; F[页面显示结果]
-    E --&gt; F
-</code></pre>
+<p>一次预约的路径：你填写日期、时间、姓名、主题 → 页面发送请求 → 服务端检查规则 → 合法且无冲突时写入数据库 → 页面显示成功。若规则不满足，服务端返回原因，页面显示失败，数据库不应新增记录。</p>
+<p>先遮住概念表，试着指出每个步骤属于页面、服务端还是数据库，再回表核对。</p>
 <p>刷新会重新加载页面。若数据只留在页面内存，刷新后可能消失；本例把数据保存在数据库。现实中同样现象也可能是日期选错、请求失败或使用了另一个数据库，不能仅凭现象确定原因。</p>
 <p>“代码”是程序指令；“终端”是输入运行命令的窗口；“进程”是正在运行的程序；“端口 8765”帮助浏览器找到本机服务；“日志”记录发生了什么。复制命令前先知道它用于启动、检查还是修改数据，不能把所有提示都当作错误。</p>
 <h2>2. 把模糊想法改写成任务</h2>
@@ -60,10 +54,10 @@
 <pre><code class="language-bash">python3 demo/app.py --port 8765
 </code></pre>
 <p>终端保持运行是正常现象。浏览器打开 <code>http://127.0.0.1:8765</code>。只使用虚构姓名和主题；该服务仅本机教学，没有账号和审批。</p>
-<p>若提示找不到文件，先检查终端是否位于包含 <code>demo</code> 文件夹的项目根目录；若找不到 <code>python3</code>，请导师协助检查运行环境；若端口被占用，先确认是不是已有同一教学服务运行，不要随意结束未知进程。把完整错误文本提供给导师。</p>
+<p>若提示找不到文件，先检查终端是否位于包含 <code>demo</code> 文件夹的项目根目录；若找不到 <code>python3</code>，先按运行说明检查 Python 环境；若端口被占用，先确认是不是已有同一教学服务运行，不要随意结束未知进程。仍受阻时按<a href="mentoring.html">问题排查</a>记录命令、当前目录和完整错误文本，再请求具备相应经验的人协助。</p>
 <p>停止服务时在对应终端按 <code>Ctrl+C</code>；不要把关闭浏览器理解为停止服务。重新启动后应使用同一数据库才能继续看到原记录，具体位置以运行说明为准。</p>
 <h2>4. 第一次亲手验收</h2>
-<p>选择没有已有预约的教学日期，填写虚构姓名“学员甲”和主题“演练”。每做一步立刻记结果；看到失败时记录失败，不把预期抄成实测。</p>
+<p>选择没有已有预约的教学日期，填写虚构姓名“练习同事甲”和主题“演练”。每做一步立刻记结果；看到失败时记录失败，不把预期抄成实测。</p>
 <table>
 <thead>
 <tr>
@@ -104,11 +98,11 @@
 </tr>
 </tbody></table>
 <p>时间用 <code>[开始,结束)</code> 理解：前一个预约到11:00结束，后一个可以11:00开始。当前范围是09:00—18:00、半小时刻度、同一所选日期内；没有午休限制，午休是后续练习中的新增需求。</p>
-<p>完成这些操作不代表已经验证同时预约、生产安全或所有异常。请在提交中写出至少一项未检查范围，体现你知道证据的边界。</p>
+<p>完成这些操作不代表已经验证同时预约、生产安全或所有异常。请在自己的记录中写出至少一项未检查范围，体现你知道证据的边界。</p>
 <h2>5. 一个新任务怎样与 AI 协作</h2>
-<p>新手独立练习可以从提示文案开始：把“预约失败”改成能帮助用户采取下一步的说明。先列出输入非法、时间冲突、服务不可用三个不同情境，再向导师确认实际代码支持的区分方式。不要要求所有失败都显示“请换时间”，因为服务不可用并非时间冲突。</p>
-<p>在独立练习副本中给 AI 任务：阅读需求与现有实现，说明需要改哪里；只调整当前错误反馈，不改变预约规则；提出正常和失败例子；实际运行适用检查并说明未验证项。你负责确认页面是否清楚、按例子验收；导师负责代码与服务端行为检查。协助程度如实登记。</p>
-<p>进阶时参与<a href="../../training/exercises.html">午休变更 L4</a>，负责边界例子与已有预约处理问题，由工程师承担实现与技术审查。这样你能参与完整交付，又知道哪些判断需要专业帮助。</p>
+<p>新手独立练习可以从提示文案开始：把“预约失败”改成能帮助用户采取下一步的说明。先列出输入非法、时间冲突、服务不可用三个情境，为每种情况写“发生什么＋下一步做什么”。再请 AI 指出当前代码分别从哪里取得错误信息，自己对照实际页面结果。不要要求所有失败都显示“请换时间”，因为服务不可用并非时间冲突。</p>
+<p>在独立练习副本中给 AI 任务：阅读需求与现有实现，说明需要改哪里；只调整当前错误反馈，不改变预约规则；提出正常和失败例子；实际运行适用检查并说明未验证项。自己对照修改前后的差异，按三个情境验收，确认预约规则没有被改动。看不懂的服务端改动不要直接接受：要求解释或缩回纯文字调整；仍不能判断时提交差异和问题请求技术评审。使用了哪些参考和帮助，如实登记。</p>
+<p>进阶时尝试<a href="../../training/exercises.html">午休变更 L4</a>：先独立写出边界例子与已有预约处理问题，再选择继续实现，或对照答案理解完整改动。它是新需求，当前程序尚未实现。真实交付时由具备相应能力的人审查业务逻辑与数据修改；这不影响你先完成需求与验收部分的自学。</p>
 <h2>6. 遇到问题，怎样求助更有效</h2>
 <p>可直接使用：</p>
 <pre><code class="language-text">我想完成：刷新后仍看到预约（A05）。
@@ -119,7 +113,7 @@
 我检查过：刷新后选择的日期相同；附终端错误或请求结果。
 需要帮助：请协助复现，判断是查询、保存还是环境问题。
 </code></pre>
-<p>不要贴入真实客户数据或账号秘密。导师会先帮助你缩小问题，再决定由谁处理。可从<a href="../../faq/README.html">FAQ</a>找到常见路径。</p>
+<p>不要贴入真实客户数据或账号秘密。先从<a href="../../faq/README.html">FAQ</a>和<a href="mentoring.html">排查与求助</a>找到常见路径，每次只检查一个原因。请人协助时提供上述记录，即使暂时无人回复，也可继续不受阻塞的概念学习和验收例子编写。</p>
 <h2>7. 完成标准</h2>
-<p>完成 L1、L2，并交一项新的小任务记录。你应能解释页面、服务端和数据库的关系，写出正常与异常例子，区分预期和实际，清楚说明尚未验证的内容，并带着复现步骤求助。一次练习完成不等于已经能独立负责生产系统，后续按<a href="../../templates/capability-pilot.html">能力考核</a>逐步扩大任务范围。</p>
+<p>完成 L1、L2，并保留一项新的小任务记录。先回答：刷新为何不会自动清空本例数据？相邻为何允许？停止服务后为何不能新增预约？参考本指南第 1、3、4 节核对。你应能解释页面、服务端和数据库的关系，写出正常与异常例子，区分预期和实际，清楚说明尚未验证的内容，并带着复现步骤求助。一次练习完成不等于已经能独立负责生产系统，后续按<a href="../../templates/capability-pilot.html">能力自评</a>逐步扩大任务范围。</p>
 </main></body></html>

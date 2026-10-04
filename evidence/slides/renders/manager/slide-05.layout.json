@@ -692,8 +692,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "教学范围",
-      "textPreview": "教学范围",
+      "text": "示例范围",
+      "textPreview": "示例范围",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -716,14 +716,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "教学范围"
+            "text": "示例范围"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "教学范围",
+          "text": "示例范围",
           "resolvedTextStyle": {
             "fontSize": 31,
             "typeface": "Arial Unicode MS",
@@ -734,7 +734,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "教学范围",
+              "text": "示例范围",
               "fontSize": 31,
               "typeface": "Arial Unicode MS",
               "color": "#0C7777",
@@ -962,8 +962,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "本地演示，无登录与审批",
-      "textPreview": "本地演示，无登录与审批",
+      "text": "本地示例，无登录与审批",
+      "textPreview": "本地示例，无登录与审批",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -986,14 +986,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "本地演示，无登录与审批"
+            "text": "本地示例，无登录与审批"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "本地演示，无登录与审批",
+          "text": "本地示例，无登录与审批",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -1003,7 +1003,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "本地演示，无登录与审批",
+              "text": "本地示例，无登录与审批",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"

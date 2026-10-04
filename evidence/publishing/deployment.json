@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T04:14:22.053295+00:00",
+  "updated_at": "2026-10-04T04:23:57.155787+00:00",
   "owner": "baibo20260827",
   "repository": "ai-coding-training",
   "public_authorized": true,
@@ -7,8 +7,8 @@
   "repository_created": true,
   "pushed": true,
   "pages_enabled": true,
-  "prepared_commit": "4127fae44ac515a91f5f463729e13a636adcab0f",
-  "prepared_file_count": 238,
+  "prepared_commit": "95ee7e0616c57ba12515f5c82579b5f6a29bad26",
+  "prepared_file_count": 241,
   "checkout": "dist/github-pages-repo",
   "remote": "https://github.com/baibo20260827/ai-coding-training.git",
   "next_step": "Keep training materials current; real training outcomes still require a pilot.",
@@ -38,5 +38,18 @@
     "First push failed because a pre-existing Git proxy at 127.0.0.1:9674 was unavailable.",
     "A subsequent chunked upload returned HTTP 408.",
     "Push succeeded with per-command proxy, HTTP/1.1 and 64 MiB post buffer; no force push."
-  ]
+  ],
+  "final_verified_commit": "95ee7e0616c57ba12515f5c82579b5f6a29bad26",
+  "final_build_status": "built",
+  "final_build_updated_at": "2026-10-04T04:22:09Z",
+  "final_online_check": {
+    "path": "evidence/publishing/final-online-check.json",
+    "status": "pass",
+    "checked_files": 21,
+    "checked_at": "2026-10-04T04:23:07.321668+00:00"
+  },
+  "material_revision": "1.1",
+  "learning_mode": "self-study",
+  "release_notes": "Self-study revision requested by user on 2026-10-04. Prior verified commits and checks below remain historical evidence; this revision is checked separately.",
+  "revision_evidence": "evidence/SELF_STUDY.md"
 }

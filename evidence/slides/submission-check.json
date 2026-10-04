@@ -1,16 +1,17 @@
 {
-  "checked_at": "2026-10-03",
-  "scope": "PPTX structure, notes, editable objects, typography and render presence; no PowerPoint application execution",
+  "checked_at": "2026-10-04T13:43:21.633211+08:00",
+  "version": "1.1",
+  "scope": "Self-study wording, PPTX structure, reading notes, editable objects, typography and render presence; no PowerPoint application execution",
   "decks": [
     {
       "id": "manager",
       "file": "training/slides/manager.pptx",
-      "sha256": "779a20dd865416d744b6c96f91955b92e381a7498fefed187502744272eb4d0f",
+      "sha256": "010a80e18319f63eeb0d2a8e250ca08b17b31ae7f9560fb096dc1d3b897ddef8",
       "slides": [
         {
           "slide": 1,
           "title": "AI Coding\n交付与能力建设",
-          "notes_characters": 293,
+          "notes_characters": 325,
           "native_tables": 0,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -20,7 +21,7 @@
         {
           "slide": 2,
           "title": "主管的小失败：周五还能交付吗",
-          "notes_characters": 335,
+          "notes_characters": 348,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -30,7 +31,7 @@
         {
           "slide": 3,
           "title": "工程师的小失败：测试绿了，规则错了",
-          "notes_characters": 315,
+          "notes_characters": 364,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -40,7 +41,7 @@
         {
           "slide": 4,
           "title": "新手的小失败：刷新后，预约不见了",
-          "notes_characters": 302,
+          "notes_characters": 311,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -50,7 +51,7 @@
         {
           "slide": 5,
           "title": "客户场景与本期范围",
-          "notes_characters": 269,
+          "notes_characters": 300,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -60,7 +61,7 @@
         {
           "slide": 6,
           "title": "Harness 的责任分工",
-          "notes_characters": 420,
+          "notes_characters": 458,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -70,7 +71,7 @@
         {
           "slide": 7,
           "title": "进度的单位：可验收成果",
-          "notes_characters": 284,
+          "notes_characters": 309,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -80,7 +81,7 @@
         {
           "slide": 8,
           "title": "4A：同一个预约的四种视图",
-          "notes_characters": 648,
+          "notes_characters": 618,
           "native_tables": 0,
           "native_shapes": 25,
           "native_connectors": 8,
@@ -90,7 +91,7 @@
         {
           "slide": 9,
           "title": "阶段报告：承诺、证据与预测",
-          "notes_characters": 276,
+          "notes_characters": 332,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -100,7 +101,7 @@
         {
           "slide": 10,
           "title": "新增审批的影响分析",
-          "notes_characters": 300,
+          "notes_characters": 304,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -110,7 +111,7 @@
         {
           "slide": 11,
           "title": "合理延期的方案与沟通",
-          "notes_characters": 298,
+          "notes_characters": 321,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -120,7 +121,7 @@
         {
           "slide": 12,
           "title": "工具依赖与人员储备",
-          "notes_characters": 285,
+          "notes_characters": 315,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -130,7 +131,7 @@
         {
           "slide": 13,
           "title": "部署与 DfX 的客户对齐",
-          "notes_characters": 356,
+          "notes_characters": 397,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -140,7 +141,7 @@
         {
           "slide": 14,
           "title": "主管练习与持续改进",
-          "notes_characters": 293,
+          "notes_characters": 401,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -153,12 +154,12 @@
     {
       "id": "engineer",
       "file": "training/slides/engineer.pptx",
-      "sha256": "2598784a86cf7b6dae0155352a6903e5493cd5a52999237701a2b50cd4e9bdeb",
+      "sha256": "e00f325e85efceb3157f58496b90cfec5d2301866111d041215556f16e66d070",
       "slides": [
         {
           "slide": 1,
           "title": "AI Coding\n委派、验证与恢复",
-          "notes_characters": 300,
+          "notes_characters": 328,
           "native_tables": 0,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -168,7 +169,7 @@
         {
           "slide": 2,
           "title": "主管的小失败：周五还能交付吗",
-          "notes_characters": 335,
+          "notes_characters": 348,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -178,7 +179,7 @@
         {
           "slide": 3,
           "title": "工程师的小失败：测试绿了，规则错了",
-          "notes_characters": 315,
+          "notes_characters": 364,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -188,7 +189,7 @@
         {
           "slide": 4,
           "title": "新手的小失败：刷新后，预约不见了",
-          "notes_characters": 302,
+          "notes_characters": 311,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -198,7 +199,7 @@
         {
           "slide": 5,
           "title": "一次委派的任务合同",
-          "notes_characters": 356,
+          "notes_characters": 384,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -208,7 +209,7 @@
         {
           "slide": 6,
           "title": "验收例子定义正确行为",
-          "notes_characters": 273,
+          "notes_characters": 320,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -218,7 +219,7 @@
         {
           "slide": 7,
           "title": "4A 与实现边界",
-          "notes_characters": 607,
+          "notes_characters": 629,
           "native_tables": 0,
           "native_shapes": 25,
           "native_connectors": 8,
@@ -228,7 +229,7 @@
         {
           "slide": 8,
           "title": "项目上下文与实际约束",
-          "notes_characters": 384,
+          "notes_characters": 446,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -238,7 +239,7 @@
         {
           "slide": 9,
           "title": "差异审查的四个入口",
-          "notes_characters": 274,
+          "notes_characters": 296,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -248,7 +249,7 @@
         {
           "slide": 10,
           "title": "故障一：相邻修复引入重叠回归",
-          "notes_characters": 301,
+          "notes_characters": 324,
           "native_tables": 0,
           "native_shapes": 8,
           "native_connectors": 0,
@@ -258,7 +259,7 @@
         {
           "slide": 11,
           "title": "故障二：检查空闲后仍可能双订",
-          "notes_characters": 455,
+          "notes_characters": 460,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -268,7 +269,7 @@
         {
           "slide": 12,
           "title": "故障三：页面状态与持久化",
-          "notes_characters": 360,
+          "notes_characters": 404,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -278,7 +279,7 @@
         {
           "slide": 13,
           "title": "验证命令与证据记录",
-          "notes_characters": 351,
+          "notes_characters": 381,
           "native_tables": 0,
           "native_shapes": 8,
           "native_connectors": 0,
@@ -287,8 +288,8 @@
         },
         {
           "slide": 14,
-          "title": "本地演示与恢复",
-          "notes_characters": 653,
+          "title": "本地运行与恢复",
+          "notes_characters": 599,
           "native_tables": 0,
           "native_shapes": 8,
           "native_connectors": 0,
@@ -298,7 +299,7 @@
         {
           "slide": 15,
           "title": "审批变更与阶段报告",
-          "notes_characters": 262,
+          "notes_characters": 292,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -308,7 +309,7 @@
         {
           "slide": 16,
           "title": "部署与 DfX 的最低说明",
-          "notes_characters": 332,
+          "notes_characters": 368,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -317,8 +318,8 @@
         },
         {
           "slide": 17,
-          "title": "工具接续与导师培养",
-          "notes_characters": 269,
+          "title": "工具接续与团队能力",
+          "notes_characters": 306,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -327,8 +328,8 @@
         },
         {
           "slide": 18,
-          "title": "工程师考核与持续改进",
-          "notes_characters": 279,
+          "title": "工程师自测与持续改进",
+          "notes_characters": 332,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -341,12 +342,12 @@
     {
       "id": "beginner",
       "file": "training/slides/beginner.pptx",
-      "sha256": "3b123c03a762cad28c88aa1bd6c77702deee069d779d212ff86318c34c0d28ea",
+      "sha256": "e729b895ad907c4be76c8bfee424ef1fba70208544a3cc1b22eb14ede9cf5929",
       "slides": [
         {
           "slide": 1,
           "title": "AI Coding\n从想法到验收",
-          "notes_characters": 299,
+          "notes_characters": 350,
           "native_tables": 0,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -356,7 +357,7 @@
         {
           "slide": 2,
           "title": "主管的小失败：周五还能交付吗",
-          "notes_characters": 335,
+          "notes_characters": 348,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -366,7 +367,7 @@
         {
           "slide": 3,
           "title": "工程师的小失败：测试绿了，规则错了",
-          "notes_characters": 315,
+          "notes_characters": 364,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -376,7 +377,7 @@
         {
           "slide": 4,
           "title": "新手的小失败：刷新后，预约不见了",
-          "notes_characters": 302,
+          "notes_characters": 311,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -386,7 +387,7 @@
         {
           "slide": 5,
           "title": "一个软件里发生了什么",
-          "notes_characters": 268,
+          "notes_characters": 294,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -396,7 +397,7 @@
         {
           "slide": 6,
           "title": "一张客户场景卡",
-          "notes_characters": 263,
+          "notes_characters": 285,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -406,7 +407,7 @@
         {
           "slide": 7,
           "title": "我能亲手检查的验收例子",
-          "notes_characters": 263,
+          "notes_characters": 309,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -416,7 +417,7 @@
         {
           "slide": 8,
           "title": "4A：从四个角度看小工具",
-          "notes_characters": 600,
+          "notes_characters": 575,
           "native_tables": 0,
           "native_shapes": 25,
           "native_connectors": 8,
@@ -426,7 +427,7 @@
         {
           "slide": 9,
           "title": "第一次启动本地工具",
-          "notes_characters": 400,
+          "notes_characters": 465,
           "native_tables": 0,
           "native_shapes": 8,
           "native_connectors": 0,
@@ -436,7 +437,7 @@
         {
           "slide": 10,
           "title": "一次成功预约与刷新检查",
-          "notes_characters": 278,
+          "notes_characters": 327,
           "native_tables": 0,
           "native_shapes": 17,
           "native_connectors": 0,
@@ -446,7 +447,7 @@
         {
           "slide": 11,
           "title": "相邻可以，重叠不可以",
-          "notes_characters": 272,
+          "notes_characters": 294,
           "native_tables": 0,
           "native_shapes": 8,
           "native_connectors": 0,
@@ -456,7 +457,7 @@
         {
           "slide": 12,
           "title": "出现问题时的求助说明",
-          "notes_characters": 274,
+          "notes_characters": 305,
           "native_tables": 0,
           "native_shapes": 13,
           "native_connectors": 0,
@@ -466,7 +467,7 @@
         {
           "slide": 13,
           "title": "一个可用的 AI 任务说明",
-          "notes_characters": 357,
+          "notes_characters": 387,
           "native_tables": 0,
           "native_shapes": 8,
           "native_connectors": 0,
@@ -475,8 +476,8 @@
         },
         {
           "slide": 14,
-          "title": "练习：午休时段不可预约",
-          "notes_characters": 282,
+          "title": "进阶练习：午休时段不可预约",
+          "notes_characters": 501,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -486,7 +487,7 @@
         {
           "slide": 15,
           "title": "新要求：增加主管审批",
-          "notes_characters": 265,
+          "notes_characters": 280,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -496,7 +497,7 @@
         {
           "slide": 16,
           "title": "交付前需要与客户说清的事项",
-          "notes_characters": 342,
+          "notes_characters": 377,
           "native_tables": 1,
           "native_shapes": 5,
           "native_connectors": 0,
@@ -506,7 +507,7 @@
         {
           "slide": 17,
           "title": "交付状态与工具求助",
-          "notes_characters": 265,
+          "notes_characters": 313,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,
@@ -516,7 +517,7 @@
         {
           "slide": 18,
           "title": "完成证明与下一次改进",
-          "notes_characters": 265,
+          "notes_characters": 385,
           "native_tables": 0,
           "native_shapes": 15,
           "native_connectors": 0,

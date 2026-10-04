@@ -3,13 +3,15 @@ import hashlib
 import json
 from pathlib import Path
 import re
+from datetime import datetime
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[2]
 NS = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main", "p": "http://schemas.openxmlformats.org/presentationml/2006/main"}
 source = json.loads((ROOT / "training/slides/source/content.json").read_text())
-report = {"checked_at": "2026-10-03", "scope": "PPTX structure, notes, editable objects, typography and render presence; no PowerPoint application execution", "decks": []}
+report = {"checked_at": datetime.now().astimezone().isoformat(), "version": source["version"], "scope": "Self-study wording, PPTX structure, reading notes, editable objects, typography and render presence; no PowerPoint application execution", "decks": []}
+forbidden = re.compile(r"讲师|课堂|授课|讲授|未原样讲过|课后|试讲|学员|听众|导师|整课|建议用时|[0-9]+\s*分钟")
 for deck in source["decks"]:
     file = ROOT / f'training/slides/{deck["id"]}.pptx'
     items = [deck["cover"], *source["opening"], *deck["slides"]]
@@ -23,6 +25,9 @@ for deck in source["decks"]:
             note = ET.fromstring(archive.read(f"ppt/notesSlides/notesSlide{i}.xml"))
             note_text = "".join(t.text or "" for t in note.findall(".//a:t", NS))
             assert len(note_text) > 120, (deck["id"], i, "missing notes")
+            assert re.sub(r"\s+", "", items[i-1]["notes"]) in re.sub(r"\s+", "", note_text), (deck["id"], i, "notes differ from content source")
+            assert not forbidden.search(note_text + "".join(texts)), (deck["id"], i, "instructor wording")
+            assert any(label in note_text for label in ("自检", "完成证明", "通过标准")), (deck["id"], i, "missing independent check")
             tables = len(xml.findall(".//a:tbl", NS))
             pictures = len(xml.findall(".//p:pic", NS))
             assert pictures == 0, (deck["id"], i, "unexpected flattened image")

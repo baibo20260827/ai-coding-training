@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-04T04:20:43+00:00",
+  "checked_at_utc": "2026-10-04T05:47:43+00:00",
   "status": "pass",
   "scope": "offline structural delivery checks; no visual or learning-effect assessment",
   "excluded": [
@@ -10,10 +10,10 @@
     "__pycache__"
   ],
   "documents": {
-    "markdown": 43,
-    "html": 50,
-    "local_links_checked": 977,
-    "external_or_anchor_links_ignored": 353
+    "markdown": 44,
+    "html": 52,
+    "local_links_checked": 1253,
+    "external_or_anchor_links_ignored": 536
   },
   "svg": [
     {

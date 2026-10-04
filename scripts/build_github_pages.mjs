@@ -13,7 +13,7 @@ catch {
  if(!process.env.MARKED_MODULE) throw new Error('需要 marked；安装该模块或用 MARKED_MODULE 指定已安装模块目录。');
  ({marked}=req(process.env.MARKED_MODULE));
 }
-const zipName='harness-ai-coding-training-v1.0.zip';
+const zipName='harness-ai-coding-training-v1.1.zip';
 if(!fs.existsSync(path.join(root,'dist',zipName))) throw new Error('先运行 python3 scripts/package_delivery.py');
 if(fs.existsSync(path.join(out,'.git'))) throw new Error('生成目录含 .git，拒绝覆盖。请使用独立发布工作目录。');
 const marker=path.join(out,'.harness-site-build');
@@ -39,7 +39,7 @@ function rewrite(html,rel='index.html'){
  });
 }
 function wrap(rel,title,body,extra=''){
- return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · AI Coding 学习站</title><style>${css}</style></head><body><nav><a href="${homeFor(rel)}">培训首页</a><a href="${catalogFor(rel)}">全量材料目录</a>${extra}</nav><main>${body}</main></body></html>`;
+ return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · AI Coding 学习站</title><style>${css}</style></head><body><nav><a href="${homeFor(rel)}">自学首页</a><a href="${catalogFor(rel)}">全量材料目录</a>${extra}</nav><main>${body}</main></body></html>`;
 }
 const mdFiles=files.filter(p=>p.endsWith('.md'));
 const entries=[];
@@ -56,19 +56,19 @@ for(const rel of mdFiles){
  fs.writeFileSync(path.join(out,htmlRel),wrap(htmlRel,title,html,`<a href="${esc(posix.basename(rel))}" download>下载 Markdown 源文件</a>`));
  entries.push({path:htmlRel,source:rel,title});
 }
-for(const rel of ['学习手册.html','讲师手册.html']){
+for(const rel of ['学习手册.html','参考解析.html','讲师手册.html']){
  let html=rewrite(fs.readFileSync(path.join(root,rel),'utf8'),rel);
  html=html.replace('<nav>','<nav><a href="materials.html">全量材料目录</a>');
  fs.writeFileSync(path.join(out,rel),html);
 }
 let home=rewrite(fs.readFileSync(path.join(root,'START_HERE.html'),'utf8'));
-home=home.replace('<main>','<main><div class="links"><a href="materials.html">浏览全量材料目录</a><a href="downloads/'+zipName+'" download>下载完整培训包（含全部案例源码）</a><a href="docs/PUBLISH_GITHUB.html">GitHub 发布说明</a></div>');
+home=home.replace('<main>','<main><div class="links"><a href="materials.html">浏览全量材料目录</a><a href="downloads/'+zipName+'" download>下载完整自学包（含全部案例源码）</a><a href="docs/PUBLISH_GITHUB.html">GitHub 发布说明</a></div>');
 home=home.replace(/<p>在浏览器打开[\s\S]*?案例运行说明<\/a>。<\/p>/,
  '<p>预约应用需要在自己的电脑运行 Python 服务。GitHub Pages 提供阅读与下载；在线页面不会启动预约后端。<a href="demo/README.html">查看本地运行、Windows 启动和备份恢复步骤</a>。</p>');
 for(const rel of ['index.html','START_HERE.html'])fs.writeFileSync(path.join(out,rel),home);
-const categories=[['课程与讲师资料','training/'],['客户需求与4A案例','docs/case/'],['分层指南与导师支持','docs/guides/'],['可填写工作模板','templates/'],['常见问题','faq/'],['案例工程与运行','demo/'],['检查证据','evidence/'],['项目规则与维护','']];
+const categories=[['学习路径与实践','training/'],['客户需求与4A案例','docs/case/'],['分层指南与协作求助','docs/guides/'],['可填写工作模板','templates/'],['常见问题','faq/'],['案例工程与运行','demo/'],['检查证据','evidence/'],['项目规则与维护','']];
 const assigned=new Set();
-let list='<h1>全量学习材料</h1><p>可在线阅读全部文档，下载可编辑课件与完整工程。以下内容包含讲师答案。</p><p><a href="downloads/'+zipName+'" download>下载完整培训包</a> · <a href="学习手册.html">学员手册</a> · <a href="讲师手册.html">讲师手册</a></p><label>查找材料 <input id="search" type="search" placeholder="例如：变更、主管、验收"></label><p id="count" class="note"></p><h2>可编辑PPT与架构图</h2><ul class="catalog">';
+let list='<h1>全量学习材料</h1><p>按需要查阅文档、可编辑 PPT、模板与完整工程。建议先尝试练习，再查看参考解析。</p><p><a href="downloads/'+zipName+'" download>下载完整自学包</a> · <a href="学习手册.html">自主学习手册</a> · <a href="参考解析.html">参考解析与自检</a></p><label>查找材料 <input id="search" type="search" placeholder="例如：变更、主管、验收"></label><p id="count" class="note"></p><h2>可编辑PPT与架构图</h2><ul class="catalog">';
 for(const [p,t] of [['training/slides/manager.pptx','主管 PPT（14页）'],['training/slides/engineer.pptx','工程师 PPT（18页）'],['training/slides/beginner.pptx','新手 PPT（18页）'],...['ba','aa','da','ta'].map(v=>['docs/architecture-views/'+v+'.svg',v.toUpperCase()+' 架构图'])])list+=`<li data-item><a href="${p}">${t}</a></li>`;
 list+='</ul>';
 list+='<section><h2>案例源码与本地运行</h2><p>预约程序需要本机 Python 服务。这里提供运行说明和源码阅读；在线材料页不提供预约功能。</p><ul class="catalog"><li data-item><a href="demo/README.html">案例本地运行说明（下载培训包或克隆仓库后使用）</a></li><li data-item><a href="demo/SOURCE.html">预约界面源码预览</a></li></ul></section>';
@@ -86,11 +86,13 @@ fs.writeFileSync(path.join(out,'materials.html'),wrap('materials.html','全量�
 // Put the online source preview on a separate page, never in the application's file.
 const demoRaw=fs.readFileSync(path.join(root,'demo/static/index.html'),'utf8');
 fs.writeFileSync(path.join(out,'demo/SOURCE.html'),wrap('demo/SOURCE.html','案例页面源码',
- '<h1>预约案例页面源码</h1><p>本页用于阅读源码，不提供在线预约。请下载完整培训包或克隆仓库，在本机启动 Python 服务后使用原应用。</p><p><a href="README.html">本地运行说明</a> · <a href="../downloads/'+zipName+'" download>下载完整培训包</a></p><pre><code>'+esc(demoRaw)+'</code></pre>'));
+ '<h1>预约案例页面源码</h1><p>本页用于阅读源码，不提供在线预约。请下载完整自学包或克隆仓库，在本机启动 Python 服务后使用原应用。</p><p><a href="README.html">本地运行说明</a> · <a href="../downloads/'+zipName+'" download>下载完整自学包</a></p><pre><code>'+esc(demoRaw)+'</code></pre>'));
 fs.mkdirSync(path.join(out,'downloads'),{recursive:true});
 fs.copyFileSync(path.join(root,'dist',zipName),path.join(out,'downloads',zipName));
+// Preserve the previously shared ZIP URL as an alias to the current complete package.
+fs.copyFileSync(path.join(root,'dist',zipName),path.join(out,'downloads','harness-ai-coding-training-v1.0.zip'));
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
-fs.writeFileSync(path.join(out,'site-manifest.json'),JSON.stringify({builtAt:new Date().toISOString(),markdownPages:entries.length,sourceFiles:files.length,entries,artifactStatus:'built',repositoryUrl:'https://github.com/baibo20260827/ai-coding-training',siteUrl:'https://baibo20260827.github.io/ai-coding-training/',deploymentEvidence:'evidence/publishing/VALIDATION.html'},null,2)+'\n');
+fs.writeFileSync(path.join(out,'site-manifest.json'),JSON.stringify({builtAt:new Date().toISOString(),markdownPages:entries.length,sourceFiles:files.length,entries,artifactStatus:'built',materialVersion:'1.1',learningMode:'self-study',repositoryUrl:'https://github.com/baibo20260827/ai-coding-training',siteUrl:'https://baibo20260827.github.io/ai-coding-training/',deploymentEvidence:'evidence/publishing/VALIDATION.html'},null,2)+'\n');
 execFileSync(process.env.PYTHON||'python3',[path.join(root,'scripts/check_delivery.py'),'--root',out],{cwd:root,stdio:'inherit'});
 execFileSync(process.env.PYTHON||'python3',['-c',`from pathlib import Path
 from zipfile import ZipFile,ZIP_DEFLATED

@@ -14,7 +14,7 @@ const {finalizePresentation}=await import(pathToFileURL(path.join(SKILL_DIR,'con
 const content=JSON.parse(await fs.readFile(path.join(workspaceDir,'training/slides/source/content.json'),'utf8'));
 const FONT='Arial Unicode MS';
 const C={paper:'#FAF8F3',ink:'#17333C',muted:'#5D6B70',line:'#C8D2D0',white:'#FFFFFF'};
-const revision=process.env.SLIDE_REVISION ?? 'v1';
+const revision=process.env.SLIDE_REVISION ?? 'selfstudy-v1.1-r1';
 const evidenceDir=path.join(workspaceDir,'evidence/slides');
 await fs.mkdir(path.join(evidenceDir,'build'),{recursive:true});
 
@@ -69,7 +69,7 @@ function renderItem(s,d,item){
   txt(s,item.quote,64,232,530,205,42,C.ink,true);
   item.rows.forEach((row,j)=>{txt(s,row[0],640,211+j*109,82,42,25,a,true);txt(s,row[1],749,211+j*109,467,88,26);});
   txt(s,item.takeaway,64,573,1152,64,28,a);
-  txt(s,'虚构教学情境',64,646,850,30,23,C.muted);
+  txt(s,'虚构学习情境',64,646,850,30,23,C.muted);
  }else if(item.kind==='columns'){
   item.columns.forEach((col,j)=>{const x=64+j*600;txt(s,col.heading,x,215,550,52,31,a,true);col.items.forEach((v,k)=>txt(s,v,x,284+k*72,550,65,26));});
   bottom(s,item.bottom,a);
@@ -104,7 +104,7 @@ for(const d of content.decks){
   if(item.kind==='table')tableSlides.push(i+1);
   if(item.kind==='architecture')diagramSlides.push(i+1);
   const refs=(item.sources??[]).map(k=>`${k}: ${content.sources[k]}`).join('\n');
-  const note=`第 ${i+1} 页：${item.title.replaceAll('\n',' ')}\n\n${item.notes}\n\n材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。\n${refs ? '官方资料（2026-10-03 核对）：\n'+refs : '本页为教学设计与示例，无外部统计数据。'}`;
+  const note=`第 ${i+1} 页：${item.title.replaceAll('\n',' ')}\n\n${item.notes}\n\n材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。\n${refs ? '官方资料（2026-10-03 核对，本次保留原技术说明）：\n'+refs : '本页为概念说明与练习示例，无外部统计数据。'}`;
   s.speakerNotes.textFrame.setText(note);notes.push(`## ${i+1}. ${item.title.replaceAll('\n',' ')}\n\n${note}`);
  }
  const candidate=path.join(evidenceDir,'build',`${d.id}-${revision}-candidate.pptx`);
@@ -120,7 +120,7 @@ for(const d of content.decks){
   fontPolicy:{basis:'design',families:[FONT]},verifyArtifactToolImport:true,
   receiptPath:path.join(evidenceDir,`${d.id}-${revision}.validation.json`)});
  await fs.copyFile(finalPath,deliveredPath);
- await fs.writeFile(path.join(workspaceDir,'training/slides',`${d.id}-notes.md`),`# ${d.name}逐页讲师备注\n\n版本 ${content.version}，${content.date}。${content.status}。\n\n`+notes.join('\n\n'),'utf8');
+ await fs.writeFile(path.join(workspaceDir,'training/slides',`${d.id}-notes.md`),`# ${d.name}逐页阅读补充\n\n版本 ${content.version}，${content.date}。${content.status}。\n\n按对应页阅读解释，再完成操作与自检。PPTX 的备注区同时保存这些内容。\n\n`+notes.join('\n\n'),'utf8');
  // Render the finalized file, not only the authored in-memory presentation.
  const imported=await PresentationFile.importPptx(await FileBlob.load(finalPath));
  const renderDir=path.join(evidenceDir,'renders',d.id);await fs.mkdir(renderDir,{recursive:true});

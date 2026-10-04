@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-10-04T04:20:43.420Z",
-  "markdownPages": 43,
-  "sourceFiles": 191,
+  "builtAt": "2026-10-04T05:47:43.307Z",
+  "markdownPages": 44,
+  "sourceFiles": 205,
   "entries": [
     {
       "path": "AGENTS.html",
@@ -11,7 +11,7 @@
     {
       "path": "README.html",
       "source": "README.md",
-      "title": "软件工程 Harness 与 AI Coding 能力建设"
+      "title": "软件工程 Harness 与 AI Coding 自学指南"
     },
     {
       "path": "STATUS.html",
@@ -36,7 +36,7 @@
     {
       "path": "demo/WALKTHROUGH.html",
       "source": "demo/WALKTHROUGH.md",
-      "title": "讲师演示与故障恢复脚本"
+      "title": "独立完成会议室预约的端到端实践"
     },
     {
       "path": "docs/IMPROVEMENTS.html",
@@ -46,7 +46,7 @@
     {
       "path": "docs/PROJECT_PLAN.html",
       "source": "docs/PROJECT_PLAN.md",
-      "title": "建设方案"
+      "title": "建设方案：以自学、实践和独立迁移为主"
     },
     {
       "path": "docs/PUBLISH_GITHUB.html",
@@ -96,12 +96,17 @@
     {
       "path": "docs/guides/mentoring.html",
       "source": "docs/guides/mentoring.md",
-      "title": "答疑分诊与导师指导流程"
+      "title": "问题排查与协作求助"
+    },
+    {
+      "path": "evidence/SELF_STUDY.html",
+      "source": "evidence/SELF_STUDY.md",
+      "title": "自学版 v1.1 修订与检查"
     },
     {
       "path": "evidence/VALIDATION.html",
       "source": "evidence/VALIDATION.md",
-      "title": "培训包 v1.0 验证记录"
+      "title": "材料验证入口与 v1.0 历史记录"
     },
     {
       "path": "evidence/demo/BROWSER.html",
@@ -121,7 +126,7 @@
     {
       "path": "evidence/slides/QA.html",
       "source": "evidence/slides/QA.md",
-      "title": "课件检查记录"
+      "title": "自学版课件检查记录"
     },
     {
       "path": "faq/README.html",
@@ -136,7 +141,7 @@
     {
       "path": "templates/capability-pilot.html",
       "source": "templates/capability-pilot.md",
-      "title": "模板：能力考核与真实试点复盘"
+      "title": "模板：能力自评与真实任务复盘"
     },
     {
       "path": "templates/change-control.html",
@@ -171,12 +176,12 @@
     {
       "path": "training/00-opening.html",
       "source": "training/00-opening.md",
-      "title": "培训开篇：三个小失败，三种真实困难"
+      "title": "从三个小失败开始：找到你要解决的困难"
     },
     {
       "path": "training/README.html",
       "source": "training/README.md",
-      "title": "培训使用入口"
+      "title": "三类自学路径"
     },
     {
       "path": "training/ai-task-cards.html",
@@ -186,40 +191,42 @@
     {
       "path": "training/answer-key.html",
       "source": "training/answer-key.md",
-      "title": "讲师参考答案与评分"
+      "title": "自检参考解析"
     },
     {
       "path": "training/exercises.html",
       "source": "training/exercises.md",
-      "title": "学员练习册"
+      "title": "独立练习册"
     },
     {
       "path": "training/facilitator-guide.html",
       "source": "training/facilitator-guide.md",
-      "title": "讲师运行手册"
+      "title": "自学实践指南"
     },
     {
       "path": "training/slides/README.html",
       "source": "training/slides/README.md",
-      "title": "分层培训课件"
+      "title": "分层自学课件"
     },
     {
       "path": "training/slides/beginner-notes.html",
       "source": "training/slides/beginner-notes.md",
-      "title": "新手版逐页讲师备注"
+      "title": "新手版逐页阅读补充"
     },
     {
       "path": "training/slides/engineer-notes.html",
       "source": "training/slides/engineer-notes.md",
-      "title": "工程师版逐页讲师备注"
+      "title": "工程师版逐页阅读补充"
     },
     {
       "path": "training/slides/manager-notes.html",
       "source": "training/slides/manager-notes.md",
-      "title": "主管版逐页讲师备注"
+      "title": "主管版逐页阅读补充"
     }
   ],
   "artifactStatus": "built",
+  "materialVersion": "1.1",
+  "learningMode": "self-study",
   "repositoryUrl": "https://github.com/baibo20260827/ai-coding-training",
   "siteUrl": "https://baibo20260827.github.io/ai-coding-training/",
   "deploymentEvidence": "evidence/publishing/VALIDATION.html"

@@ -85,8 +85,8 @@
         70
       ],
       "geometry": "rect",
-      "text": "练习：午休时段不可预约",
-      "textPreview": "练习：午休时段不可预约",
+      "text": "进阶练习：午休时段不可预约",
+      "textPreview": "进阶练习：午休时段不可预约",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -109,14 +109,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "练习：午休时段不可预约"
+            "text": "进阶练习：午休时段不可预约"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "练习：午休时段不可预约",
+          "text": "进阶练习：午休时段不可预约",
           "resolvedTextStyle": {
             "fontSize": 44,
             "typeface": "Arial Unicode MS",
@@ -127,7 +127,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "练习：午休时段不可预约",
+              "text": "进阶练习：午休时段不可预约",
               "fontSize": 44,
               "typeface": "Arial Unicode MS",
               "color": "#17333C",
@@ -154,8 +154,8 @@
         62
       ],
       "geometry": "rect",
-      "text": "这是新增练习要求，基线应用尚未包含",
-      "textPreview": "这是新增练习要求，基线应用尚未包含",
+      "text": "可先完成需求与验收；基线应用尚未实现此规则",
+      "textPreview": "可先完成需求与验收；基线应用尚未实现此规则",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -178,14 +178,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "这是新增练习要求，基线应用尚未包含"
+            "text": "可先完成需求与验收；基线应用尚未实现此规则"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "这是新增练习要求，基线应用尚未包含",
+          "text": "可先完成需求与验收；基线应用尚未实现此规则",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -195,7 +195,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "这是新增练习要求，基线应用尚未包含",
+              "text": "可先完成需求与验收；基线应用尚未实现此规则",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#5D6B70"
@@ -692,8 +692,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "再完成验证",
-      "textPreview": "再完成验证",
+      "text": "按进度选择任务",
+      "textPreview": "按进度选择任务",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -716,14 +716,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "再完成验证"
+            "text": "按进度选择任务"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "再完成验证",
+          "text": "按进度选择任务",
           "resolvedTextStyle": {
             "fontSize": 31,
             "typeface": "Arial Unicode MS",
@@ -734,7 +734,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "再完成验证",
+              "text": "按进度选择任务",
               "fontSize": 31,
               "typeface": "Arial Unicode MS",
               "color": "#A26035",
@@ -761,8 +761,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "写正常与异常验收例子",
-      "textPreview": "写正常与异常验收例子",
+      "text": "基础：写正常与异常验收例子",
+      "textPreview": "基础：写正常与异常验收例子",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -785,14 +785,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "写正常与异常验收例子"
+            "text": "基础：写正常与异常验收例子"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "写正常与异常验收例子",
+          "text": "基础：写正常与异常验收例子",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -802,7 +802,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "写正常与异常验收例子",
+              "text": "基础：写正常与异常验收例子",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -828,8 +828,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "请 AI 先给修改计划",
-      "textPreview": "请 AI 先给修改计划",
+      "text": "进阶：在独立副本与空库实现",
+      "textPreview": "进阶：在独立副本与空库实现",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -852,14 +852,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "请 AI 先给修改计划"
+            "text": "进阶：在独立副本与空库实现"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "请 AI 先给修改计划",
+          "text": "进阶：在独立副本与空库实现",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -869,7 +869,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "请 AI 先给修改计划",
+              "text": "进阶：在独立副本与空库实现",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -895,8 +895,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "在导师指导下检查变更",
-      "textPreview": "在导师指导下检查变更",
+      "text": "检查差异，不确定时请求技术复核",
+      "textPreview": "检查差异，不确定时请求技术复核",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -919,14 +919,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "在导师指导下检查变更"
+            "text": "检查差异，不确定时请求技术复核"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "在导师指导下检查变更",
+          "text": "检查差异，不确定时请求技术复核",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -936,7 +936,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "在导师指导下检查变更",
+              "text": "检查差异，不确定时请求技术复核",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -962,8 +962,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "运行旧用例并记录新结果",
-      "textPreview": "运行旧用例并记录新结果",
+      "text": "回归旧检查，注明需求引起的调整",
+      "textPreview": "回归旧检查，注明需求引起的调整",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -986,14 +986,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "运行旧用例并记录新结果"
+            "text": "回归旧检查，注明需求引起的调整"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "运行旧用例并记录新结果",
+          "text": "回归旧检查，注明需求引起的调整",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -1003,7 +1003,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "运行旧用例并记录新结果",
+              "text": "回归旧检查，注明需求引起的调整",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"

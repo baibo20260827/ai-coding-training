@@ -1,0 +1,112 @@
+{
+  "checked_at": "2026-10-04T13:43:21.729110+08:00",
+  "version": "1.1",
+  "decks": [
+    {
+      "id": "manager",
+      "revision": "selfstudy-v1.1-r1",
+      "sha256": "010a80e18319f63eeb0d2a8e250ca08b17b31ae7f9560fb096dc1d3b897ddef8",
+      "receipt": "manager-selfstudy-v1.1-r1.validation.json",
+      "status": "pass",
+      "findings": 0,
+      "warnings": 0,
+      "final_import_passed": true
+    },
+    {
+      "id": "engineer",
+      "revision": "selfstudy-v1.1-r2",
+      "sha256": "e00f325e85efceb3157f58496b90cfec5d2301866111d041215556f16e66d070",
+      "receipt": "engineer-selfstudy-v1.1-r2.validation.json",
+      "status": "pass",
+      "findings": 0,
+      "warnings": 0,
+      "final_import_passed": true
+    },
+    {
+      "id": "beginner",
+      "revision": "selfstudy-v1.1-r4",
+      "sha256": "e729b895ad907c4be76c8bfee424ef1fba70208544a3cc1b22eb14ede9cf5929",
+      "receipt": "beginner-selfstudy-v1.1-r4.validation.json",
+      "status": "pass",
+      "findings": 0,
+      "warnings": 0,
+      "final_import_passed": true
+    }
+  ],
+  "visual_review": {
+    "reviewed_slides": {
+      "manager": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "engineer": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "beginner": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "total": 50,
+    "method": "Each full-size 1280x720 rendered slide viewed by the author. Engineer r2 changed notes only, with normalized slide XML equality to visually reviewed r1 verified below. Beginner final visible revisions checked on slides 14 and 18."
+  },
+  "engineer_note_revision": {
+    "visible_slide_xml_equal_excluding_creationId": true,
+    "slides": 18,
+    "change": "Slide 18 notes: replaced a residual reference to spoken instruction with an independent task description."
+  },
+  "beginner_final_revision": {
+    "changed_visible_slides": [
+      14,
+      18
+    ],
+    "all_other_visible_slide_xml_equal_excluding_creationId": true,
+    "final_changed_slides_visually_reviewed": true,
+    "cover_and_slide_18_notes_also_aligned_to_beginner_scope": true
+  }
+}

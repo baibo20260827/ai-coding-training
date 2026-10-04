@@ -1,5 +1,6 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 协作任务卡 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="ai-task-cards.md" download>下载 Markdown 源文件</a></nav><main><h1>AI 协作任务卡</h1>
-<p>这些是可复制并调整的教学任务，不是声称已经发生过的模型对话。使用部门准入工具，在项目根目录开始；先确认工具实际读取了相关约定。保留关键输出和真实验证结果，避免把对话本身当作验收。</p>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 协作任务卡 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">自学首页</a><a href="../materials.html">全量材料目录</a><a href="ai-task-cards.md" download>下载 Markdown 源文件</a></nav><main><h1>AI 协作任务卡</h1>
+<p>版本 v1.1 · 2026-10-04。这七张卡可在自学和实际任务中复制调整，不代表已经发生过的模型对话。先写下你自己的目标和验收例子，再使用部门准入工具协作；在项目根目录开始，并确认工具实际读取了相关约定。保留关键输出和真实验证结果，对话本身不等于验收。</p>
+<p>每张卡后都有自检提示。练习中得到的假设留在个人记录；迁移到真实项目时，涉及客户规则、权限、范围和日期的决定仍由相应责任人确认。练习安排见<a href="exercises.html">独立练习册</a>。</p>
 <h2>卡 1：澄清需求</h2>
 <pre><code class="language-text">我要为一个单会议室做预约工具。请阅读项目 AGENTS.md 和案例需求文件。
 先用用户、目标、输入、规则、数据、输出描述场景。
@@ -7,37 +8,38 @@
 给出本期范围、正常/异常验收例子和需要谁确认的事项。
 当前只准备需求材料，不擅自增加登录、审批或通知范围。
 </code></pre>
-<p>检查：是否替客户做了未授权决定；“完成”能否亲手验证；是否遗漏数据保存和异常路径。</p>
+<p>自检：是否替客户做了未授权决定；“完成”能否亲手验证；是否遗漏数据保存和异常路径。保存场景卡、待确认项和验收例子。</p>
 <h2>卡 2：设计与拆分</h2>
-<pre><code class="language-text">依据已确认的教学需求，阅读案例4A视图和demo代码。
+<pre><code class="language-text">依据本案例已定义的教学需求，阅读案例4A视图和demo代码。
 把这次任务拆成可独立验证的小步骤，说明受影响的业务、应用、数据和技术部分。
 每步列出产物、验收依据、依赖和未知项。请区分预计工作量与交付时间。
 部署和DfX仅列本任务需要对齐或验证的事项，不展开产品选型。
 </code></pre>
-<p>检查：是否引用现有结构；是否为了一个小改动增加不必要组件；架构决定能否说明理由。</p>
+<p>自检：是否引用现有结构；是否为了一个小改动增加不必要组件；架构决定能否说明理由。保存任务拆分与影响清单。</p>
 <h2>卡 3：午休规则变更</h2>
 <pre><code class="language-text">教学变更：每天12:00—13:00不可预约，任何重叠都拒绝；11:30—12:00和13:00—13:30允许。
 请先阅读需求、实现和测试，在独立练习副本内工作。
-明确已有预约处理的待确认事项，先采用讲师确认的演练假设。
+本轮个人练习假设：只在隔离空库验证新建预约规则，不删除、迁移或重写已有记录。
+将已有预约如何适用新规则列为待确认事项，不能把练习假设写成真实客户决定。
 列出受影响部分和边界用例，实施范围最小的修改。
 保留其他功能与原业务预期；若需改测试预期，请说明需求依据。
 实际运行适用检查，给出变更文件、结果和未验证部分。
 </code></pre>
-<p>检查：是否服务端验证；是否覆盖包含/相邻边界；是否破坏取消、持久化或并发。</p>
+<p>自检：是否服务端验证；是否覆盖包含/相邻边界；是否破坏取消、持久化或并发。保存差异、测试适配依据与真实输出；没有执行的部分注明原因。</p>
 <h2>卡 4：独立审查</h2>
 <pre><code class="language-text">请按需求与验收例子审查本次差异。不要只复述实现者的“测试通过”。
 重点检查业务预期变化、修改范围、输入边界、数据与并发影响，以及现有证据不能支持的结论。
 提出最小反例或可执行检查，标明已复现与待验证问题。
 若没有发现问题，如实说出检查范围与限制，不编造发现。
 </code></pre>
-<p>检查：审查是否给出可复现信息；AI 审查的建议是否仍需要实际执行验证。</p>
+<p>自检：审查是否给出可复现信息；AI 审查的建议是否已经实际验证。保存接受或退回的依据与未覆盖范围。</p>
 <h2>卡 5：故障排查</h2>
 <pre><code class="language-text">这是实际操作步骤、预期、实际结果和错误输出：[填入已观察信息]。
 请先复现或说明当前不能复现的原因，按证据列出最可能的原因及检查顺序。
 一次验证一个假设。修改后检查原问题和相关旧功能。
 不要仅凭现象认定根因，不要删除记录或降低验收条件来掩盖失败。
 </code></pre>
-<p>检查：区分原因假设与证据；不得把未运行的命令写成已通过。</p>
+<p>自检：区分原因假设与证据；不得把未运行的命令写成已通过。保存最小复现、已排除原因和下一项检查；仍卡住时据此求助。</p>
 <h2>卡 6：阶段汇报与变更沟通</h2>
 <pre><code class="language-text">根据当前任务状态、验收证据、原基线和变更记录，准备一页阶段报告。
 分别列出原承诺、已批准的新承诺、当前预测、剩余工作、阻塞和待决策事项。
@@ -45,12 +47,12 @@
 准备给客户的沟通草稿，说明需要谁在何时确认什么。
 草稿留待有权限的人审核确认，不代客户批准，也不发送。
 </code></pre>
-<p>检查：不同收件人使用同一范围和日期依据；所有数字能追溯到任务或明确的教学假设。</p>
+<p>自检：不同收件人使用同一范围和日期依据；所有数字能追溯到任务或明确的教学假设。保存报告与沟通草稿，标明待确认项。</p>
 <h2>卡 7：复盘并改进资产</h2>
 <pre><code class="language-text">依据本次真实记录，总结发生了什么、哪条假设不成立、改动是否有效。
 更新受影响的代码/测试/文档/FAQ和改进日志。
 只有长期有效的工作经验才提炼进AGENTS.md；保留尚未验证的事项和后续验证方式。
 给下一位接手者留下可执行的入口，不依赖完整聊天记录。
 </code></pre>
-<p>检查：改进是否落到实际产物；材料更新是否被误写成能力效果已经验证。</p>
+<p>自检：改进是否落到实际产物；材料更新是否被误写成能力效果已经验证。保存改动位置、验证结果和下一步；有条件时用一个新任务检查方法能否迁移。</p>
 </main></body></html>

@@ -491,8 +491,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "一次可解释的小变更",
-      "textPreview": "一次可解释的小变更",
+      "text": "进阶：可解释的小变更",
+      "textPreview": "进阶：可解释的小变更",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -515,14 +515,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "一次可解释的小变更"
+            "text": "进阶：可解释的小变更"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "一次可解释的小变更",
+          "text": "进阶：可解释的小变更",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -532,7 +532,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "一次可解释的小变更",
+              "text": "进阶：可解释的小变更",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -692,8 +692,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "课后改进",
-      "textPreview": "课后改进",
+      "text": "完成后改进",
+      "textPreview": "完成后改进",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -716,14 +716,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "课后改进"
+            "text": "完成后改进"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "课后改进",
+          "text": "完成后改进",
           "resolvedTextStyle": {
             "fontSize": 31,
             "typeface": "Arial Unicode MS",
@@ -734,7 +734,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "课后改进",
+              "text": "完成后改进",
               "fontSize": 31,
               "typeface": "Arial Unicode MS",
               "color": "#A26035",
@@ -828,8 +828,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "由导师核对验收和代码影响",
-      "textPreview": "由导师核对验收和代码影响",
+      "text": "核对验收，不确定的影响请求复核",
+      "textPreview": "核对验收，不确定的影响请求复核",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -852,14 +852,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "由导师核对验收和代码影响"
+            "text": "核对验收，不确定的影响请求复核"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "由导师核对验收和代码影响",
+          "text": "核对验收，不确定的影响请求复核",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -869,7 +869,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "由导师核对验收和代码影响",
+              "text": "核对验收，不确定的影响请求复核",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -1029,8 +1029,8 @@
         50
       ],
       "geometry": "rect",
-      "text": "课程效果等待真实练习与试讲结果验证",
-      "textPreview": "课程效果等待真实练习与试讲结果验证",
+      "text": "自检依据是独立完成新任务的实际结果",
+      "textPreview": "自检依据是独立完成新任务的实际结果",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -1053,14 +1053,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "课程效果等待真实练习与试讲结果验证"
+            "text": "自检依据是独立完成新任务的实际结果"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "课程效果等待真实练习与试讲结果验证",
+          "text": "自检依据是独立完成新任务的实际结果",
           "resolvedTextStyle": {
             "fontSize": 24,
             "typeface": "Arial Unicode MS",
@@ -1070,7 +1070,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "课程效果等待真实练习与试讲结果验证",
+              "text": "自检依据是独立完成新任务的实际结果",
               "fontSize": 24,
               "typeface": "Arial Unicode MS",
               "color": "#A26035"

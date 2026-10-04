@@ -692,8 +692,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "工具与导师",
-      "textPreview": "工具与导师",
+      "text": "工具与求助",
+      "textPreview": "工具与求助",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -716,14 +716,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "工具与导师"
+            "text": "工具与求助"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "工具与导师",
+          "text": "工具与求助",
           "resolvedTextStyle": {
             "fontSize": 31,
             "typeface": "Arial Unicode MS",
@@ -734,7 +734,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "工具与导师",
+              "text": "工具与求助",
               "fontSize": 31,
               "typeface": "Arial Unicode MS",
               "color": "#A26035",
@@ -962,8 +962,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "代码、数据、发布问题找技术导师",
-      "textPreview": "代码、数据、发布问题找技术导师",
+      "text": "代码、数据、发布问题请求技术复核",
+      "textPreview": "代码、数据、发布问题请求技术复核",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -986,14 +986,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "代码、数据、发布问题找技术导师"
+            "text": "代码、数据、发布问题请求技术复核"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "代码、数据、发布问题找技术导师",
+          "text": "代码、数据、发布问题请求技术复核",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -1003,7 +1003,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "代码、数据、发布问题找技术导师",
+              "text": "代码、数据、发布问题请求技术复核",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"

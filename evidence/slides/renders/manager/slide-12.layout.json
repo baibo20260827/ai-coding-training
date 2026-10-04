@@ -828,8 +828,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "技术导师承担架构与关键审查",
-      "textPreview": "技术导师承担架构与关键审查",
+      "text": "技术负责人承担架构与关键审查",
+      "textPreview": "技术负责人承担架构与关键审查",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -852,14 +852,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "技术导师承担架构与关键审查"
+            "text": "技术负责人承担架构与关键审查"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "技术导师承担架构与关键审查",
+          "text": "技术负责人承担架构与关键审查",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -869,7 +869,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "技术导师承担架构与关键审查",
+              "text": "技术负责人承担架构与关键审查",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -895,8 +895,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "学员用未讲过的任务证明能力",
-      "textPreview": "学员用未讲过的任务证明能力",
+      "text": "成员用新任务证明独立完成能力",
+      "textPreview": "成员用新任务证明独立完成能力",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -919,14 +919,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "学员用未讲过的任务证明能力"
+            "text": "成员用新任务证明独立完成能力"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "学员用未讲过的任务证明能力",
+          "text": "成员用新任务证明独立完成能力",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -936,7 +936,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "学员用未讲过的任务证明能力",
+              "text": "成员用新任务证明独立完成能力",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"

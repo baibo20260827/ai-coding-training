@@ -154,8 +154,8 @@
         62
       ],
       "geometry": "rect",
-      "text": "本课程只建立清单和验收口径",
-      "textPreview": "本课程只建立清单和验收口径",
+      "text": "部署清单与质量目标的基本口径",
+      "textPreview": "部署清单与质量目标的基本口径",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -178,14 +178,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "本课程只建立清单和验收口径"
+            "text": "部署清单与质量目标的基本口径"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "本课程只建立清单和验收口径",
+          "text": "部署清单与质量目标的基本口径",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -195,7 +195,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "本课程只建立清单和验收口径",
+              "text": "部署清单与质量目标的基本口径",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#5D6B70"

@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>自学版 v1.1 修订与检查 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">自学首页</a><a href="../materials.html">全量材料目录</a><a href="SELF_STUDY.md" download>下载 Markdown 源文件</a></nav><main><h1>自学版 v1.1 修订与检查</h1>
+<p>日期：2026-10-04。来源：用户要求去除模拟讲师授课视角，主要面向自学，并同步 GitHub。</p>
+<h2>修订范围</h2>
+<p>首页、三类学习路径、三个小失败开篇、独立实践指南、端到端操作步骤、6 项练习与解析、7 张 AI 任务卡、分层指南、FAQ、模板、三套 PPT 及逐页阅读补充。主阅读入口为自主学习手册与参考解析。</p>
+<p>每条路径按起点、阅读顺序、动手产出、自检和排查入口组织。阅读者可以独立推进；真实客户确认与技术评审仍保留在相应工作流程中。</p>
+<p>原讲师手册网页地址保留为参考解析内容；原 v1.0 下载地址兼容当前自学包。新的主包使用 v1.1 文件名与清单版本。预约业务规则与数据模型保持不变；数据库不可用提示由“联系讲师”改为记录错误并查阅运行说明。</p>
+<h2>检查状态</h2>
+<ul>
+<li>内容复核：18 份指南/案例/模板/FAQ 的 177 处本地链接、8 份实践材料的 96 处本地链接有效；FAQ 32 组保持完整。复核三类路径、L1—L6、7 张任务卡、业务基线与变更假设。新手 L4 明确为进阶，可先完成需求与验收部分。</li>
+<li>浏览器检查：通过本机 HTTP 实际查看首页首屏，展开主管案例；学习手册查找、匹配数量、目录跳转清空筛选、参考解析入口可用。此处未声称已检查所有页面、移动设备或打印分页。</li>
+<li>工程回归：2026-10-04 13:36（上海），运行 <code>python3 -m unittest discover -s demo/tests -v</code>，21 项通过，退出码 0。测试使用临时数据库和回环接口；没有新增预约功能。</li>
+<li>PPT：三套内容与备注转为自学版，具体逐页渲染及结构结果见 <a href="slides/QA.html">课件检查</a>。</li>
+<li>生成文件：使用既有检查器核对本地链接、4A SVG、PPT 页数与非空备注；精确结果见 <a href="delivery-check.json">文件检查</a>。完整包另检查 ZIP CRC、每个清单 SHA-256 和解压后的链接。</li>
+</ul>
+<p>此前 v1.0 工程与发布证据保留其原版本和日期，不用于替代本次改动后的检查。网站每次推送后核对实际 Pages 构建与公网文件；对应部署记录独立保存。</p>
+<h2>效果边界</h2>
+<p>材料检查只能确认内容、链接、文件与页面行为。读者是否能独立完成新任务、真实业务是否接受以及能力提升幅度，需要学习记录和真实项目证据。</p>
+</main></body></html>

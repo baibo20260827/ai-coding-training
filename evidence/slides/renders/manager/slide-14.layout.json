@@ -355,8 +355,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "课后练习",
-      "textPreview": "课后练习",
+      "text": "独立练习",
+      "textPreview": "独立练习",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -379,14 +379,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "课后练习"
+            "text": "独立练习"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "课后练习",
+          "text": "独立练习",
           "resolvedTextStyle": {
             "fontSize": 31,
             "typeface": "Arial Unicode MS",
@@ -397,7 +397,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "课后练习",
+              "text": "独立练习",
               "fontSize": 31,
               "typeface": "Arial Unicode MS",
               "color": "#0C7777",
@@ -424,8 +424,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "阅读一份带审批变更的状态报告",
-      "textPreview": "阅读一份带审批变更的状态报告",
+      "text": "独立分析一份带审批变更的报告",
+      "textPreview": "独立分析一份带审批变更的报告",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -448,14 +448,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "阅读一份带审批变更的状态报告"
+            "text": "独立分析一份带审批变更的报告"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "阅读一份带审批变更的状态报告",
+          "text": "独立分析一份带审批变更的报告",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -465,7 +465,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "阅读一份带审批变更的状态报告",
+              "text": "独立分析一份带审批变更的报告",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"
@@ -761,8 +761,8 @@
         65
       ],
       "geometry": "rect",
-      "text": "试讲是否解决受众的真实困惑",
-      "textPreview": "试讲是否解决受众的真实困惑",
+      "text": "材料能否回答阅读中的真实疑问",
+      "textPreview": "材料能否回答阅读中的真实疑问",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -785,14 +785,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "试讲是否解决受众的真实困惑"
+            "text": "材料能否回答阅读中的真实疑问"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "试讲是否解决受众的真实困惑",
+          "text": "材料能否回答阅读中的真实疑问",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -802,7 +802,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "试讲是否解决受众的真实困惑",
+              "text": "材料能否回答阅读中的真实疑问",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#17333C"

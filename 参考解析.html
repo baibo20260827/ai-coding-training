@@ -1,0 +1,352 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>参考解析与自检</title><style>:root{font-family:"PingFang SC","Microsoft YaHei",sans-serif;color:#183047;background:#f5f7f8;line-height:1.75}*{box-sizing:border-box}body{margin:0}header{background:#102b3f;color:white;padding:32px 5vw}header h1{font-size:32px;margin:0 0 8px}header p{margin:0;color:#c9d9e4}nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #d3e0e5;padding:12px 5vw;z-index:1;display:flex;gap:24px;align-items:center;flex-wrap:wrap}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}input{font:inherit;padding:6px 10px;border:1px solid #90a6b2;border-radius:4px;max-width:100%}main{max-width:1100px;margin:32px auto;padding:0 28px}article{padding:28px 38px;background:#fff;border:1px solid #dae2e6;margin:24px 0;scroll-margin-top:90px}h1{font-size:29px}h2{font-size:23px;border-bottom:1px solid #dce6eb;padding-bottom:8px;margin-top:30px}h3{font-size:19px;margin-top:24px}p,li{font-size:17px}table{border-collapse:collapse;width:100%;font-size:15px;display:block;overflow:auto}td,th{padding:9px 12px;border:1px solid #cddde3;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;background:#f4f8f8;margin:18px 0;padding:6px 20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f4f7;padding:18px;font-size:14px}code{font-family:ui-monospace,monospace}img{max-width:100%;height:auto}.source{font-size:13px;color:#52687a}.toc{columns:2;column-gap:32px}.toc li{break-inside:avoid;font-size:15px}.hidden{display:none}@media(max-width:700px){article{padding:20px}.toc{columns:1}main{padding:0 12px}}@media print{nav,.toc-box,.source{display:none}body{background:white}header{background:white;color:#183047;padding:0}header p{color:#52687a}main{max-width:none;padding:0;margin:0}article{border:0;padding:0;break-before:page}article:first-child{break-before:auto}h1,h2,h3{break-after:avoid}table{display:table;font-size:11px}td,th{padding:5px}p,li{font-size:11pt}img{max-height:600px}pre{font-size:9pt}}</style><header><h1>参考解析与自检</h1><p>软件工程 Harness 与 AI Coding · 自学版 v1.1 · 2026-10-04 · 按路径阅读，动手后对照参考解析</p></header><nav><a href="materials.html">全量材料目录</a><a href="START_HERE.html">返回自学首页</a><a href="#contents">目录</a><a href="参考解析.html">参考解析与自检</a><label>查找内容 <input id="search" type="search" placeholder="输入关键词"></label><span id="count"></span></nav><main><section class="toc-box" id="contents"><h2>阅读目录</h2><ul class="toc"><li><a href="#doc-training-facilitator-guide-md">自学实践指南</a></li><li><a href="#doc-training-exercises-md">独立练习册</a></li><li><a href="#doc-training-answer-key-md">自检参考解析</a></li></ul></section><article id="doc-training-facilitator-guide-md" data-search="自学实践指南"><p class="source">源文件：<a href="training/facilitator-guide.html">training/facilitator-guide.md</a></p><h1>自学实践指南</h1>
+<p>版本 v1.1 · 2026-10-04。按下面步骤完成一次“读需求—运行—发现错误—验证—恢复—记录”的实践。遇到不熟悉的概念可以回到<a href="学习手册.html#doc-training-README-md">三类路径</a>，每完成一项就保存结果，下一次从记录处继续。</p>
+<h2>1. 选定问题，准备练习记录</h2>
+<p>先读<a href="学习手册.html#doc-training-00-opening-md">三个小失败</a>，写一句自己的目标，例如“我想判断这次测试通过是否足以接受修改”。创建一个个人练习目录，保存日期、材料版本、使用环境、产物、实际结果和未解决问题；格式见<a href="#doc-training-exercises-md">练习册</a>末尾。</p>
+<p>四个常用词可以先这样理解：需求描述要达到的行为；验收检查这个行为是否达到；架构说明各部分职责与关系；版本标识一个可区分、必要时可恢复的状态。</p>
+<p><strong>本步产出：</strong> 一句学习目标和一份空的练习记录。<strong>自检：</strong> 目标应对应一个你可以观察或判断的动作，而不是“全面掌握 AI”。</p>
+<h2>2. 准备本地环境</h2>
+<table>
+<thead>
+<tr>
+<th>需要准备</th>
+<th>操作与预期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>完整项目目录</td>
+<td>能打开本文件、案例 README、应用和测试；目录结构保持完整</td>
+</tr>
+<tr>
+<td>Python 与浏览器</td>
+<td>在根目录执行 <code>python3 --version</code>，按<a href="学习手册.html#doc-demo-README-md">案例 README</a>检查版本与 Windows 命令</td>
+</tr>
+<tr>
+<td>独立练习数据</td>
+<td>只用虚构姓名和主题；首次可用默认数据库，再次练习选择全新 <code>--db</code> 文件名</td>
+</tr>
+<tr>
+<td>修改副本</td>
+<td>做代码变更前保留已验证版本，在独立副本中操作</td>
+</tr>
+<tr>
+<td>AI 工具（使用时）</td>
+<td>采用部门准入工具，确认能读取项目约定；记录未验证的接入能力</td>
+</tr>
+</tbody></table>
+<p>在项目根目录启动：</p>
+<pre><code class="language-sh">python3 demo/app.py --port 8765
+</code></pre>
+<p>保持该终端运行，打开 <code>http://127.0.0.1:8765</code>。另开终端执行检查；按 <code>Ctrl+C</code> 停止自己启动的服务。GitHub Pages 提供材料阅读和下载，预约程序运行在你的电脑上。</p>
+<p><strong>本步产出：</strong> 环境与数据库路径记录。<strong>自检：</strong> 你知道正在使用哪份代码、哪个数据文件，以及怎样停止服务。若暂时不能运行，继续做需求或管理练习，并把运行部分标为未执行。</p>
+<h2>3. 先理解要求，再看实现</h2>
+<p>阅读<a href="学习手册.html#doc-docs-case-requirements-md">案例需求</a>，确认单会议室、09:00—18:00、半小时刻度、单条预约不跨日，以及虚构数据和无审批范围。“同日”指所选日期内，不代表只能预约今天。</p>
+<p>用自己的话说明 A03 相邻与重叠、A05 持久化、A08 并发分别需要什么证据。再读 <a href="学习手册.html#doc-docs-case-architecture-md">4A 架构</a>，沿一条预约找到业务动作、页面与服务、预约与占用数据、本地进程与文件。</p>
+<p>部署约束和 DfX 目标需要与真实客户对齐；这里理解如何规划、交流和交付即可。教学环境没有证明生产容量、组织权限或可靠性目标已经达成。</p>
+<p><strong>本步产出：</strong> 至少三个验收例子，以及它们对应的实现部分。<strong>自检：</strong> 只看页面截图不能证明刷新持久化、并发一致性或客户接受；这些结论各需要对应检查。</p>
+<h2>4. 逐项运行并记录实际结果</h2>
+<p>按<a href="学习手册.html#doc-demo-WALKTHROUGH-md">端到端步骤</a>建立、刷新、相邻预约、拒绝重叠、取消与重订。选择没有记录的日期，同一轮保持日期一致。每项先写预期，再操作并记录实际结果。</p>
+<p>刷新后若页面回到当天，重新选择刚才的日期再判断数据是否保留。停止并重启服务时使用同一数据文件；否则无法用结果判断原数据是否持久化。</p>
+<p><strong>本步产出：</strong> L2 验收记录。<strong>自检：</strong> 失败请求没有破坏已有记录，取消释放了时段；你也能指出当前还没有检查什么。如果某一步失败，保留错误和复现信息，先排查这一处再扩大修改。</p>
+<h2>5. 亲自发现预设错误</h2>
+<p>先列出已有 10:00—11:00 时的相邻、部分重叠和包含例子，再运行：</p>
+<pre><code class="language-sh">python3 demo/labs/failure_lab.py
+python3 -m unittest discover -s demo/tests -v
+</code></pre>
+<p>故障脚本中的错误由案例预置，不是某次模型会话的真实记录。整体成功表示预设缺陷被发现、正确行为被验证；它不表示错误版本通过业务验收。对照输出，回答：错误修复为什么能让弱测试变绿，独立验收又依据什么发现它？</p>
+<p>自动测试补充持久化、并发、输入和 HTTP 行为证据。输出中的运行耗时不是容量评估，退出码也不能代替需求覆盖分析。测试数和结果按自己实际运行填写。</p>
+<p><strong>本步产出：</strong> L3 的例子、输出摘要和结论边界。<strong>自检：</strong> 你能说明一条测试预期的业务依据，并分清故障演练成功与错误实现正确。</p>
+<h2>6. 完成与你路径匹配的新练习</h2>
+<table>
+<thead>
+<tr>
+<th>路径</th>
+<th>操作</th>
+<th>自检重点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主管</td>
+<td>完成 L5；独立比较新增审批的范围与日期方案，再对照解析</td>
+<td>原承诺与预测分开；任务依赖、缓冲、确认人和待决项清楚</td>
+</tr>
+<tr>
+<td>工程师</td>
+<td>完成 L4；先写独立用例，再使用任务卡委派，在副本中审查和验证</td>
+<td>服务端规则、测试适配依据、回归、已有数据处理与恢复</td>
+</tr>
+<tr>
+<td>新手</td>
+<td>完成 L1/L2，再做 L4 的需求与验收部分</td>
+<td>输入与规则明确；能亲手检查；不把尚未实现的部分写成完成</td>
+</tr>
+</tbody></table>
+<p>可复制<a href="学习手册.html#doc-training-ai-task-cards-md">七张任务卡</a>，按当前任务调整。先保留自己的判断，再对照<a href="#doc-training-answer-key-md">参考解析</a>。获得帮助时记录对方解决了什么，以及你自己能独立完成哪些步骤。</p>
+<h2>7. 验证恢复与可接管性</h2>
+<p>运行：</p>
+<pre><code class="language-sh">python3 demo/backup.py exercise
+</code></pre>
+<p>预期看到快照恢复到新文件，原文件保留，覆盖已有目标被拒绝。这个命令使用临时目录；对自己的练习库备份和恢复时，按<a href="学习手册.html#doc-demo-README-md">案例 README</a>确认路径和兼容版本。代码回退与数据恢复分别记录。</p>
+<p>完成 L6：暂时不看聊天记录，只根据文件找到需求、架构、启动、检查、限制和恢复入口，并执行一个检查。没有模型服务也应能够运行当前应用；这不代表所有设计和修改能力都可以省略。</p>
+<p><strong>本步产出：</strong> 恢复结果和接管清单。<strong>自检：</strong> 别人拿到你的记录，能够知道版本、完成状态、证据、遗留问题和下一步。</p>
+<h2>卡住时，按观察到的现象求助</h2>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先做什么</th>
+<th>还需要帮助时带上什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Python 或启动命令不可用</td>
+<td>查案例 README 的平台说明和当前目录</td>
+<td>系统、实际命令、错误原文；不要自行更改组织安全策略</td>
+</tr>
+<tr>
+<td>端口被占用</td>
+<td>改用支持的另一端口，并同步浏览器地址</td>
+<td>端口与启动输出；不要停止未知进程</td>
+</tr>
+<tr>
+<td>AI 工具不可用</td>
+<td>继续用现有实现做验收、用任务卡设计委派</td>
+<td>任务目标及工具错误，不把接入记为已验证</td>
+</tr>
+<tr>
+<td>修改后出现失败</td>
+<td>停止扩大修改，保存最小复现和差异</td>
+<td>需求例子、预期/实际、命令与输出、已尝试步骤</td>
+</tr>
+<tr>
+<td>客户规则有歧义</td>
+<td>补充具体例子，登记待确认事项</td>
+<td>需要哪位业务或项目授权人确认什么</td>
+</tr>
+<tr>
+<td>暂时无法判断设计或代码</td>
+<td>先完成可以判断的需求和验收部分</td>
+<td>影响边界、自己的分析、希望技术负责人复核的问题</td>
+</tr>
+</tbody></table>
+<p>常见答案查 <a href="学习手册.html#doc-faq-README-md">FAQ</a>，复杂问题按<a href="学习手册.html#doc-docs-guides-mentoring-md">答疑与指导流程</a>处理。不需要为了完成练习猜测客户批准或替代技术把关。</p>
+<h2>怎样判断这一轮学习有收获</h2>
+<p>拿最初的一句目标做检查：你能否独立完成对应动作，并用证据解释结果？用参考解析中的维度复核，给尚不稳的部分安排下一次小练习。练习通过不自动授予真实业务或生产操作权限。</p>
+<p>迁移到真实低风险任务时，指定业务验收人和技术责任人，按真实范围重新确认。材料困惑和改进建议可记录到<a href="docs/IMPROVEMENTS.html">改进日志</a>；个人练习完成、团队能力效果和客户接受分别保留证据。</p>
+</article>
+<article id="doc-training-exercises-md" data-search="独立练习册"><p class="source">源文件：<a href="training/exercises.html">training/exercises.md</a></p><h1>独立练习册</h1>
+<p>版本 v1.1 · 2026-10-04。全部案例、名字、日期与管理情境均为虚构学习材料。按<a href="学习手册.html#doc-training-README-md">自学路径</a>选择适用练习，先保存自己的判断和实际结果，再打开<a href="#doc-training-answer-key-md">自检参考解析</a>核对。</p>
+<p>命令在项目根目录运行，采用独立练习数据库。每份记录标明日期、角色、工具、是否获得协助及实际检查结果；未运行的检查保持“未执行”。完成标准用于安排下一步学习，真实客户验收和项目授权仍由对应责任人确认。</p>
+<h2>L1｜把想法变成可以验收的需求</h2>
+<p>适用：全体，尤其新手与主管。</p>
+<p>收到一句需求：“做个好用的会议室预约系统，下周给大家试用。”</p>
+<p>任务：写出使用者与目标、三个需要澄清的问题、本期范围、两个正常例子、两个异常例子、验收人及一项依赖。不要自行假定登录、审批、通知、跨时区都在本期。</p>
+<p>保存产物：一页场景卡及验收表；每个例子包含前置条件、操作、预期结果。把未得到回答的问题标为待确认。</p>
+<p>自检：例子可亲手检查；范围与假设分开；知道谁判断完成。完成后与<a href="学习手册.html#doc-docs-case-requirements-md">案例需求</a>比较，说明哪些假设需要重新确认。卡住时使用<a href="学习手册.html#doc-templates-scenario-baseline-md">场景模板</a>，先补一个具体输入输出例子。</p>
+<h2>L2｜亲手验证“已经做好了”</h2>
+<p>适用：全体。先按<a href="学习手册.html#doc-demo-README-md">案例 README</a>启动。</p>
+<p>选一个空的教学日期，完成以下检查并逐条记录实际结果：</p>
+<ol>
+<li>建立 10:00—11:00 的预约；刷新、重新查看后仍存在。</li>
+<li>建立 11:00—12:00 的相邻预约，应该允许。</li>
+<li>尝试建立 10:30—11:30 的重叠预约，应该拒绝。</li>
+<li>取消第一条记录，再预约该时段，应该允许。</li>
+<li>检查一次非法输入，例如结束早于开始，记录错误提示是否可理解。</li>
+</ol>
+<p>保存产物：验收表、实际输入/结果、一个尚未验证的范围。具备代码经验时附自动检查命令与输出；初次实践以实际操作证据为主。</p>
+<p>自检：没有把预期直接写成实测；拒绝场景没有破坏已有记录；能解释为什么刷新验证有价值。只验证一个浏览器的操作，不能据此推断并发或生产可靠性已经验证。操作卡住时按<a href="学习手册.html#doc-demo-WALKTHROUGH-md">端到端步骤</a>定位，注意刷新后要选择同一日期。</p>
+<h2>L3｜绿色测试为什么仍会漏掉错误</h2>
+<p>适用：资深开发者；其他读者也可运行脚本并对照输出理解规则。</p>
+<p>先独立列出已存在 10:00—11:00 时的边界例子，再运行：</p>
+<pre><code class="language-sh">python3 demo/labs/failure_lab.py
+</code></pre>
+<p>任务：指出旧逻辑错在哪里、错误修复放过了什么、弱检查为何没有发现、独立验收增加了什么。检查你自己的例子是否含相邻、相交、完全包含、完全位于内部和不同日期。</p>
+<p>再运行：</p>
+<pre><code class="language-sh">python3 -m unittest discover -s demo/tests -v
+</code></pre>
+<p>保存产物：两条关键业务规则、至少五个例子、故障和正常检查的输出摘要、一个还不能由当前测试推出的结论。</p>
+<p>自检：能根据业务约定判断测试预期；明确预设故障不代表真实模型行为；能说明脚本成功发现故障与错误实现通过验收的区别。卡住时对照脚本中的 <code>old_conflict</code>、<code>wrong_fix</code> 和 <code>ACCEPTANCE</code>，再读<a href="#doc-training-answer-key-md">参考解析</a>的边界表。</p>
+<h2>L4｜一次新的需求变更：午休不能预约</h2>
+<p>适用：工程师完成整项；新手可先独立完成需求与验收设计，进阶实现时按需要寻求技术复核。</p>
+<p>教学变更：客户希望每天 12:00—13:00 保留为午休，所有与这个区间重叠的预约应拒绝。原先合法的 11:30—12:00、13:00—13:30 仍应允许。此需求属于练习，不是当前示例应用的既有行为。</p>
+<p>任务步骤：</p>
+<ol>
+<li>写明新增规则和不变规则，列出已有跨午休预约怎样处理的问题。本轮个人练习先采用明确假设：只在隔离空库验证新建预约规则，不删除、迁移或重写已有记录；已有预约如何适用新规则仍待确认。迁移到真实项目时，须由相应业务负责人作决定。</li>
+<li>列出边界用例，分析业务、应用、数据和验证影响。</li>
+<li>在独立练习副本内给 AI 一张任务卡，要求先读需求、代码与测试，再提出小范围修改。</li>
+<li>系统检查既有测试的输入、生成数据和预期，找出本练习的新规则影响了哪些旧假设。允许有业务依据地适配测试数据或预期，保留原测试目的与仍适用的检查；记录调整依据，不能只为变绿删除检查。</li>
+<li>审查修改及测试预期，运行适配后的既有测试和新增用例；检查界面提示与服务端规则是否一致。</li>
+<li>保存变更说明、差异、验证结果和恢复方式，列出未解决事项。</li>
+</ol>
+<p><strong>测试适配提示：</strong> 当前 <code>demo/tests/test_app.py</code> 的 <code>test_R08_simultaneous_adjacent_requests_all_succeed</code> 动态生成 10:00—11:00、11:00—12:00、12:00—13:00 三条相邻预约。新午休规则会合法地改变最后一条的结果。可在自己的练习副本中把相邻并发输入移到 14:00—15:00、15:00—16:00、16:00—17:00，继续验证“合法相邻并发全部成功”；同时新增午休重叠被拒绝的用例。记录中说明这项调整来自练习需求的变化，原有并发要求仍需成立。</p>
+<p>检查不能只搜索文字 <code>12:00</code>：还需查看时间计算、循环生成、共用数据构造和区间是否跨过午休。11:00—12:00 与 13:00—14:00 仍应合法；结束恰好 12:00 不占用午休，不能一并改成拒绝。只修改独立练习副本，当前已实现教学基线继续保留无午休限制的行为。</p>
+<p>保存产物：任务卡、影响分析、修改文件或补丁、实际测试结果、验收与限制。若获得协助，注明谁负责实现或技术检查；若只完成需求部分，明确标出。</p>
+<p>自检：服务端执行规则，边界正确，未被需求变更影响的旧功能保留；受影响测试的调整有业务依据且原测试目的受到保护；没有靠删除失败测试或只禁用页面选项达到表面通过；已有数据处理有明确假设或决定。卡住时保存最小失败例子，使用<a href="学习手册.html#doc-training-ai-task-cards-md">任务卡 4/5</a>整理审查或求助信息。</p>
+<h2>L5｜客户加审批，如何讨论日期</h2>
+<p>适用：主管、项目负责人、工程师。</p>
+<p>阅读<a href="学习手册.html#doc-docs-case-change-example-md">填好的变更情境</a>，先保留自己的判断，再比较其中的建议。分别从客户、项目负责人、审查者的关注点检查同一份影响分析：价值是否清楚、排程是否可解释、证据是否足以支持承诺。</p>
+<p>保存产物：原范围与新要求、受影响任务及依赖、预测区间和假设、至少两种方案、所需确认人、最晚决策时间，以及一段不超过 200 字的沟通草稿。</p>
+<p>自检：新增人日与日历延误分开；没有承诺“加人必然不延期”；已批准日期与预测日期分开；能解释等待决定的影响。草稿保存在练习目录，真实沟通由有权限的人确认后进行。卡住时使用<a href="学习手册.html#doc-templates-change-control-md">变更模板</a>补齐依赖和待决事项。</p>
+<h2>L6｜AI 工具不可用时，团队还能交接吗</h2>
+<p>适用：主管与工程师，新手可检查操作材料是否看得懂。</p>
+<p>教学情境：下一位维护者没有当前聊天记录，AI 工具暂时不可用，但已经拿到项目文件。</p>
+<p>任务：仅依据文件找到需求、架构、启动/检查方法、当前状态、已知限制与恢复说明。尝试一个验收操作或故障检查，列出缺失的信息。</p>
+<p>保存产物：接管检查记录、一个可独立执行的命令或操作、一个需原负责人补充的问题、改进的文档位置。</p>
+<p>自检：暂时不看聊天记录，仅凭文件能验证至少一个关键行为；不足如实记录。此练习检验资产可接管性，不证明所有模型和工具均可互换。找不到入口时回到<a href="docs/guides/README.html">材料索引</a>，把缺少的信息记为改进项。</p>
+<h2>统一练习记录</h2>
+<pre><code class="language-text">练习编号与记录日期：
+角色 / 独立或协助完成：
+采用的需求版本与演练假设：
+使用的工具及版本（能取得的部分）：
+产物文件或链接：
+实际执行的检查与结果：
+未验证范围 / 遗留问题：
+下一步与需要的帮助：
+</code></pre>
+<p>保存到自行选择的练习目录，使用虚构数据。完成后对照<a href="#doc-training-answer-key-md">参考解析</a>写下“已独立完成、借助帮助完成、尚未验证”，为差距选择一个新例子再试。需要正式能力认定或真实项目授权时，由部门相应负责人按能力标准判断。</p>
+</article>
+<article id="doc-training-answer-key-md" data-search="自检参考解析"><p class="source">源文件：<a href="training/answer-key.html">training/answer-key.md</a></p><h1>自检参考解析</h1>
+<p>版本 v1.1 · 2026-10-04。先完成<a href="#doc-training-exercises-md">对应练习</a>并保存自己的结果，再用本页检查依据、边界和遗漏。以下是可接受解法示例，允许有依据的不同方案。发现差异时先解释原因，再用具体例子验证；未亲自执行的检查不能记为通过。</p>
+<h2>L1：需求与验收</h2>
+<p>先检查是否澄清：谁使用/谁验收、可预约时间与冲突定义、记录保存要求。可限定本期查看/建立/取消，待确认登录、审批、通知和跨日。</p>
+<p>正常例子：空时段 10:00—11:00 成功；已有 10:00—11:00 时 11:00—12:00 成功。异常例子：10:30—11:30 重叠被拒；结束早于开始被拒。持久化例子：成功建立后重新查看同日期仍存在。</p>
+<p>“界面美观、功能正常、性能很好”本身不足以指导验收；需进一步说明场景、观察方法与目标。客户未给答复时记录假设与待确认事项，不替客户签字。</p>
+<h2>L2：实际行为</h2>
+<p>按练习记录核对输入与观察结果；需要保存记录而没有刷新/重新读取检查的，不能认定持久化已验收。冲突被拒后还需确认旧记录没有变化。取消后再次预约成功，才能证明占用释放。</p>
+<p>参考需求对应：查看 A01；建立 A02；相邻/重叠 A03；取消 A04；持久化 A05；输入边界 A06。浏览器人工检查没有覆盖全部 A07 本地边界与 A08 并发一致性，不应填“全部通过”。</p>
+<h2>L3：边界与独立验收</h2>
+<p>已有 [10:00,11:00) 时，下表应作为业务判断依据。右端点不包含在占用区间内，因此相邻允许。</p>
+<table>
+<thead>
+<tr>
+<th>新预约</th>
+<th>结果</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>09:00—10:00</td>
+<td>允许</td>
+<td>左侧相邻</td>
+</tr>
+<tr>
+<td>11:00—12:00</td>
+<td>允许</td>
+<td>右侧相邻</td>
+</tr>
+<tr>
+<td>10:30—11:30</td>
+<td>拒绝</td>
+<td>部分相交</td>
+</tr>
+<tr>
+<td>09:30—11:30</td>
+<td>拒绝</td>
+<td>完全包含原预约</td>
+</tr>
+<tr>
+<td>10:00—10:30</td>
+<td>拒绝</td>
+<td>位于原预约内</td>
+</tr>
+<tr>
+<td>不同日期 10:00—11:00</td>
+<td>允许</td>
+<td>日期是冲突条件之一</td>
+</tr>
+</tbody></table>
+<p>如果同一 AI 既改实现又调整预期，检查结果可能自洽却不符合原需求。审查应说明业务依据、对比测试预期变化，并用需求导出的独立用例核对。不同模型复核可补充观察，但不替代行为检查。</p>
+<h2>L4：午休变更</h2>
+<p>核心条件：预约开始早于 13:00，且预约结束晚于 12:00，则与午休区间重叠，应拒绝。时间必须先按既有规则校验，转换成可比较的分钟或同等规范表示。</p>
+<p>参考纯函数（只说明规则，不是主应用已实现功能）：</p>
+<pre><code class="language-python">def overlaps_lunch(start_minutes, end_minutes):
+    return start_minutes &lt; 13 * 60 and end_minutes &gt; 12 * 60
+</code></pre>
+<p>至少覆盖：11:30—12:00 允许、12:00—12:30 拒绝、12:30—13:00 拒绝、13:00—13:30 允许、11:30—13:30 拒绝。保留既有相邻、重叠、取消、持久化、输入与并发的检查目的；获准的新需求改变了旧输入的合法性时，应适配测试数据或预期，并记录业务依据。</p>
+<h3>当前基线测试的具体影响</h3>
+<p>以下为对当前 <code>demo/tests/test_app.py</code> 及教学脚本的静态复核，不是午休功能已实现或已通过测试的证明。修改只发生在你的独立练习副本。</p>
+<table>
+<thead>
+<tr>
+<th>现有用例/脚本</th>
+<th>当前输入与影响</th>
+<th>练习中的处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>test_R08_simultaneous_adjacent_requests_all_succeed</code></td>
+<td>循环生成 10—11、11—12、12—13，原预期三条全部成功；12—13 与新午休规则冲突</td>
+<td>把三个合法相邻输入移到14—15、15—16、16—17，保留并发全部成功的目的与记录数检查；另加午休重叠拒绝用例</td>
+</tr>
+<tr>
+<td><code>test_R01_empty_and_date_filtered_order</code></td>
+<td>有13—14，恰好从午休结束开始，仍合法</td>
+<td>保留日期筛选、排序和成功预期</td>
+</tr>
+<tr>
+<td><code>test_R03_adjacent_on_both_sides_allowed</code>、<code>test_R03_http_conflict_is_409_adjacent_is_201</code></td>
+<td>有11—12，恰好在午休开始结束，仍合法</td>
+<td>保留相邻成功以及 HTTP 201 预期</td>
+</tr>
+<tr>
+<td><code>test_R03_overlap_variations_rejected_and_no_partial_rows</code></td>
+<td>包含09—12；它不与午休重叠，但与已有10—11冲突</td>
+<td>仍应按预约冲突拒绝，并检查没有部分写入；不要改成午休校验失败</td>
+</tr>
+<tr>
+<td><code>test_R06_invalid_inputs_rejected_without_writes</code></td>
+<td>有默认10点开始、18:30结束的非法输入，区间也经过午休</td>
+<td>仍需首先满足原输入范围校验的要求；不能用午休拒绝来掩盖营业时间校验被删除</td>
+</tr>
+<tr>
+<td><code>demo/labs/failure_lab.py</code>、<code>demo/backup.py</code> 的预约操作</td>
+<td>正常操作为10—11、11—12；故障/冲突例子在午休前</td>
+<td>当前输入不需因午休变更而调整；保留原演练目的</td>
+</tr>
+</tbody></table>
+<p>本次静态检查中，唯一明确“原先有效、预期成功、现在被午休禁止”的既有自动用例是相邻并发测试中的第三条。未来测试变化后需重新检查，不能把本表当成永久清单。检查应覆盖共用数据构造、动态生成和跨区间输入，不能只搜索一个时间字符串。</p>
+<p>保留旧的测试目的，并加入新的业务判定。删除并发测试、把全部失败笼统改成预期失败，都会丢掉原有行为的检查依据；直接修改主基线还会使它与其他材料不一致。不同错误原因需要区分时，可增加有明确目的的检查，避免所有拒绝都只看同一异常类型而遗漏规则回归。</p>
+<p>应用侧应在服务端执行业务规则，并给页面可理解的错误；界面可减少误操作，但不能作为唯一限制。数据模型可能不需要新增字段，不过已有合法记录会受到规则变化影响，必须确认是否保留、迁移或人工协调；不能静默删除。</p>
+<p>验收允许多种结构设计，依据项目实际代码审查。你的记录应说明修改边界、检查结果、原数据处理假设和如何恢复练习副本。没有修改代码时，只将需求与验收设计标为完成，实现部分保持未完成；本轮在空库验证的假设不等于真实客户已经决定如何处理已有记录。</p>
+<h2>L5：日期沟通</h2>
+<p>沿变更示例中的依赖重排工作，检查自己的分析是否说明哪些可并行、哪些会延长交付链、还有多少可用缓冲。数字需明确为教学估算，外部等待和未解决规则需纳入前提。</p>
+<p>可接受选项包括原范围先试用、审批后交付；或确认完整范围的新日期；如果替换低优先级功能，应明确替换对象并重新排程。审批人需具备调整相应范围/日期/预算的权限，不能由 AI 自动批准。</p>
+<p>沟通示例：</p>
+<blockquote>
+<p>新增审批会影响角色、状态流转和验收。我们已列出受影响任务，当前预测及前提见影响表。建议原范围按原计划试用，审批另设里程碑；如果审批是首次使用的必要条件，请确认调整整体范围和日期。请在约定决策时间前选择方案，关键依赖确认后更新承诺。原日期、当前预测和待决事项会分别展示。</p>
+</blockquote>
+<p>不要把“客户提了新要求”当作所有既有延误的理由，缺陷、估算偏差、外部等待仍需分别说明。</p>
+<h2>L6：可接管性</h2>
+<p>检查记录是否能定位 requirements、architecture、demo README、当前状态和验证证据。运行项目不需要模型服务，但重新设计或修改时仍需要工具与能力支持。发现路径错误、缺少运行前提、未记录规则或恢复方法，均是有效改进项。</p>
+<h2>用五个维度复核自己的结果</h2>
+<p>逐项指出支撑判断的产物或实际观察。缺少证据时保留待验证，不能仅凭“看懂了解析”认定已经会做。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>自检问题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求与范围</td>
+<td>场景是否明确，假设与确认是否分开，验收是否可操作？</td>
+</tr>
+<tr>
+<td>设计与边界</td>
+<td>影响与职责是否清楚，我知道哪些部分没有覆盖吗？</td>
+</tr>
+<tr>
+<td>行为或决策正确性</td>
+<td>实测行为是否符合规则，管理方案是否依据任务依赖？</td>
+</tr>
+<tr>
+<td>验证证据</td>
+<td>是否实际检查、有反例、可复核，并说明限制？</td>
+</tr>
+<tr>
+<td>交接与表达</td>
+<td>别人能否根据记录理解结果、遗留问题与下一步？</td>
+</tr>
+</tbody></table>
+<p>给每项练习标注一种状态：<strong>已独立完成</strong>（自己完成且有对应证据）、<strong>借助帮助完成</strong>（记录帮助范围，准备再独立尝试）、<strong>尚未验证</strong>（有想法或产物，但还缺实际检查）。若发现把未运行写成通过，先纠正记录，再补实际检查。</p>
+<p>主管重点复核决策与承诺逻辑，工程师复核修改和验证，新手复核需求、操作与求助。选择一个未照抄解析的新例子再做，能独立解释结果后再扩大任务范围。遇到无法判断的代码或客户规则，按<a href="学习手册.html#doc-docs-guides-mentoring-md">求助流程</a>带上证据请相应人员复核。自检结果不能替代正式能力认定、生产权限或真实客户验收。</p>
+</article></main><script>const input=document.getElementById('search');const articles=[...document.querySelectorAll('article')];input.addEventListener('input',()=>{let n=0;for(const a of articles){let show=a.textContent.toLowerCase().includes(input.value.trim().toLowerCase());a.classList.toggle('hidden',!show);if(show)n++;}document.getElementById('count').textContent=input.value?n+' 篇匹配':'';});document.addEventListener('click',e=>{if(e.target.closest('a[href^="#doc-"]')){input.value='';for(const article of articles)article.classList.remove('hidden');document.getElementById('count').textContent='';}});</script></html>

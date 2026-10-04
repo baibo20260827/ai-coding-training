@@ -154,8 +154,8 @@
         62
       ],
       "geometry": "rect",
-      "text": "具体记录能让导师和 AI 更快定位",
-      "textPreview": "具体记录能让导师和 AI 更快定位",
+      "text": "具体记录能让他人和 AI 更快定位",
+      "textPreview": "具体记录能让他人和 AI 更快定位",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -178,14 +178,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "具体记录能让导师和 AI 更快定位"
+            "text": "具体记录能让他人和 AI 更快定位"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "具体记录能让导师和 AI 更快定位",
+          "text": "具体记录能让他人和 AI 更快定位",
           "resolvedTextStyle": {
             "fontSize": 26,
             "typeface": "Arial Unicode MS",
@@ -195,7 +195,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "具体记录能让导师和 AI 更快定位",
+              "text": "具体记录能让他人和 AI 更快定位",
               "fontSize": 26,
               "typeface": "Arial Unicode MS",
               "color": "#5D6B70"

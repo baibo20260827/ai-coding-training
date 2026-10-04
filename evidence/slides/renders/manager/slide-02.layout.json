@@ -928,8 +928,8 @@
         30
       ],
       "geometry": "rect",
-      "text": "虚构教学情境",
-      "textPreview": "虚构教学情境",
+      "text": "虚构学习情境",
+      "textPreview": "虚构学习情境",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -952,14 +952,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "虚构教学情境"
+            "text": "虚构学习情境"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "虚构教学情境",
+          "text": "虚构学习情境",
           "resolvedTextStyle": {
             "fontSize": 23,
             "typeface": "Arial Unicode MS",
@@ -969,7 +969,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "虚构教学情境",
+              "text": "虚构学习情境",
               "fontSize": 23,
               "typeface": "Arial Unicode MS",
               "color": "#5D6B70"
