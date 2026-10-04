@@ -1,6 +1,6 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全量学习站本地发布检查 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="VALIDATION.md" download>下载 Markdown 源文件</a></nav><main><h1>全量学习站本地发布检查</h1>
-<p>日期：2026-10-04。用户要求：将网页及全量学习材料发布到自己的 GitHub。当前阶段：发布文件准备完成，未进行外部发布。</p>
-<h2>已完成</h2>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全量学习站发布与验证记录 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="VALIDATION.md" download>下载 Markdown 源文件</a></nav><main><h1>全量学习站发布与验证记录</h1>
+<p>日期：2026-10-04。范围：全量学习材料的 GitHub Pages 发布与公网文件检查。账号 <code>baibo20260827</code>，仓库 <code>ai-coding-training</code>，用户已授权公开全部材料。已完成首次部署；原有本地构建检查与本次公网检查分别记录。</p>
+<h2>本地构建检查</h2>
 <ul>
 <li>使用 <a href="../../scripts/build_github_pages.mjs">构建器</a> 生成静态首页、全量材料目录、学员/讲师手册和全部 Markdown 的 HTML 阅读页。</li>
 <li>保留三套可编辑 PPT、逐页讲稿、练习/答案、FAQ、模板、4A 图源/图片、案例源码和验证记录；首页提供完整离线培训包下载。</li>
@@ -9,7 +9,73 @@
 <li>运行交付检查：本地链接目标、SVG XML、三套 PPTX 页数和全部备注检查通过。网站构建结果在 <code>dist/github-pages/evidence/delivery-check.json</code>。</li>
 <li>本轮完整培训包重新生成并通过清单哈希及解压检查；发布 ZIP 为 <code>dist/github-pages-full.zip</code>，首页位于 ZIP 根目录。</li>
 </ul>
-<h2>发布前仍需完成</h2>
-<p>用户已确认 GitHub 账号 <code>baibo20260827</code>、目标仓库 <code>ai-coding-training</code> 及全量公开范围。已读取账号公开仓库列表，尚无对应培训仓库。本机未找到可用 GitHub Git 凭据；正在准备登录。当前未执行仓库创建、推送、开启 Pages 或线上访问检查。</p>
-<p>HTML 发布适配采用静态链接/结构检查，没有将这些结果声称为浏览器视觉检查、GitHub 部署成功或真实学习效果。上线后还需检查实际站点首页、深层页面、PPT 和完整包下载。具体步骤见 <a href="../../docs/PUBLISH_GITHUB.html">发布说明</a>。</p>
+<h2>实际发布</h2>
+<ul>
+<li>公开仓库：<a href="https://github.com/baibo20260827/ai-coding-training">baibo20260827/ai-coding-training</a>。</li>
+<li>公开站点：<a href="https://baibo20260827.github.io/ai-coding-training/">AI Coding 全量学习站</a>。</li>
+<li>发布来源：<code>main</code> 分支、仓库根目录；Pages API 模式 <code>legacy</code>，强制 HTTPS 已启用（<code>https_enforced=true</code>）。</li>
+<li>首次已核实部署提交：<code>4127fae44ac515a91f5f463729e13a636adcab0f</code>。</li>
+<li>GitHub 构建状态：<code>built</code>；更新时间：2026-10-04T04:12:06Z（上海 2026-10-04 12:12:06）。</li>
+</ul>
+<h2>公网文件检查</h2>
+<p>实测时间：2026-10-04T04:12:54.821492+00:00（上海 12:12:54）。<a href="online-check.json">机器记录</a>保存每个地址、HTTP 状态、内容类型、字节数、完整文件 SHA-256 和与已发布工作目录的比对结果。</p>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>本次检查范围</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首页与材料目录</td>
+<td><code>index.html</code>、<code>materials.html</code>，2 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>两份总手册</td>
+<td>学习手册、讲师手册，2 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>三类指南</td>
+<td>主管、工程师、新手指南，3 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>架构与变更</td>
+<td>4A 说明、审批变更案例，2 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>变更模板与 FAQ</td>
+<td>变更控制模板、FAQ，2 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>案例材料</td>
+<td>本地运行说明、独立源码预览，2 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>课件</td>
+<td>主管、工程师、新手 PPTX，3 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>完整培训包</td>
+<td><code>downloads/harness-ai-coding-training-v1.0.zip</code>，1 项</td>
+<td>HTTP 200，5,685,933 字节，完整文件 SHA-256 一致</td>
+</tr>
+<tr>
+<td>四类架构图</td>
+<td>BA、AA、DA、TA SVG，4 项</td>
+<td>HTTP 200，完整文件 SHA-256 一致</td>
+</tr>
+</tbody></table>
+<p>共 21 项，全部通过；内容类型也已检查。首次发布培训 ZIP 的 SHA-256 为 <code>c0dfe0c272f5c7123fa8749456b7966388b08dffa0d199a4bba46cd8b79649bf</code>。这是上述首次部署的证据，材料重建后文件字节与哈希可能变化，应对后续部署重新核对，不能直接复用本次通过结论。</p>
+<h2>故障处理历史与验证边界</h2>
+<p>上线前的 GitHub CLI 设备授权曾两次遭遇令牌端点网络超时，浏览器也曾显示过期或 <code>not_found</code>；这些是先前授权尝试的实际问题，不能归因于用户输错。后续授权、仓库创建、推送与 Pages 部署已完成；成功结果不抹去此前网络故障记录。</p>
+<p>本次网站检查包括本地静态链接/结构检查与公网 HTTPS 文件获取和完整哈希比对，<strong>没有执行网站浏览器视觉或交互验证</strong>。三套 PPT 的既有文件渲染检查和本地预约应用的浏览器测试仍见各自证据，不等同于本次学习网站的浏览器验证。真实试讲、人员能力提升、客户接受和业务收益仍待取得。</p>
+<p>Python/SQLite 预约案例需在本机运行，Pages 不执行该后端。具体维护步骤见 <a href="../../docs/PUBLISH_GITHUB.html">发布说明</a>。</p>
 </main></body></html>

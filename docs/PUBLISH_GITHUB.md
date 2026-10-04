@@ -2,7 +2,7 @@
 
 版本：1.0；日期：2026-10-04。适用：在 Mac 上维护本项目，并将完整学习材料发布为 GitHub Pages 网站。
 
-**当前状态：用户已确认账号 baibo20260827，允许公开全量材料，并同意使用 ai-coding-training 仓库名。** 目标为 `https://github.com/baibo20260827/ai-coding-training`，当前正在准备认证与发布；只有实际推送和站点检查完成后才记为上线。
+**当前状态：全量学习材料已按用户授权公开发布。** 账号 `baibo20260827`；[发布仓库](https://github.com/baibo20260827/ai-coding-training)；[在线学习站](https://baibo20260827.github.io/ai-coding-training/)。实际部署与检查记录见 [发布证据](../evidence/publishing/VALIDATION.md)。下文首次发布步骤保留供参考，后续维护使用第 5 节的增量更新流程。
 
 ## 1. 本次发布什么
 
@@ -169,6 +169,11 @@ python3 demo/app.py --port 8765
 
 ## 7. 发布完成记录
 
-目标仓库 URL：`https://github.com/baibo20260827/ai-coding-training`。公开决定：用户于 2026-10-04 明确允许公开全部材料。实际站点：尚未发布；预计项目站点路径为 `https://baibo20260827.github.io/ai-coding-training/`，需以真实部署结果确认。发布提交及线上检查：待登录后执行。
+- 仓库：[baibo20260827/ai-coding-training](https://github.com/baibo20260827/ai-coding-training)。
+- 访问范围：用户于 2026-10-04 明确授权公开全部学习材料。
+- 实际站点：[AI Coding 全量学习站](https://baibo20260827.github.io/ai-coding-training/)。
+- 发布来源：`main` 分支、仓库根目录；GitHub Pages API 模式为 `legacy`，`https_enforced=true`。
+- 首次成功部署提交：`4127fae44ac515a91f5f463729e13a636adcab0f`；GitHub 构建状态 `built`，更新时间为 2026-10-04T04:12:06Z（上海 12:12:06）。
+- 公网检查：2026-10-04T04:12:54.821492+00:00，21 项 HTTPS GET、内容类型与完整文件 SHA-256 比对通过；详见[发布记录](../evidence/publishing/VALIDATION.md)及[机器检查结果](../evidence/publishing/online-check.json)。
 
-完成实际操作后再填写这些字段。保留发布提交与材料版本的对应关系，使团队能知道自己使用的是哪一版课程。
+后续更新保留材料版本、发布提交和检查时间的对应关系。本节记录首次已核实部署；补充状态文档后的后续构建与部署应另行检查。网站上线不表示 Python 后端已在 Pages 运行，也不代表已完成网站浏览器视觉/交互验证、真实客户验收或培训成效验证。

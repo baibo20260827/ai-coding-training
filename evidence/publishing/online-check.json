@@ -1,0 +1,220 @@
+{
+  "checked_at": "2026-10-04T04:12:54.821492+00:00",
+  "site": "https://baibo20260827.github.io/ai-coding-training/",
+  "status": "pass",
+  "checked_files": 21,
+  "scope": "Public HTTPS GET, content types, full-file SHA-256 parity; no browser visual or interaction claim.",
+  "results": [
+    {
+      "path": "index.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/index.html",
+      "http_status": 200,
+      "bytes": 4931,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "fa413c4d4093db84aa3c25e045c58161dacfb8aa9d5c1416d056798d132eb302",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "materials.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/materials.html",
+      "http_status": 200,
+      "bytes": 8151,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "dd71f99bb0d626248066f2f482045f523c45411072f6b2c4178bbea34c710540",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "学习手册.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C.html",
+      "http_status": 200,
+      "bytes": 131957,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "fa4d50aadfeab33929bb21f046e94b7dc68590b33249a44fa7b79bd2cbf4c376",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "讲师手册.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/%E8%AE%B2%E5%B8%88%E6%89%8B%E5%86%8C.html",
+      "http_status": 200,
+      "bytes": 150508,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f5dfda49a62531a50cfd4bd5dd9533a75ffd4bbea064cae62ac3394ff5313238",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/guides/manager.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/guides/manager.html",
+      "http_status": 200,
+      "bytes": 8704,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "fdd185d80ca9158d1624e3670453a2218e024be1509625bc11dd6dbaf97013b6",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/guides/engineer.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/guides/engineer.html",
+      "http_status": 200,
+      "bytes": 8025,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "5287a897ff5ab4478a754bd265185936c5b4a7915bbf58618637cbafe52d16db",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/guides/beginner.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/guides/beginner.html",
+      "http_status": 200,
+      "bytes": 9979,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "62ec1c67c2e32ddb820c8844d519c6d67cc670d84f5198c62e7efeea960aba7d",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/case/architecture.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/case/architecture.html",
+      "http_status": 200,
+      "bytes": 7680,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "df97dfbfff7c5c3fbe3753bb37e384e07919aa8a2aebdeb4aef684ae5f03ca1f",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/case/change-example.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/case/change-example.html",
+      "http_status": 200,
+      "bytes": 9860,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1fcedc5615b7c05fedfbf2edd7280068df71b7b9b302f812535282c16e4346a4",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "templates/change-control.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/templates/change-control.html",
+      "http_status": 200,
+      "bytes": 5899,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "92b5d36e8502160808682ca78095fb5bd89dd1ef446a6537d55a153fbd940796",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "faq/README.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/faq/README.html",
+      "http_status": 200,
+      "bytes": 20182,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "40e2dcb66309a08fbd5bd7d458d59708898c872f8dc3197cd3b147f8080f3be3",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "demo/README.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/demo/README.html",
+      "http_status": 200,
+      "bytes": 10850,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "d3815f9227c6a2cacf371e407e18d73ea822e9de0b691b89bead33c961e8e0c2",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "demo/SOURCE.html",
+      "url": "https://baibo20260827.github.io/ai-coding-training/demo/SOURCE.html",
+      "http_status": 200,
+      "bytes": 6584,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "d790d883f8cb46ec1867958e240f1aff5115e329a743cd11ab90f82bbaf736a0",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "training/slides/manager.pptx",
+      "url": "https://baibo20260827.github.io/ai-coding-training/training/slides/manager.pptx",
+      "http_status": 200,
+      "bytes": 67660,
+      "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "779a20dd865416d744b6c96f91955b92e381a7498fefed187502744272eb4d0f",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "training/slides/engineer.pptx",
+      "url": "https://baibo20260827.github.io/ai-coding-training/training/slides/engineer.pptx",
+      "http_status": 200,
+      "bytes": 82714,
+      "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "2598784a86cf7b6dae0155352a6903e5493cd5a52999237701a2b50cd4e9bdeb",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "training/slides/beginner.pptx",
+      "url": "https://baibo20260827.github.io/ai-coding-training/training/slides/beginner.pptx",
+      "http_status": 200,
+      "bytes": 82601,
+      "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sha256": "3b123c03a762cad28c88aa1bd6c77702deee069d779d212ff86318c34c0d28ea",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "downloads/harness-ai-coding-training-v1.0.zip",
+      "url": "https://baibo20260827.github.io/ai-coding-training/downloads/harness-ai-coding-training-v1.0.zip",
+      "http_status": 200,
+      "bytes": 5685933,
+      "content_type": "application/x-zip-compressed",
+      "sha256": "c0dfe0c272f5c7123fa8749456b7966388b08dffa0d199a4bba46cd8b79649bf",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/architecture-views/ba.svg",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/architecture-views/ba.svg",
+      "http_status": 200,
+      "bytes": 3424,
+      "content_type": "image/svg+xml",
+      "sha256": "ee2b0bc831db87be661896ba33118ae5717c6f24d9ad2bcf3127c261afdda834",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/architecture-views/aa.svg",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/architecture-views/aa.svg",
+      "http_status": 200,
+      "bytes": 3416,
+      "content_type": "image/svg+xml",
+      "sha256": "0eab4826b0a4ef8fc0c44472f762ecdadd51f09a8699bd416056e4dba5fef5c9",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/architecture-views/da.svg",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/architecture-views/da.svg",
+      "http_status": 200,
+      "bytes": 2969,
+      "content_type": "image/svg+xml",
+      "sha256": "b399c0e3705f74ad7cf139202e65d838568a33710c97dc214a40f994768a8fdd",
+      "matches_published_checkout": true,
+      "status": "pass"
+    },
+    {
+      "path": "docs/architecture-views/ta.svg",
+      "url": "https://baibo20260827.github.io/ai-coding-training/docs/architecture-views/ta.svg",
+      "http_status": 200,
+      "bytes": 2908,
+      "content_type": "image/svg+xml",
+      "sha256": "a38ca90507be676951065e7537b04c041756b589e748e190a3f53d33c93d8cac",
+      "matches_published_checkout": true,
+      "status": "pass"
+    }
+  ],
+  "verified_commit": "4127fae44ac515a91f5f463729e13a636adcab0f"
+}

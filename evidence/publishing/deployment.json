@@ -1,21 +1,42 @@
 {
-  "updated_at": "2026-10-04T03:46:12.225560+00:00",
+  "updated_at": "2026-10-04T04:14:22.053295+00:00",
   "owner": "baibo20260827",
   "repository": "ai-coding-training",
   "public_authorized": true,
   "repository_url": "https://github.com/baibo20260827/ai-coding-training",
-  "repository_created": false,
-  "pushed": false,
-  "pages_enabled": false,
-  "prepared_commit": "82cd7e64c570fa2e2dabf990b5cf0b4cf04a5fea",
+  "repository_created": true,
+  "pushed": true,
+  "pages_enabled": true,
+  "prepared_commit": "4127fae44ac515a91f5f463729e13a636adcab0f",
   "prepared_file_count": 238,
   "checkout": "dist/github-pages-repo",
   "remote": "https://github.com/baibo20260827/ai-coding-training.git",
-  "next_step": "Complete GitHub CLI device login, then create repository, push and enable Pages.",
-  "status": "awaiting_github_login",
+  "next_step": "Keep training materials current; real training outcomes still require a pilot.",
+  "status": "published_and_verified",
   "authentication_notes": [
     "Initial flow ended with OAuth token endpoint network timeout.",
     "Second code was rejected by the website with not_found; no proven root cause.",
-    "Stopped the previous local flow and started one new official CLI flow; user code is not saved in artifacts."
+    "Stopped the previous local flow and started one new official CLI flow; user code is not saved in artifacts.",
+    "Authentication succeeded as baibo20260827 using a task-scoped GitHub-only CONNECT relay; no TLS decryption or global network setting changes."
+  ],
+  "https_enforced": true,
+  "site_url": "https://baibo20260827.github.io/ai-coding-training/",
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "first_verified_commit": "4127fae44ac515a91f5f463729e13a636adcab0f",
+  "first_build_status": "built",
+  "first_build_updated_at": "2026-10-04T04:12:06Z",
+  "online_check": {
+    "path": "evidence/publishing/online-check.json",
+    "status": "pass",
+    "checked_files": 21,
+    "checked_at": "2026-10-04T04:12:54.821492+00:00"
+  },
+  "publication_notes": [
+    "First push failed because a pre-existing Git proxy at 127.0.0.1:9674 was unavailable.",
+    "A subsequent chunked upload returned HTTP 408.",
+    "Push succeeded with per-command proxy, HTTP/1.1 and 64 MiB post buffer; no force push."
   ]
 }

@@ -4,7 +4,7 @@
 
 ## 当前阶段
 
-全套培训材料和教学工程已完成，进入试讲准备。材料完成、工程验证、真实学习效果与客户接受分别记录。
+全套培训材料和教学工程已完成，全量学习站已公开发布，进入试讲准备。材料完成、网站发布、工程验证、真实学习效果与客户接受分别记录。
 
 | 工作 | 实际状态 | 证据或入口 |
 |---|---|---|
@@ -18,10 +18,11 @@
 | 自动工程检查 | 21/21 通过；故障/备份恢复演练通过 | [工程验证](evidence/demo/VALIDATION.md) |
 | 浏览器端到端检查 | 已验证创建、刷新保留、相邻允许、重叠拒绝、取消/重约、停服提示及重启持久化 | [浏览器证据](evidence/demo/BROWSER.md) |
 | PPT 检查 | 50 页渲染和逐页视觉检查通过，文件结构与备注检查通过 | [课件验证](evidence/slides/QA.md) |
+| 全量学习站 | 已公开发布；21 项公网 HTTPS GET 与完整文件 SHA-256 比对通过 | [在线学习站](https://baibo20260827.github.io/ai-coding-training/)、[发布证据](evidence/publishing/VALIDATION.md) |
 | 真实试讲与能力考核 | 尚未实施，需要团队参与 | [考核与试点模板](templates/capability-pilot.md) |
 | 真实客户确认与收益 | 尚未取得，不以教学假设代替 | [建设方案](docs/PROJECT_PLAN.md) |
 
-入口：[START_HERE.html](START_HERE.html)。综合验证及限制见 [验证记录](evidence/VALIDATION.md)。
+在线入口：[AI Coding 学习站](https://baibo20260827.github.io/ai-coding-training/)；离线入口：[START_HERE.html](START_HERE.html)。综合验证及限制见 [验证记录](evidence/VALIDATION.md)，网站检查范围见 [发布记录](evidence/publishing/VALIDATION.md)。
 
 ## 已处理的问题
 
@@ -32,7 +33,7 @@
 
 ## 下一步：组织使用
 
-新增发布任务：按用户要求准备包含全量材料的 GitHub Pages 静态网站。入口为 `dist/github-pages/index.html`，发布包为 `dist/github-pages-full.zip`；构建和操作步骤见 [发布说明](docs/PUBLISH_GITHUB.md)。用户已确认账号 `baibo20260827`、仓库名 `ai-coding-training` 并授权全量公开；正在完成 GitHub 登录与发布，本地构建与链接检查通过，见 [发布检查](evidence/publishing/VALIDATION.md)；当前未关联远端、未推送、未开启 Pages。预约应用保留源码下载与本地运行方式。
+全量学习材料已发布到 [baibo20260827/ai-coding-training](https://github.com/baibo20260827/ai-coding-training)。用户已明确授权公开全部材料；Pages 使用 `main` 分支根目录并强制 HTTPS。首次成功部署提交为 `4127fae44ac515a91f5f463729e13a636adcab0f`，GitHub 构建状态为 `built`，构建更新时间为 2026-10-04 12:12:06（上海）。21 项公网文件检查于同日 12:12:54 通过，具体范围见 [发布检查](evidence/publishing/VALIDATION.md)。本地构建输出继续保存在 `dist/github-pages/` 和 `dist/github-pages-full.zip`；更新方法见 [发布说明](docs/PUBLISH_GITHUB.md)。预约应用保留源码下载与本地运行方式，真实试讲、客户接受和收益仍待取得。
 
 1. 用真实访谈校准三类受众的困难；确定讲师、种子导师、参加者和试讲时间。
 2. 确认部门工具准入及参与者本地环境，讲师按清单先完整运行一次。

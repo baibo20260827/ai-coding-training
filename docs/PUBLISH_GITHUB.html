@@ -1,6 +1,6 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在自己的 GitHub 发布完整学习网站 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="PUBLISH_GITHUB.md" download>下载 Markdown 源文件</a></nav><main><h1>在自己的 GitHub 发布完整学习网站</h1>
 <p>版本：1.0；日期：2026-10-04。适用：在 Mac 上维护本项目，并将完整学习材料发布为 GitHub Pages 网站。</p>
-<p><strong>当前状态：用户已确认账号 baibo20260827，允许公开全量材料，并同意使用 ai-coding-training 仓库名。</strong> 目标为 <code>https://github.com/baibo20260827/ai-coding-training</code>，当前正在准备认证与发布；只有实际推送和站点检查完成后才记为上线。</p>
+<p><strong>当前状态：全量学习材料已按用户授权公开发布。</strong> 账号 <code>baibo20260827</code>；<a href="https://github.com/baibo20260827/ai-coding-training">发布仓库</a>；<a href="https://baibo20260827.github.io/ai-coding-training/">在线学习站</a>。实际部署与检查记录见 <a href="../evidence/publishing/VALIDATION.html">发布证据</a>。下文首次发布步骤保留供参考，后续维护使用第 5 节的增量更新流程。</p>
 <h2>1. 本次发布什么</h2>
 <p>本网站提供培训入口、学员与讲师手册、完整材料的网页阅读、3 套 PPT、讲师备注、6 项练习与答案、AI 任务卡、分层指南、FAQ、7 份模板、4A 图源与图片、案例源码和验证记录，并提供完整学习包下载。</p>
 <p>本地生成位置：</p>
@@ -123,6 +123,13 @@ git push
 <p>也不要把 <code>demo/static/index.html</code> 单独设为网站首页：它引用 <code>/assets/</code> 并请求 <code>/api/</code>，需要案例 Python 服务提供路径和处理逻辑。在项目 Pages 子路径下这些地址没有相应服务，页面不能完成预约。</p>
 <p>若将来希望不同员工在线共享预约数据，那是新增应用托管任务，需要另行确定身份、权限、后端运行环境与业务交付范围。当前发布交付的是完整学习网站和可下载的本地案例，不应将它标成已上线的共享预约系统。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">静态托管边界</a></p>
 <h2>7. 发布完成记录</h2>
-<p>目标仓库 URL：<code>https://github.com/baibo20260827/ai-coding-training</code>。公开决定：用户于 2026-10-04 明确允许公开全部材料。实际站点：尚未发布；预计项目站点路径为 <code>https://baibo20260827.github.io/ai-coding-training/</code>，需以真实部署结果确认。发布提交及线上检查：待登录后执行。</p>
-<p>完成实际操作后再填写这些字段。保留发布提交与材料版本的对应关系，使团队能知道自己使用的是哪一版课程。</p>
+<ul>
+<li>仓库：<a href="https://github.com/baibo20260827/ai-coding-training">baibo20260827/ai-coding-training</a>。</li>
+<li>访问范围：用户于 2026-10-04 明确授权公开全部学习材料。</li>
+<li>实际站点：<a href="https://baibo20260827.github.io/ai-coding-training/">AI Coding 全量学习站</a>。</li>
+<li>发布来源：<code>main</code> 分支、仓库根目录；GitHub Pages API 模式为 <code>legacy</code>，<code>https_enforced=true</code>。</li>
+<li>首次成功部署提交：<code>4127fae44ac515a91f5f463729e13a636adcab0f</code>；GitHub 构建状态 <code>built</code>，更新时间为 2026-10-04T04:12:06Z（上海 12:12:06）。</li>
+<li>公网检查：2026-10-04T04:12:54.821492+00:00，21 项 HTTPS GET、内容类型与完整文件 SHA-256 比对通过；详见<a href="../evidence/publishing/VALIDATION.html">发布记录</a>及<a href="../evidence/publishing/online-check.json">机器检查结果</a>。</li>
+</ul>
+<p>后续更新保留材料版本、发布提交和检查时间的对应关系。本节记录首次已核实部署；补充状态文档后的后续构建与部署应另行检查。网站上线不表示 Python 后端已在 Pages 运行，也不代表已完成网站浏览器视觉/交互验证、真实客户验收或培训成效验证。</p>
 </main></body></html>

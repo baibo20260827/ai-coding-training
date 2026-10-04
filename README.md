@@ -2,7 +2,7 @@
 
 培训交付包 v1.0 · 2026-10-03。面向部门主管、资深开发者与无编码经验者，支撑培训赋能、日常答疑、项目指导和持续改进。
 
-**开始使用：打开 [培训包入口 START_HERE.html](START_HERE.html)。** 可离线阅读；完整目录应保持在一起。正式试讲前按讲师手册检查演示环境。
+**在线学习：打开 [AI Coding 全量学习站](https://baibo20260827.github.io/ai-coding-training/)。** 站点包含三类学习路径、全部文档、课件和完整培训包下载。[GitHub 发布仓库](https://github.com/baibo20260827/ai-coding-training)保留可编辑材料与案例源码。离线使用可打开 [START_HERE.html](START_HERE.html)，并保持完整目录结构。正式试讲前按讲师手册检查本地案例环境。
 
 ## 已交付材料
 
@@ -39,7 +39,7 @@ python3 demo/backup.py exercise
 
 ## 项目维护
 
-全量材料发布到 GitHub 的步骤见 [GitHub Pages 发布说明](docs/PUBLISH_GITHUB.md)。本地发布构建器会补齐网站首页、文档阅读页、全量目录和完整培训包下载；用户已确认账号 `baibo20260827`、仓库名 `ai-coding-training` 并允许全量公开，实际部署状态见 STATUS。
+全量学习材料已按用户授权公开发布，账号为 `baibo20260827`，仓库为 `ai-coding-training`。更新方法见 [GitHub Pages 发布说明](docs/PUBLISH_GITHUB.md)，实际发布与检查记录见 [发布证据](evidence/publishing/VALIDATION.md)。Pages 提供静态阅读和下载；Python 预约案例仍在读者本机运行。
 
 - [AGENTS.md](AGENTS.md)：长期工作约定与 AI 阅读入口。
 - [建设方案](docs/PROJECT_PLAN.md)：目标、方法、交付台账和组织实施建议。

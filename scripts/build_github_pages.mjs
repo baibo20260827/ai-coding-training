@@ -90,7 +90,7 @@ fs.writeFileSync(path.join(out,'demo/SOURCE.html'),wrap('demo/SOURCE.html','æ¡ˆä
 fs.mkdirSync(path.join(out,'downloads'),{recursive:true});
 fs.copyFileSync(path.join(root,'dist',zipName),path.join(out,'downloads',zipName));
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
-fs.writeFileSync(path.join(out,'site-manifest.json'),JSON.stringify({builtAt:new Date().toISOString(),markdownPages:entries.length,sourceFiles:files.length,entries,publishingStatus:'prepared locally; not deployed'},null,2)+'\n');
+fs.writeFileSync(path.join(out,'site-manifest.json'),JSON.stringify({builtAt:new Date().toISOString(),markdownPages:entries.length,sourceFiles:files.length,entries,artifactStatus:'built',repositoryUrl:'https://github.com/baibo20260827/ai-coding-training',siteUrl:'https://baibo20260827.github.io/ai-coding-training/',deploymentEvidence:'evidence/publishing/VALIDATION.html'},null,2)+'\n');
 execFileSync(process.env.PYTHON||'python3',[path.join(root,'scripts/check_delivery.py'),'--root',out],{cwd:root,stdio:'inherit'});
 execFileSync(process.env.PYTHON||'python3',['-c',`from pathlib import Path
 from zipfile import ZipFile,ZIP_DEFLATED

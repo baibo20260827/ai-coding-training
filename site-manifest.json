@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-10-04T03:56:10.439Z",
+  "builtAt": "2026-10-04T04:20:43.420Z",
   "markdownPages": 43,
-  "sourceFiles": 190,
+  "sourceFiles": 191,
   "entries": [
     {
       "path": "AGENTS.html",
@@ -116,7 +116,7 @@
     {
       "path": "evidence/publishing/VALIDATION.html",
       "source": "evidence/publishing/VALIDATION.md",
-      "title": "全量学习站本地发布检查"
+      "title": "全量学习站发布与验证记录"
     },
     {
       "path": "evidence/slides/QA.html",
@@ -219,5 +219,8 @@
       "title": "主管版逐页讲师备注"
     }
   ],
-  "publishingStatus": "prepared locally; not deployed"
+  "artifactStatus": "built",
+  "repositoryUrl": "https://github.com/baibo20260827/ai-coding-training",
+  "siteUrl": "https://baibo20260827.github.io/ai-coding-training/",
+  "deploymentEvidence": "evidence/publishing/VALIDATION.html"
 }

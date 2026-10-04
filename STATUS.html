@@ -1,7 +1,7 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>当前状态 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="index.html">培训首页</a><a href="materials.html">全量材料目录</a><a href="STATUS.md" download>下载 Markdown 源文件</a></nav><main><h1>当前状态</h1>
 <p>更新时间：2026-10-04。版本：培训交付包 v1.0。</p>
 <h2>当前阶段</h2>
-<p>全套培训材料和教学工程已完成，进入试讲准备。材料完成、工程验证、真实学习效果与客户接受分别记录。</p>
+<p>全套培训材料和教学工程已完成，全量学习站已公开发布，进入试讲准备。材料完成、网站发布、工程验证、真实学习效果与客户接受分别记录。</p>
 <table>
 <thead>
 <tr>
@@ -61,6 +61,11 @@
 <td><a href="evidence/slides/QA.html">课件验证</a></td>
 </tr>
 <tr>
+<td>全量学习站</td>
+<td>已公开发布；21 项公网 HTTPS GET 与完整文件 SHA-256 比对通过</td>
+<td><a href="https://baibo20260827.github.io/ai-coding-training/">在线学习站</a>、<a href="evidence/publishing/VALIDATION.html">发布证据</a></td>
+</tr>
+<tr>
 <td>真实试讲与能力考核</td>
 <td>尚未实施，需要团队参与</td>
 <td><a href="templates/capability-pilot.html">考核与试点模板</a></td>
@@ -71,7 +76,7 @@
 <td><a href="docs/PROJECT_PLAN.html">建设方案</a></td>
 </tr>
 </tbody></table>
-<p>入口：<a href="START_HERE.html">START_HERE.html</a>。综合验证及限制见 <a href="evidence/VALIDATION.html">验证记录</a>。</p>
+<p>在线入口：<a href="https://baibo20260827.github.io/ai-coding-training/">AI Coding 学习站</a>；离线入口：<a href="START_HERE.html">START_HERE.html</a>。综合验证及限制见 <a href="evidence/VALIDATION.html">验证记录</a>，网站检查范围见 <a href="evidence/publishing/VALIDATION.html">发布记录</a>。</p>
 <h2>已处理的问题</h2>
 <ul>
 <li>取消预约改为页面内二次确认，已复核保留、取消和重约。</li>
@@ -80,7 +85,7 @@
 <li>架构数据字段、并发机制、课件与运行代码已交叉核对。</li>
 </ul>
 <h2>下一步：组织使用</h2>
-<p>新增发布任务：按用户要求准备包含全量材料的 GitHub Pages 静态网站。入口为 <code>dist/github-pages/index.html</code>，发布包为 <code>dist/github-pages-full.zip</code>；构建和操作步骤见 <a href="docs/PUBLISH_GITHUB.html">发布说明</a>。用户已确认账号 <code>baibo20260827</code>、仓库名 <code>ai-coding-training</code> 并授权全量公开；正在完成 GitHub 登录与发布，本地构建与链接检查通过，见 <a href="evidence/publishing/VALIDATION.html">发布检查</a>；当前未关联远端、未推送、未开启 Pages。预约应用保留源码下载与本地运行方式。</p>
+<p>全量学习材料已发布到 <a href="https://github.com/baibo20260827/ai-coding-training">baibo20260827/ai-coding-training</a>。用户已明确授权公开全部材料；Pages 使用 <code>main</code> 分支根目录并强制 HTTPS。首次成功部署提交为 <code>4127fae44ac515a91f5f463729e13a636adcab0f</code>，GitHub 构建状态为 <code>built</code>，构建更新时间为 2026-10-04 12:12:06（上海）。21 项公网文件检查于同日 12:12:54 通过，具体范围见 <a href="evidence/publishing/VALIDATION.html">发布检查</a>。本地构建输出继续保存在 <code>dist/github-pages/</code> 和 <code>dist/github-pages-full.zip</code>；更新方法见 <a href="docs/PUBLISH_GITHUB.html">发布说明</a>。预约应用保留源码下载与本地运行方式，真实试讲、客户接受和收益仍待取得。</p>
 <ol>
 <li>用真实访谈校准三类受众的困难；确定讲师、种子导师、参加者和试讲时间。</li>
 <li>确认部门工具准入及参与者本地环境，讲师按清单先完整运行一次。</li>
