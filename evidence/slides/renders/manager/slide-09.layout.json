@@ -1,0 +1,724 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/udsvah03",
+    "id": "udsvah03",
+    "slide": 9,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAF8F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial Unicode MS",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ofq5svm5",
+      "id": "7",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        45,
+        1152,
+        70
+      ],
+      "geometry": "rect",
+      "text": "阶段报告：承诺、证据与预测",
+      "textPreview": "阶段报告：承诺、证据与预测",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阶段报告：承诺、证据与预测"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阶段报告：承诺、证据与预测",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阶段报告：承诺、证据与预测",
+              "fontSize": 44,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfmhgne",
+      "id": "2",
+      "name": "slide-lead",
+      "bbox": [
+        64,
+        137,
+        1152,
+        62
+      ],
+      "geometry": "rect",
+      "text": "示范状态卡，所有日期均为演练假设",
+      "textPreview": "示范状态卡，所有日期均为演练假设",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "示范状态卡，所有日期均为演练假设"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "示范状态卡，所有日期均为演练假设",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "示范状态卡，所有日期均为演练假设",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0b65obm9",
+      "id": "3",
+      "name": "footer-audience",
+      "bbox": [
+        64,
+        683,
+        580,
+        25
+      ],
+      "geometry": "rect",
+      "text": "主管版",
+      "textPreview": "主管版",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "主管版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "主管版",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "主管版",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nex4jq5k",
+      "id": "4",
+      "name": "footer-page",
+      "bbox": [
+        1080,
+        683,
+        136,
+        25
+      ],
+      "geometry": "rect",
+      "text": "09 / 14",
+      "textPreview": "09 / 14",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "09 / 14"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "09 / 14",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "09 / 14",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/29wzel8z",
+      "id": "8",
+      "bbox": [
+        64,
+        210,
+        1152,
+        380
+      ],
+      "text": "项目 | 报告内容\n原承诺与当前批准承诺 | 周五试用基础功能，审批尚未批准\n已验证与剩余工作 | 逐项引用证据，列出未通过的验收项\n最新完成预测 | 按剩余任务、关键依赖和缓冲重新计算\n偏差与待决策 | 审批待澄清，请决策人选择交付方案",
+      "textPreview": "项目 | 报告内容 | 原承诺与当前批准承诺 | 周五试用基础功能，审批尚未批准 | 已验证与剩余工作 | 逐项引用证据，列出未通过的验收项 | 最新完成预测 | 按剩余任务、关键依赖和缓冲重新计算 | 偏差与待决策 | 审批待澄清，请决策人选择交付方案",
+      "rows": 5,
+      "cols": 2,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            64,
+            210,
+            325,
+            76
+          ],
+          "text": "项目",
+          "textPreview": "项目",
+          "fillColor": "#0C7777",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "项目",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "项目",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            389,
+            210,
+            827,
+            76
+          ],
+          "text": "报告内容",
+          "textPreview": "报告内容",
+          "fillColor": "#0C7777",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "报告内容",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "报告内容",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            64,
+            286,
+            325,
+            76
+          ],
+          "text": "原承诺与当前批准承诺",
+          "textPreview": "原承诺与当前批准承诺",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "原承诺与当前批准承诺",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "原承诺与当前批准承诺",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            389,
+            286,
+            827,
+            76
+          ],
+          "text": "周五试用基础功能，审批尚未批准",
+          "textPreview": "周五试用基础功能，审批尚未批准",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "周五试用基础功能，审批尚未批准",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "周五试用基础功能，审批尚未批准",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            64,
+            362,
+            325,
+            76
+          ],
+          "text": "已验证与剩余工作",
+          "textPreview": "已验证与剩余工作",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "已验证与剩余工作",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "已验证与剩余工作",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            389,
+            362,
+            827,
+            76
+          ],
+          "text": "逐项引用证据，列出未通过的验收项",
+          "textPreview": "逐项引用证据，列出未通过的验收项",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "逐项引用证据，列出未通过的验收项",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "逐项引用证据，列出未通过的验收项",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            64,
+            438,
+            325,
+            76
+          ],
+          "text": "最新完成预测",
+          "textPreview": "最新完成预测",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "最新完成预测",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "最新完成预测",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            389,
+            438,
+            827,
+            76
+          ],
+          "text": "按剩余任务、关键依赖和缓冲重新计算",
+          "textPreview": "按剩余任务、关键依赖和缓冲重新计算",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "按剩余任务、关键依赖和缓冲重新计算",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "按剩余任务、关键依赖和缓冲重新计算",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            64,
+            514,
+            325,
+            76
+          ],
+          "text": "偏差与待决策",
+          "textPreview": "偏差与待决策",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "偏差与待决策",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "偏差与待决策",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            389,
+            514,
+            827,
+            76
+          ],
+          "text": "审批待澄清，请决策人选择交付方案",
+          "textPreview": "审批待澄清，请决策人选择交付方案",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "审批待澄清，请决策人选择交付方案",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "审批待澄清，请决策人选择交付方案",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gzml0nq",
+      "id": "6",
+      "name": "takeaway",
+      "bbox": [
+        64,
+        619,
+        1152,
+        50
+      ],
+      "geometry": "rect",
+      "text": "预测日期与已批准日期分别展示，保留原基线",
+      "textPreview": "预测日期与已批准日期分别展示，保留原基线",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "预测日期与已批准日期分别展示，保留原基线"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "预测日期与已批准日期分别展示，保留原基线",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial Unicode MS",
+            "color": "#0C7777",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预测日期与已批准日期分别展示，保留原基线",
+              "fontSize": 24,
+              "typeface": "Arial Unicode MS",
+              "color": "#0C7777"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

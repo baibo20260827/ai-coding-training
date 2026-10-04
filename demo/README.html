@@ -1,0 +1,125 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>会议室预约：可运行的 Harness 教学案例 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="README.md" download>下载 Markdown 源文件</a></nav><main><h1>会议室预约：可运行的 Harness 教学案例</h1>
+<p>版本：1.0，2026-10-03。适用对象：讲师、工程师、新手及查看交付证据的主管。</p>
+<p>本案例把“客户场景 → 验收例子 → 设计 → 实现 → 失败定位 → 回归 → 交付与恢复”连起来。数据和业务情境均为虚构教学用途；实现与测试已形成，客户接受和培训效果尚待真实参与者验证。</p>
+<h2>5 分钟启动</h2>
+<ol>
+<li><p>将完整项目保存到本机，打开终端并进入项目根目录。确认 <code>python3 --version</code> 可用；代码兼容 Python 3.9+，实际使用组织准入且仍受维护的 Python 3 版本。无需 <code>pip install</code> 或 <code>npm install</code>。</p>
+</li>
+<li><p>从项目根目录执行：</p>
+<pre><code class="language-sh">python3 demo/app.py --port 8765
+</code></pre>
+</li>
+<li><p>在浏览器打开 <span>本地教学页面（需先在本机启动案例服务）</span>。保持终端运行，用虚构姓名建立预约。结束时在终端按 <code>Ctrl+C</code>。</p>
+</li>
+</ol>
+<p>Windows 可将所有命令中的 <code>python3</code> 替换为已安装的 <code>py -3</code>，例如 <code>py -3 demo/app.py --port 8765</code>。这是操作路径说明，当前实测环境为 macOS，Windows 尚未实测。若机器没有 Python，由组织提供符合准入要求的安装；不要求新手自行更改安全策略。</p>
+<p>默认数据库位于 <code>demo/data/bookings.sqlite3</code>，首次启动自动建立；停止和重启服务不会删除它。不要双击 <code>index.html</code>，页面需要连接本地 HTTP 服务。每条预约只包含一个日期；日期初值取本机当天，不做跨日或时区换算。</p>
+<p>再次练习需要空数据时，选择一个<strong>全新数据库文件名</strong>，保留原数据：</p>
+<pre><code class="language-sh">python3 demo/app.py --port 8765 --db demo/data/session-02.sqlite3
+</code></pre>
+<p>端口占用时先停止自己已启动的实例，或将端口与访问地址一同改为 8766；不要终止不认识的进程。若沙箱拒绝监听本机端口，需要允许本地预览的执行环境；这与应用测试失败应分别记录。</p>
+<h2>基线行为</h2>
+<ul>
+<li>单会议室，每天 09:00–18:00，以 30 分钟为粒度；不限制日期必须在未来，便于稳定复现教学用例。</li>
+<li>查看当日预约，提交姓名、主题和起止时间，取消预约。</li>
+<li><code>10:00–11:00</code> 与 <code>11:00–12:00</code> 相邻允许；与 <code>10:30–11:30</code> 重叠拒绝。</li>
+<li>数据写入 SQLite，浏览器刷新和服务重启后保留；取消后释放时段。</li>
+<li>并发竞争同一时段时最多一条成功；没有容量测评或高并发服务承诺。</li>
+<li>仅绑定 <code>127.0.0.1</code>，不含登录与审批。本机操作者可看到并取消全部教学记录，不能把此行为当作正式权限方案。</li>
+</ul>
+<h2>检查与演练</h2>
+<pre><code class="language-sh">python3 -m unittest discover -s demo/tests -v
+python3 demo/labs/failure_lab.py
+python3 demo/backup.py exercise
+</code></pre>
+<p>测试使用临时数据库和临时回环端口，结束自动清理。故障脚本展示“相邻误拒 → 错误修复与弱测试全绿 → 独立验收发现 → 正确规则及主应用通过”，同时模拟页面内存重建与数据库重新连接的差别。它不修改主应用，也没有故意让正式测试误报通过。脚本退出码 0 表示<strong>预设故障被如期发现、正确实现通过</strong>。</p>
+<p>备份/恢复演练只在自动清理的临时目录中运行，演示恢复到新文件与拒绝覆盖已有文件。实际执行结果和环境限制见 <a href="../evidence/demo/VALIDATION.html">验证记录</a>。</p>
+<h2>接口与结构</h2>
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>输入</th>
+<th>正常结果</th>
+<th>主要异常</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GET /api/health</code></td>
+<td>无</td>
+<td>200，运行模式与 schema 版本</td>
+<td>仅做 HTTP 存活检查，不证明数据/业务全部正常</td>
+</tr>
+<tr>
+<td><code>GET /api/bookings?date=YYYY-MM-DD</code></td>
+<td>一个日期</td>
+<td>200，<code>{&quot;bookings&quot;: [...]}</code>，按开始时间排序</td>
+<td>400 日期非法或缺失</td>
+</tr>
+<tr>
+<td><code>POST /api/bookings</code></td>
+<td><code>application/json</code>，见下例</td>
+<td>201，<code>{&quot;booking&quot;: {...}}</code></td>
+<td>400 非法输入、409 冲突、413 大小、415 类型、503 数据库不可用</td>
+</tr>
+<tr>
+<td><code>DELETE /api/bookings/{id}</code></td>
+<td>32 位预约 ID</td>
+<td>200，<code>{&quot;cancelled&quot;: true}</code></td>
+<td>404 不存在、503 数据库不可用</td>
+</tr>
+</tbody></table>
+<pre><code class="language-json">{&quot;date&quot;:&quot;2026-10-08&quot;,&quot;start&quot;:&quot;10:00&quot;,&quot;end&quot;:&quot;11:00&quot;,&quot;name&quot;:&quot;演示同事 A&quot;,&quot;purpose&quot;:&quot;需求验收练习&quot;}
+</code></pre>
+<p>错误结构：<code>{&quot;error&quot;:{&quot;code&quot;:&quot;booking_conflict&quot;,&quot;message&quot;:&quot;该时段已被预约，请刷新列表并选择其他时段。&quot;}}</code>。如果提交期间连接中断，先刷新确认是否已经保存，再决定重试。</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="app.py">app.py</a></td>
+<td>输入校验、SQLite 存取、本机 HTTP 与接口</td>
+</tr>
+<tr>
+<td><a href="static/index.html">static/index.html</a>、<a href="static/style.css">样式</a>、<a href="static/app.js">交互</a></td>
+<td>中文页面与操作反馈，不使用外部 CDN</td>
+</tr>
+<tr>
+<td><a href="tests/test_app.py">tests/test_app.py</a></td>
+<td>业务、持久化、并发、接口、边界与恢复测试</td>
+</tr>
+<tr>
+<td><a href="labs/failure_lab.py">labs/failure_lab.py</a></td>
+<td>显式隔离的错误版本与独立验收演练</td>
+</tr>
+<tr>
+<td><a href="backup.py">backup.py</a></td>
+<td>新文件备份、恢复与安全演练</td>
+</tr>
+<tr>
+<td><a href="REQUIREMENTS.html">REQUIREMENTS.md</a></td>
+<td>R01–R08/A01–A08、需求到实现和测试的追踪</td>
+</tr>
+<tr>
+<td><a href="WALKTHROUGH.html">WALKTHROUGH.md</a></td>
+<td>讲师演示、复现、修复与恢复步骤</td>
+</tr>
+</tbody></table>
+<p>数据库的 <code>bookings</code> 保存预约；<code>slots</code> 为预约占用的每个半小时建立一行，主键 <code>(day, start_minute)</code>。<code>BEGIN IMMEDIATE</code> 将创建操作串行进入事务；预约及其全部时段在一个事务内写入，唯一约束拒绝重叠，失败回滚全部写入。取消通过外键级联释放时段。代码中的 <code>overlaps()</code> 用于教学对照；实际一致性保证来自数据库事务与约束。</p>
+<h2>备份、恢复与代码回退</h2>
+<p>先确定当前 <code>--db</code> 的真实路径。使用从未存在过的目标文件名；下列名字仅作为一次演练示例：</p>
+<pre><code class="language-sh">python3 demo/backup.py backup --source demo/data/bookings.sqlite3 --output demo/backups/before-change.sqlite3
+python3 demo/backup.py restore --source demo/backups/before-change.sqlite3 --output demo/data/restored.sqlite3
+</code></pre>
+<p>备份调用 SQLite backup API，检查应用标识、schema 版本和数据库完整性。恢复也只写入全新文件，不覆盖当前库。然后停止原服务，在新路径启动并验证：</p>
+<pre><code class="language-sh">python3 demo/app.py --port 8765 --db demo/data/restored.sqlite3
+</code></pre>
+<p>比较快照时间、预约条数和目标记录，确认满足预期后才将新路径作为后续教学环境。<strong>恢复到旧快照不会保留快照后的修改</strong>；原数据库仍留存，必要时可停止服务并重新指向它。脚本不迁移 schema，也不合并两份数据。</p>
+<p>代码回退与数据恢复分别处理：开始练习前保留本项目的已验证副本或自己批准的 Git 版本；变更失败时停止服务，用新的工作目录取出该版本，运行检查，再用兼容数据库启动。不要对未知工作区执行 <code>reset --hard</code>，不要假定旧代码兼容新 schema。本版故障演练不改主应用，因此无须实际回退代码。</p>
+<h2>完成标准与限制</h2>
+<p>案例工程完成标准：上述检查通过；他人能按说明启动、复现预设故障、验证正确行为、恢复到新文件，并说清证据的适用范围。实际界面操作情况见验证记录，自动测试不能替代真实客户验收。</p>
+<p>部署环境、数据库准入、备份责任和 DfX 目标仍需与真实客户对齐。本案例选择 SQLite 只是为了本地无外部依赖教学，不构成客户选型结论。未实现身份认证、审批、生产运维、高可用、跨时区、迁移流程或性能容量承诺。真实项目需要另外确认这些范围与责任。</p>
+</main></body></html>

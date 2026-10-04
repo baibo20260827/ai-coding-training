@@ -1,0 +1,130 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>已填案例：一页阶段汇报 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="weekly-report-example.md" download>下载 Markdown 源文件</a></nav><main><h1>已填案例：一页阶段汇报</h1>
+<p><strong>虚构教学周报。</strong> 报告编号 SIM-W02，演练时点 D6 开始，日期为相对工作日。以下进度、人员和验证结果为模拟数据，仅用于学习汇报写法，不代表当前仓库测试、培训或客户接受事实。</p>
+<h2>需要主管先看的一句话</h2>
+<p>基础范围目标仍为 D10；新增审批尚未批准。若一起交付，在既定假设成立时最新预测为 D12—D14。建议先完成原范围试用，并在本次评审决定审批是否另期实施。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>原承诺 B0</th>
+<th>当前已批准承诺</th>
+<th>当前预测</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基础预约</td>
+<td>D10，R01—R08</td>
+<td>未变，仍为 D10</td>
+<td>原范围暂可保持 D10</td>
+<td>黄色：关键验证待完成</td>
+</tr>
+<tr>
+<td>新增审批 CR-001</td>
+<td>原范围外</td>
+<td>尚未批准</td>
+<td>若一起交付 D12—D14</td>
+<td>待决；依据见<a href="change-example.html">变更演练</a></td>
+</tr>
+<tr>
+<td>培训材料</td>
+<td>本地试用前提供操作材料</td>
+<td>演练假设同原计划</td>
+<td>基础材料随 D10；审批材料待范围决定</td>
+<td>需同步维护</td>
+</tr>
+</tbody></table>
+<p>黄色表示需要关注的待验证或待决事项，不是按主观百分比折算完成度。</p>
+<h2>已实现、已验证、已接受分别显示</h2>
+<table>
+<thead>
+<tr>
+<th>验收项</th>
+<th>已实现（模拟）</th>
+<th>已验证（模拟）</th>
+<th>已接受（模拟）</th>
+<th>证据位置写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A01 查看 / A02 预约</td>
+<td>是</td>
+<td>已走查正常路径</td>
+<td>未安排客户验收</td>
+<td>填实际代码版本、步骤与日志；本示例无真实日志</td>
+</tr>
+<tr>
+<td>A03 相邻/重叠</td>
+<td>是</td>
+<td>相邻用例通过，完整边界待测</td>
+<td>否</td>
+<td>不可用“页面可点”替代 A03 结果</td>
+</tr>
+<tr>
+<td>A04 取消 / A05 持久化</td>
+<td>是</td>
+<td>取消后重订已测，重启保持待测</td>
+<td>否</td>
+<td>将未测部分单列</td>
+</tr>
+<tr>
+<td>A06 输入 / A08 并发</td>
+<td>部分</td>
+<td>未完成</td>
+<td>否</td>
+<td>保留剩余工作与负责人</td>
+</tr>
+<tr>
+<td>A07 本地边界</td>
+<td>是</td>
+<td>启动地址已查，停止后的行为待查</td>
+<td>否</td>
+<td>不能推导为生产安全已达标</td>
+</tr>
+</tbody></table>
+<p>此表按场景显示可见状态，不把“实现了 6/8 项”换算成“完成 75%”或剩余工期；不同项复杂度和依赖不同。</p>
+<h2>剩余工作、依赖与需要的决定</h2>
+<table>
+<thead>
+<tr>
+<th>工作/决定</th>
+<th>教学负责人</th>
+<th>计划安排</th>
+<th>影响与下一步</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>输入校验、并发与重启验证</td>
+<td>开发甲</td>
+<td>剩余 2 日收尾内</td>
+<td>完成后提交实际证据，失败则更新预测</td>
+</tr>
+<tr>
+<td>综合回归与验收准备</td>
+<td>开发甲＋评审人</td>
+<td>收尾后 1 日</td>
+<td>验收例子独立于实现核对</td>
+</tr>
+<tr>
+<td>剩余缓冲</td>
+<td>项目负责人</td>
+<td>原计划 1 日</td>
+<td>单列，不用来掩盖未识别任务</td>
+</tr>
+<tr>
+<td>CR-001 方案选择</td>
+<td>具备权限的里程碑批准人</td>
+<td>演练建议 D6 内决定</td>
+<td>未决定不启动未批准范围；报告等待影响</td>
+</tr>
+<tr>
+<td>审批身份/环境前提核对</td>
+<td>客户 IT 与业务代表</td>
+<td>承诺新日期前</td>
+<td>未满足则 D12—D14 区间失效</td>
+</tr>
+</tbody></table>
+<h2>能力建设的独立状态</h2>
+<p>模拟展示口径：材料已写完、练习尚未独立完成、真实试点尚未执行。导师计划让主管比较两个方案、工程师排查一个隐藏回归、新手验证一次刷新持久化。人数、通过率和收益保持“未测量”，不把材料页数或 AI 使用次数当作能力成效。</p>
+<p>下次报告应提供实际验收证据、批准结果、更新预测及学员练习观察；维持原基线，同时保留每次预测变化的原因。真实项目请复制<a href="../../templates/weekly-milestone.html">周报模板</a>，删除全部模拟结果后填写。</p>
+</main></body></html>

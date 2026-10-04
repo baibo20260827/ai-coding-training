@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模板：任务委派、审查与接受 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="task-review.md" download>下载 Markdown 源文件</a></nav><main><h1>模板：任务委派、审查与接受</h1>
+<p>适用：AI 辅助实现、修复、调查或测试。完成标准：另一人能理解边界、重做关键验证，并判断接受或退回。一个任务应足够小，能在一次有明确结论的审查中评估；不按固定代码行数机械拆分。</p>
+<h2>1. 委派给 AI 的任务卡</h2>
+<pre><code class="language-text">任务编号/负责人/代码版本：待填写。
+目的与需求编号：待填写。
+已知事实、参考文件和已确认规则：待填写。
+目标行为：待填写，用具体输入输出例子表达。
+允许修改范围：待填写。
+约束和不能擅自改变的验收依据：待填写。
+可用工具/环境/数据：待填写；遵循项目已有权限。
+要求先输出：理解、拟修改位置、验证计划与不确定项。
+交付要求：修改说明、实际执行命令与结果、未覆盖项、恢复方法。
+接受人：待填写；涉及客户承诺的事项交给有权限的人决定。
+</code></pre>
+<p><strong>已填教学例子（虚构）：</strong> 修复 A03 相邻预约：已有 10:00—11:00，11:00—12:00 应成功，10:30—11:30 应拒绝。仅修改相关时间规则与必要测试；保持 R06 输入边界和 R08 并发约束。不得仅为变绿而改变重叠拒绝的预期。检查代码差异、测试预期变化，并独立运行这两个例子。</p>
+<h2>2. 审查记录</h2>
+<table>
+<thead>
+<tr>
+<th>检查</th>
+<th>需要留下的记录</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求一致</td>
+<td>每项变更对应哪条需求/缺陷，是否混入新增范围</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>差异边界</td>
+<td>修改了哪些文件/数据/配置，是否有不相关内容</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>逻辑与数据</td>
+<td>正常、异常、并发、回滚是否符合该任务影响范围</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>测试可信</td>
+<td>新增/删除/修改了哪些预期，依据何在</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>独立验证</td>
+<td>从需求推导的输入输出、实际执行与结果</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>接管恢复</td>
+<td>失败怎样保留证据并回到已知版本/数据</td>
+<td>待填写</td>
+</tr>
+</tbody></table>
+<p>不要求每项修改进行无限扩展测试；检查力度按影响范围和风险决定。发现新失败或未解疑点再扩大验证。</p>
+<h2>3. 验证与结论</h2>
+<p>实际代码版本、环境、命令、退出状态、日志位置、验收编号、执行人：待填写。未运行项及原因：待填写。残留限制：待填写。</p>
+<p>可选结论：接受；退回修订；补充证据；需要业务澄清。结论与理由：待填写。确认人/日期：待填写。测试通过不能代替客户接受。</p>
+<p>标准案例检查命令在项目根目录执行：</p>
+<pre><code class="language-bash">python3 -m unittest discover -s demo/tests -v
+python3 demo/labs/failure_lab.py
+</code></pre>
+<p>命令列在模板中不代表已经执行。参见<a href="../docs/guides/engineer.html">工程师指南</a>和<a href="../docs/case/requirements.html">需求基线</a>。</p>
+</main></body></html>

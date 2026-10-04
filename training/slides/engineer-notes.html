@@ -1,0 +1,105 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工程师版逐页讲师备注 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="engineer-notes.md" download>下载 Markdown 源文件</a></nav><main><h1>工程师版逐页讲师备注</h1>
+<p>版本 1.0，2026-10-03。培训材料初版，尚待真实试讲与客户验证。</p>
+<h2>1. AI Coding 委派、验证与恢复</h2>
+<p>第 1 页：AI Coding 委派、验证与恢复</p>
+<p>整课建议 150 分钟，包含环境准备、共同开篇、讲解操作、练习及反馈，具体以 training/README.md 的安排为准，实际节奏待试讲校准。目标是把工程判断转成可执行约束、独立验收与可审查差异，并能处理一次失败。本课程使用一个小型本地会议室预约项目，无外部框架依赖，标准 Python 分发仍需包含 sqlite3 模块。强调 AI 回复、自动测试和人工审查各自提供的证据与局限。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>2. 主管的小失败：周五还能交付吗</h2>
+<p>第 2 页：主管的小失败：周五还能交付吗</p>
+<p>建议用时 2 分钟。案例为虚构教学情境。周一约定周五试用查看、预约、取消，周三页面可操作，周四客户提出新增主管审批。主管据页面生成速度判断可以同日完成，到了周五才发现审批人、驳回后处理、待审批数据可见范围没有定清。可见后果是试用暂缓，并重新召开范围确认会。这里的困难是缺少支持承诺的证据。请问听众：回答周五一起给之前，你最需要补看什么？接收一两个回答后，引出交付状态卡。必须区分原功能缺陷与新增审批，不能用新增范围证明原范围不合格，也不能凭这个故事推断真实延期天数。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>3. 工程师的小失败：测试绿了，规则错了</h2>
+<p>第 3 页：工程师的小失败：测试绿了，规则错了</p>
+<p>建议用时 2 分钟。案例为虚构、预设的错误修改。工程师请 AI 修复相邻预约误判，AI 回复全部测试通过。工程师补试一个明显重叠的预约，发现也能成功。差异显示，原来应拒绝的测试预期被改成允许。工程师停下合并，没有把故障交给真实用户。提问：测试全绿时，你怎样判断测试仍在检查正确的规则？引出两个独立验收例子、代码差异和测试预期审查。不要得出 AI 每次都会改坏测试的结论。测试可以随已确认需求改变，但预期变化需要业务依据。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>4. 新手的小失败：刷新后，预约不见了</h2>
+<p>第 4 页：新手的小失败：刷新后，预约不见了</p>
+<p>建议用时 2 分钟。案例为虚构教学情境。新手输入做一个好用的会议室预约系统，页面出现、按钮能点、列表能显示预约。展示时同事刷新页面，记录消失。新手不知道该重新做，还是继续说帮我修好。本故事预设记录只存在页面内存，真实故障不能仅凭同一现象断定同一原因。让听众补三条可检查要求：刷新保留、重叠拒绝、取消释放。再说明后续会逐步认识输入、规则、数据、结果，并学习提供操作步骤、预期、实际与环境信息来求助。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>5. 一次委派的任务合同</h2>
+<p>第 5 页：一次委派的任务合同</p>
+<p>建议用时 4 分钟。让工程师把口头修一下改写成任务合同。任务应引用需求与验收编号、相关文件、环境和修改边界，并要求 AI 先解释方案和验证计划。禁止悄改不是永远不能改测试，而是预期变化必须有需求依据并纳入审查。把复杂工作拆成可审查的小步，保留一次变更与一组证据的联系。AGENTS.md 存放长期约定，具体任务状态和讨论放在任务记录。这个委派方法是本项目建议流程，不宣称普适标准。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+agents: <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">https://learn.chatgpt.com/docs/agent-configuration/agents-md</a></p>
+<h2>6. 验收例子定义正确行为</h2>
+<p>第 6 页：验收例子定义正确行为</p>
+<p>建议用时 4 分钟。先从业务独立写例子，再查看实现。半开区间意味着结束时刻不被前一预约占用，因此紧邻可预约。日期也是冲突判断的一部分，不能把不同日期的同一时刻判为冲突。除正常例子，还覆盖边界、错误输入、刷新重启和并发。真实业务改变时，应先更新经确认的验收，再调整测试。自动测试必须检查真实效果和拒绝结果，不能仅验证函数调用或复制实现中的同一错误逻辑。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>7. 4A 与实现边界</h2>
+<p>第 7 页：4A 与实现边界</p>
+<p>建议用时 5 分钟。用可编辑四层图说明小系统的四类视图。BA 是查看、预约、取消流程及规则。AA 将页面、HTTP 接口、业务校验和数据库访问划开职责。DA 是预约记录及标识、日期、区间、预约人和生命周期。TA 是本机浏览器、Python 标准库服务和 SQLite 文件。四类视图是不同关注点，不要求建成四套独立系统。请学员指出审批变更影响哪里：业务状态、身份权限、数据迁移、接口、校验和验证都可能变化。 本例数据模型由一条预约对应多个半小时占用格，同一日期与格起点只能占用一次。取消预约同时释放相应占用格。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+architecture: <a href="https://help.opengroup.org/hc/en-us/articles/32115987894930-How-the-ArchiMate-Language-and-the-TOGAF-Standard-Complement-Each-Other">https://help.opengroup.org/hc/en-us/articles/32115987894930-How-the-ArchiMate-Language-and-the-TOGAF-Standard-Complement-Each-Other</a>
+http: <a href="https://docs.python.org/3/library/http.server.html">https://docs.python.org/3/library/http.server.html</a>
+sqlite: <a href="https://docs.python.org/3/library/sqlite3.html">https://docs.python.org/3/library/sqlite3.html</a></p>
+<h2>8. 项目上下文与实际约束</h2>
+<p>第 8 页：项目上下文与实际约束</p>
+<p>建议用时 3 分钟。强调文档与机制的关系。AGENTS.md 能让代理了解约定，但不能替代沙箱、权限和独立检查。使用仓库现有命令，不凭记忆猜测环境，按实际授权访问客户数据与工具。工程师需要阅读上下文并确认工作范围，把暂态任务记录留在相应文档，不把 AGENTS.md 堆成无限增长的流水账。接管时应从需求、计划、差异和证据恢复上下文。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+agents: <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">https://learn.chatgpt.com/docs/agent-configuration/agents-md</a>
+sandbox: <a href="https://learn.chatgpt.com/docs/sandboxing">https://learn.chatgpt.com/docs/sandboxing</a></p>
+<h2>9. 差异审查的四个入口</h2>
+<p>第 9 页：差异审查的四个入口</p>
+<p>建议用时 4 分钟。让学员查看一次真实生成差异，先圈出任务外改动，再核对业务预期。测试源码同样需要审查，尤其是删除断言、放宽预期或同时修改实现与预期的情况。并非所有测试修改都可疑，关键是需求与证据能否解释。查看新增依赖和数据操作的必要性，定位风险高的地方。AI 的自我总结可用于导航，不能代替差异和实际输出。必要时退回一部分修改，仍继续可独立验证的部分。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>10. 故障一：相邻修复引入重叠回归</h2>
+<p>第 10 页：故障一：相邻修复引入重叠回归</p>
+<p>建议用时 6 分钟，含演示。先问听众左右两组应该如何处理，再运行教学故障实验。命令：python3 demo/labs/failure_lab.py。此命令运行明确标记的故障与修复对照，不能声称它代表某次真实模型输出。请学员观察错误逻辑如何让错误预期也通过，再用独立业务例子暴露问题。修复完成后必须同时检查相邻允许与重叠拒绝。若本轮未实际运行，就按讲师实验记录如实标注，不复述预期输出为真实输出。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>11. 故障二：检查空闲后仍可能双订</h2>
+<p>第 11 页：故障二：检查空闲后仍可能双订</p>
+<p>建议用时 6 分钟。本表展示缺少保护的教学故障时序，不是当前正式实现行为。先检查后写入会产生竞态，即使两个请求分别检查过也可能双订。本例将每个预约拆成多个半小时占用格，slots 的日期与格起点组成主键，因此同一天同一个格只能占用一次。BEGIN IMMEDIATE 事务内写入预约记录及全部占用格，一格冲突则整体回滚，取消通过外键级联释放格。并发验收检查成功和冲突响应，以及最终数据状态。SQLite 同一时刻只允许一个写事务，也需要处理等待或超时。不要把一次单人演示当作并发正确的证明。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+transaction: <a href="https://sqlite.org/lang_transaction.html">https://sqlite.org/lang_transaction.html</a>
+constraints: <a href="https://sqlite.org/lang_createtable.html">https://sqlite.org/lang_createtable.html</a></p>
+<h2>12. 故障三：页面状态与持久化</h2>
+<p>第 12 页：故障三：页面状态与持久化</p>
+<p>建议用时 5 分钟。开篇故障预设数据只保存在页面内存，真实项目同样症状可能来自未提交事务、使用临时数据库、路径错误或查询条件错误。请学员先写最短复现步骤，记录预期、实际和版本，再逐层定位页面、接口与存储。使用 R05/A05 检查刷新与服务重启后的同一日期记录，并用 R04/A04 检查取消释放。说明 SQLite 文件式存储不需要独立数据库服务进程，但 Python 分发需要包含 sqlite3 模块。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+sqlite: <a href="https://docs.python.org/3/library/sqlite3.html">https://docs.python.org/3/library/sqlite3.html</a></p>
+<h2>13. 验证命令与证据记录</h2>
+<p>第 13 页：验证命令与证据记录</p>
+<p>建议用时 5 分钟。讲师在仓库根目录运行命令，并让学员观察真实输出，不预填通过数量。unittest discover 根据目录发现测试，-v 显示具体测试名。测试通过说明该版本在该环境满足已执行检查，并不证明所有需求、生产可靠性或客户接受。把 A01 至 A08 与自动测试、人工操作及并发结果对应。保留失败输出后修复，比较新旧证据。演示前如环境不满足，应处理真实报错并记录，不伪造成功。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+unittest: <a href="https://docs.python.org/3/library/unittest.html">https://docs.python.org/3/library/unittest.html</a></p>
+<h2>14. 本地演示与恢复</h2>
+<p>第 14 页：本地演示与恢复</p>
+<p>建议用时 5 分钟。启动后先完成查看、预约、冲突拒绝、取消和刷新验收。故障恢复先明确影响范围，停止相关操作，保存诊断证据，再按演示手册处理教学数据和程序版本。不能仅回退程序却忽略数据是否兼容，也不要在未确认路径时删除数据库。当前为本地教学，使用合成预约人和主题。真实发布需另行确认备份、恢复、运维与验收责任。讲师应依照项目恢复说明执行实际步骤，并保留恢复后关键验收结果。 课堂恢复演练命令为 python3 demo/backup.py exercise，仅在临时目录操作。手动备份示例：python3 demo/backup.py backup --source demo/data/bookings.sqlite3 --output demo/backups/before-change.sqlite3。恢复示例：python3 demo/backup.py restore --source demo/backups/before-change.sqlite3 --output demo/data/restored.sqlite3。恢复到新文件，已有目标拒绝覆盖，再按恢复文档核对数据并切换。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+http: <a href="https://docs.python.org/3/library/http.server.html">https://docs.python.org/3/library/http.server.html</a></p>
+<h2>15. 审批变更与阶段报告</h2>
+<p>第 15 页：审批变更与阶段报告</p>
+<p>建议用时 4 分钟。审批在本例中是新增需求演练，不是已实现功能。工程师需要把技术影响解释成业务可理解的交付影响。先澄清规则，再给工作量区间和依赖，新增人日与延期天数分别说明。比较原范围先交、完整范围延期或分期等选择。对外承诺由有权限的人确认，AI 可起草评估和沟通文本。报告同时显示当前预测与已批准日期，保持未受影响工作的推进。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>16. 部署与 DfX 的最低说明</h2>
+<p>第 16 页：部署与 DfX 的最低说明</p>
+<p>建议用时 3 分钟。真实部署需要对齐位置、基础设施约束、数据库中间件准入、环境提供方及就绪日期。DfX 选择适用属性，写明场景、阈值、负责人、措施、验证和证据。不要把一次本机演示速度当作性能承诺，也不要因为监听本机就声称拥有完整安全性。本例使用 Python 标准库 HTTP，官方文档不推荐其作为生产服务。说明边界是为了确定下一阶段的真实工作。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+官方资料（2026-10-03 核对）：
+http: <a href="https://docs.python.org/3/library/http.server.html">https://docs.python.org/3/library/http.server.html</a></p>
+<h2>17. 工具接续与导师培养</h2>
+<p>第 17 页：工具接续与导师培养</p>
+<p>建议用时 3 分钟。让一位工程师把当前任务交给另一位同事，观察缺少哪些上下文。保存聊天记录可以辅助，但可运行代码、明确需求、测试与恢复文档更直接地支持接续。导师应解释为何拒绝一项修改，让新手学会描述证据，避免代做全部任务。工具、版本或模型变化后，通过代表性验收任务重新比较质量与总成本，而不是只看生成速度。没有真实样本时不宣称效率提升百分比。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+<h2>18. 工程师考核与持续改进</h2>
+<p>第 18 页：工程师考核与持续改进</p>
+<p>建议用时 5 分钟布置练习，另留 45 分钟完成。导师从配套练习选择未讲过的边界变更或故障，学员先形成验收再委派 AI。评分看复现、业务依据、差异控制、独立验证、限制和恢复，不看代码数量。测试通过但无法解释预期来源时需要补证据。改进记录区分材料修订已完成与真实效果待验证。把可普遍复用的经验写入长期规则，具体故障留在知识库，并在下一次新任务中检验改进是否有效。</p>
+<p>材料来源：本项目 AGENTS.md、docs/PROJECT_PLAN.md、training/00-opening.md。
+本页为教学设计与示例，无外部统计数据。</p>
+</main></body></html>

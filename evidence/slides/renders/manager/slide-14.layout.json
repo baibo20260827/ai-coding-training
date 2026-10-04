@@ -1,0 +1,1087 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/6lsnupw7",
+    "id": "6lsnupw7",
+    "slide": 14,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAF8F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial Unicode MS",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y5wjitgj",
+      "id": "16",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        45,
+        1152,
+        70
+      ],
+      "geometry": "rect",
+      "text": "主管练习与持续改进",
+      "textPreview": "主管练习与持续改进",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "主管练习与持续改进"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "主管练习与持续改进",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "主管练习与持续改进",
+              "fontSize": 44,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xc7eds76",
+      "id": "2",
+      "name": "slide-lead",
+      "bbox": [
+        64,
+        137,
+        1152,
+        62
+      ],
+      "geometry": "rect",
+      "text": "产出一项可解释的决策，保留依据",
+      "textPreview": "产出一项可解释的决策，保留依据",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "产出一项可解释的决策，保留依据"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "产出一项可解释的决策，保留依据",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "产出一项可解释的决策，保留依据",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wbydknq1",
+      "id": "3",
+      "name": "footer-audience",
+      "bbox": [
+        64,
+        683,
+        580,
+        25
+      ],
+      "geometry": "rect",
+      "text": "主管版",
+      "textPreview": "主管版",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "主管版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "主管版",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "主管版",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jepwf2pc",
+      "id": "4",
+      "name": "footer-page",
+      "bbox": [
+        1080,
+        683,
+        136,
+        25
+      ],
+      "geometry": "rect",
+      "text": "14 / 14",
+      "textPreview": "14 / 14",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "14 / 14"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "14 / 14",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "14 / 14",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idgvmx8r",
+      "id": "5",
+      "name": "text",
+      "bbox": [
+        64,
+        215,
+        550,
+        52
+      ],
+      "geometry": "rect",
+      "text": "课后练习",
+      "textPreview": "课后练习",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "课后练习"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "课后练习",
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Arial Unicode MS",
+            "color": "#0C7777",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "课后练习",
+              "fontSize": 31,
+              "typeface": "Arial Unicode MS",
+              "color": "#0C7777",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5grehs7i",
+      "id": "6",
+      "name": "text",
+      "bbox": [
+        64,
+        284,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "阅读一份带审批变更的状态报告",
+      "textPreview": "阅读一份带审批变更的状态报告",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阅读一份带审批变更的状态报告"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阅读一份带审批变更的状态报告",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阅读一份带审批变更的状态报告",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kfidonqx",
+      "id": "7",
+      "name": "text",
+      "bbox": [
+        64,
+        356,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "区分实现、验证与客户接受",
+      "textPreview": "区分实现、验证与客户接受",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "区分实现、验证与客户接受"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "区分实现、验证与客户接受",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "区分实现、验证与客户接受",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zi5c3y98",
+      "id": "8",
+      "name": "text",
+      "bbox": [
+        64,
+        428,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "比较方案并记录待确认前提",
+      "textPreview": "比较方案并记录待确认前提",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "比较方案并记录待确认前提"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "比较方案并记录待确认前提",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "比较方案并记录待确认前提",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ehwvat8n",
+      "id": "9",
+      "name": "text",
+      "bbox": [
+        64,
+        500,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "提出负责人及最晚决策时间",
+      "textPreview": "提出负责人及最晚决策时间",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "提出负责人及最晚决策时间"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "提出负责人及最晚决策时间",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "提出负责人及最晚决策时间",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3e1gjyd",
+      "id": "10",
+      "name": "text",
+      "bbox": [
+        664,
+        215,
+        550,
+        52
+      ],
+      "geometry": "rect",
+      "text": "后续观察",
+      "textPreview": "后续观察",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "后续观察"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "后续观察",
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Arial Unicode MS",
+            "color": "#0C7777",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "后续观察",
+              "fontSize": 31,
+              "typeface": "Arial Unicode MS",
+              "color": "#0C7777",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4ni9ofy",
+      "id": "11",
+      "name": "text",
+      "bbox": [
+        664,
+        284,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "试讲是否解决受众的真实困惑",
+      "textPreview": "试讲是否解决受众的真实困惑",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "试讲是否解决受众的真实困惑"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "试讲是否解决受众的真实困惑",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "试讲是否解决受众的真实困惑",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1wze9g7",
+      "id": "12",
+      "name": "text",
+      "bbox": [
+        664,
+        356,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "新任务能否独立完成并验收",
+      "textPreview": "新任务能否独立完成并验收",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "新任务能否独立完成并验收"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "新任务能否独立完成并验收",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "新任务能否独立完成并验收",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b2507exs",
+      "id": "13",
+      "name": "text",
+      "bbox": [
+        664,
+        428,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "真实项目的周期、缺陷与总成本",
+      "textPreview": "真实项目的周期、缺陷与总成本",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "真实项目的周期、缺陷与总成本"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "真实项目的周期、缺陷与总成本",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "真实项目的周期、缺陷与总成本",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kre1k3y9",
+      "id": "14",
+      "name": "text",
+      "bbox": [
+        664,
+        500,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "反馈登记后同步修改相关材料",
+      "textPreview": "反馈登记后同步修改相关材料",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "反馈登记后同步修改相关材料"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "反馈登记后同步修改相关材料",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "反馈登记后同步修改相关材料",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ls7idofu",
+      "id": "15",
+      "name": "takeaway",
+      "bbox": [
+        64,
+        619,
+        1152,
+        50
+      ],
+      "geometry": "rect",
+      "text": "材料可用、学会迁移、客户接受分别验证",
+      "textPreview": "材料可用、学会迁移、客户接受分别验证",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "材料可用、学会迁移、客户接受分别验证"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "材料可用、学会迁移、客户接受分别验证",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial Unicode MS",
+            "color": "#0C7777",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "材料可用、学会迁移、客户接受分别验证",
+              "fontSize": 24,
+              "typeface": "Arial Unicode MS",
+              "color": "#0C7777"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

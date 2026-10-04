@@ -1,0 +1,102 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>会议室预约：4A 架构与关键决策 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="architecture.md" download>下载 Markdown 源文件</a></nav><main><h1>会议室预约：4A 架构与关键决策</h1>
+<p>版本：1.0；对应 CASE-ROOM-01 需求 1.0；日期：2026-10-03。</p>
+<p>本文件为虚构教学应用设计。4A 暂按 BA 业务、AA 应用、DA 数据、TA 技术四类解释；真实项目沿用客户或部门定义。四个 Mermaid 代码块即为可编辑图源；标识是逻辑职责，未声称与代码函数一一同名。</p>
+<p>离线查看四张独立矢量图：<a href="../architecture-views/ba.svg">BA</a>、<a href="../architecture-views/aa.svg">AA</a>、<a href="../architecture-views/da.svg">DA</a>、<a href="../architecture-views/ta.svg">TA</a>。图与本文对应同一教学版本；修改架构时一并更新。</p>
+<h2>BA：业务架构</h2>
+<img src="../architecture-views/ba.svg" alt="4A架构视图">
+<p>业务边界是本机练习。没有登录和审批角色；不得把图中的“教学使用者”解读为已经完成用户身份验证。验收责任由人承担。</p>
+<h2>AA：应用架构</h2>
+<img src="../architecture-views/aa.svg" alt="4A架构视图">
+<p>页面负责采集信息和反馈结果；服务端维护真正的业务规则；存储层负责持久化及并发下的唯一占用。即使页面禁止选择 09:15，服务端仍须拒绝绕过页面直接送来的 09:15。故障练习使用隔离数据，不能破坏日常演示库。</p>
+<h2>DA：数据架构</h2>
+<img src="../architecture-views/da.svg" alt="4A架构视图">
+<p>图是逻辑模型：<code>booking_information</code> 表示页面要求的虚构预约信息，不限定实际列名。每条预约拥有一个或多个半小时占用格；同一日期和同一开始格只能属于一条有效预约。单会议室省略 room_id；若扩展多会议室，必须重新分析业务、数据唯一键及接口，而非只加页面选项。</p>
+<p>与当前代码的对应：逻辑 <code>RESERVATION</code> 对应 <code>bookings</code>，字段为 <code>id</code>（文本标识）、<code>day</code>、<code>start_minute</code>、<code>end_minute</code>、<code>name</code>、<code>purpose</code>；逻辑 <code>OCCUPIED_SLOT</code> 对应 <code>slots(day,start_minute,booking_id)</code>，复合主键为 <code>(day,start_minute)</code>，外键删除级联释放占用。页面时间字符串经校验后转换为分钟数。创建使用 <code>BEGIN IMMEDIATE</code> 事务；占用冲突整笔回滚并反馈 HTTP 409。</p>
+<p>创建预约与写入全部占用格必须处于同一事务：全部成功才提交，发生冲突整体回滚。取消预约与释放全部占用格也应原子完成。预约信息从页面经服务端写入本地数据库，查询再回到页面；刷新和服务重启不应清空同一数据文件。取消采用删除的教学语义，不提供审计、合规保留或恢复单条记录能力。</p>
+<h2>TA：技术架构</h2>
+<img src="../architecture-views/ta.svg" alt="4A架构视图">
+<p>本地启动：<code>python3 demo/app.py --port 8765</code>。运行检查：<code>python3 -m unittest discover -s demo/tests -v</code>。故障练习：<code>python3 demo/labs/failure_lab.py</code>。均在项目根目录执行，具体结果以实际执行记录为准。</p>
+<h2>四个视图的对应关系</h2>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>BA 业务</th>
+<th>AA 职责</th>
+<th>DA 数据</th>
+<th>TA 依赖</th>
+<th>验收</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R01/R02</td>
+<td>查看与预约</td>
+<td>页面、请求处理、业务处理</td>
+<td>预约与占用格</td>
+<td>浏览器、HTTP、SQLite</td>
+<td>A01/A02</td>
+</tr>
+<tr>
+<td>R03/R06</td>
+<td>时段与输入规则</td>
+<td>服务端校验、业务处理</td>
+<td>日期与半小时占用格</td>
+<td>标准库时间处理、数据库约束</td>
+<td>A03/A06</td>
+</tr>
+<tr>
+<td>R04/R05</td>
+<td>取消与持久可见</td>
+<td>业务处理、事务</td>
+<td>删除预约/占用格、保存文件</td>
+<td>同一 SQLite 文件与正常重启</td>
+<td>A04/A05</td>
+</tr>
+<tr>
+<td>R07/R08</td>
+<td>本地边界与唯一预约</td>
+<td>请求处理、冲突反馈</td>
+<td>唯一占用与事务回滚</td>
+<td>本机绑定、并发访问与隔离测试</td>
+<td>A07/A08</td>
+</tr>
+</tbody></table>
+<h2>关键决策记录</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>决策与理由</th>
+<th>代价及复议条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ADR-01</td>
+<td>使用 Python 标准库、SQLite 和原生页面，降低入门环境准备成本</td>
+<td>不据此推荐生产技术栈；真实部署约束出现时重新评估</td>
+</tr>
+<tr>
+<td>ADR-02</td>
+<td>固定半小时格，借助数据唯一性和事务防止并发重复占用</td>
+<td>不支持任意分钟；需求变化需要重新评估数据模型</td>
+</tr>
+<tr>
+<td>ADR-03</td>
+<td>服务端重复校验页面已限制的输入</td>
+<td>多一处实现但保护业务边界；测试应覆盖绕过页面的输入</td>
+</tr>
+<tr>
+<td>ADR-04</td>
+<td>仅监听 127.0.0.1，无登录审批</td>
+<td>易于本地教学；不能满足跨人共享与权限隔离</td>
+</tr>
+<tr>
+<td>ADR-05</td>
+<td>演练故障与正式演示数据隔离</td>
+<td>需要两类数据环境；确保失败可重复且可恢复</td>
+</tr>
+</tbody></table>
+<h2>变更检查与交付说明</h2>
+<p>新增审批时，BA 新增申请/审批/驳回规则；AA 新增状态迁移与身份权限职责；DA 新增状态、审批关系及历史需求；TA 需要重新确认身份服务、部署环境和运维责任。这些变化仅在<a href="change-example.html">变更演练</a>中评估，本期程序未实现。</p>
+<p>客户部署只使用<a href="../../templates/deployment-alignment.html">对齐表</a>确认环境、准入、就绪时间及责任。运行质量使用<a href="../../templates/dfx-matrix.html">DfX 矩阵</a>规划可检验目标；本地试验结果不得外推成生产性能或可用性承诺。</p>
+</main></body></html>

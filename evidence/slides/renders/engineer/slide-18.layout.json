@@ -1,0 +1,1087 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/y5wne50z",
+    "id": "y5wne50z",
+    "slide": 18,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAF8F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial Unicode MS",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/to72pw76",
+      "id": "16",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        45,
+        1152,
+        70
+      ],
+      "geometry": "rect",
+      "text": "工程师考核与持续改进",
+      "textPreview": "工程师考核与持续改进",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "工程师考核与持续改进"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "工程师考核与持续改进",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "工程师考核与持续改进",
+              "fontSize": 44,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wrelszu9",
+      "id": "2",
+      "name": "slide-lead",
+      "bbox": [
+        64,
+        137,
+        1152,
+        62
+      ],
+      "geometry": "rect",
+      "text": "处理一个未原样讲过的变更或故障",
+      "textPreview": "处理一个未原样讲过的变更或故障",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "处理一个未原样讲过的变更或故障"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "处理一个未原样讲过的变更或故障",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "处理一个未原样讲过的变更或故障",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hsn2l4bu",
+      "id": "3",
+      "name": "footer-audience",
+      "bbox": [
+        64,
+        683,
+        580,
+        25
+      ],
+      "geometry": "rect",
+      "text": "工程师版",
+      "textPreview": "工程师版",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "工程师版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "工程师版",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "工程师版",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/itw3upcf",
+      "id": "4",
+      "name": "footer-page",
+      "bbox": [
+        1080,
+        683,
+        136,
+        25
+      ],
+      "geometry": "rect",
+      "text": "18 / 18",
+      "textPreview": "18 / 18",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "18 / 18"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "18 / 18",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "18 / 18",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/je5knut0",
+      "id": "5",
+      "name": "text",
+      "bbox": [
+        64,
+        215,
+        550,
+        52
+      ],
+      "geometry": "rect",
+      "text": "提交的证据",
+      "textPreview": "提交的证据",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "提交的证据"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "提交的证据",
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Arial Unicode MS",
+            "color": "#3767AA",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "提交的证据",
+              "fontSize": 31,
+              "typeface": "Arial Unicode MS",
+              "color": "#3767AA",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4felwzu5",
+      "id": "6",
+      "name": "text",
+      "bbox": [
+        64,
+        284,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "独立写出的验收与修改边界",
+      "textPreview": "独立写出的验收与修改边界",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "独立写出的验收与修改边界"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "独立写出的验收与修改边界",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "独立写出的验收与修改边界",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gnmp4bq",
+      "id": "7",
+      "name": "text",
+      "bbox": [
+        64,
+        356,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "最短复现及根因说明",
+      "textPreview": "最短复现及根因说明",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "最短复现及根因说明"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "最短复现及根因说明",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "最短复现及根因说明",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6hw3y9sb",
+      "id": "8",
+      "name": "text",
+      "bbox": [
+        64,
+        428,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "代码差异与回归结果",
+      "textPreview": "代码差异与回归结果",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "代码差异与回归结果"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "代码差异与回归结果",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "代码差异与回归结果",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rip4retw",
+      "id": "9",
+      "name": "text",
+      "bbox": [
+        64,
+        500,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "接受、退回或恢复的依据",
+      "textPreview": "接受、退回或恢复的依据",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "接受、退回或恢复的依据"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "接受、退回或恢复的依据",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "接受、退回或恢复的依据",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fapkr6pw",
+      "id": "10",
+      "name": "text",
+      "bbox": [
+        664,
+        215,
+        550,
+        52
+      ],
+      "geometry": "rect",
+      "text": "复盘与改进",
+      "textPreview": "复盘与改进",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "复盘与改进"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "复盘与改进",
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Arial Unicode MS",
+            "color": "#3767AA",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "复盘与改进",
+              "fontSize": 31,
+              "typeface": "Arial Unicode MS",
+              "color": "#3767AA",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upg3i18r",
+      "id": "11",
+      "name": "text",
+      "bbox": [
+        664,
+        284,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "哪里需要补上下文或检查",
+      "textPreview": "哪里需要补上下文或检查",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "哪里需要补上下文或检查"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "哪里需要补上下文或检查",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "哪里需要补上下文或检查",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cr2tg72",
+      "id": "12",
+      "name": "text",
+      "bbox": [
+        664,
+        356,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "审查与返工花了多少时间",
+      "textPreview": "审查与返工花了多少时间",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "审查与返工花了多少时间"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "审查与返工花了多少时间",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "审查与返工花了多少时间",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbylkbqh",
+      "id": "13",
+      "name": "text",
+      "bbox": [
+        664,
+        428,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "哪些规则适合进入 AGENTS.md",
+      "textPreview": "哪些规则适合进入 AGENTS.md",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "哪些规则适合进入 AGENTS.md"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "哪些规则适合进入 AGENTS.md",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "哪些规则适合进入 AGENTS.md",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mpknmp0",
+      "id": "14",
+      "name": "text",
+      "bbox": [
+        664,
+        500,
+        550,
+        65
+      ],
+      "geometry": "rect",
+      "text": "关联代码、图与课件是否同步",
+      "textPreview": "关联代码、图与课件是否同步",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "关联代码、图与课件是否同步"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "关联代码、图与课件是否同步",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "关联代码、图与课件是否同步",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6lg3e18f",
+      "id": "15",
+      "name": "takeaway",
+      "bbox": [
+        64,
+        619,
+        1152,
+        50
+      ],
+      "geometry": "rect",
+      "text": "能解释为什么可信，才形成可复用的委派能力",
+      "textPreview": "能解释为什么可信，才形成可复用的委派能力",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "能解释为什么可信，才形成可复用的委派能力"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "能解释为什么可信，才形成可复用的委派能力",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial Unicode MS",
+            "color": "#3767AA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "能解释为什么可信，才形成可复用的委派能力",
+              "fontSize": 24,
+              "typeface": "Arial Unicode MS",
+              "color": "#3767AA"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

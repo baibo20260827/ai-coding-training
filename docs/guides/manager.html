@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>主管指南：让 AI coding 的进度、风险和人才培养可判断 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="manager.md" download>下载 Markdown 源文件</a></nav><main><h1>主管指南：让 AI coding 的进度、风险和人才培养可判断</h1>
+<p>版本：1.0；日期：2026-10-03。适用：部门主管、项目负责人及能力建设负责人。目标：用客户价值、工程证据和人员能力决定试点、交付承诺与推广范围。本指南是建议流程，真实人员、日期和审批权限需由部门确定。</p>
+<p>先用<a href="../../training/00-opening.html">共同开篇</a>的主管故事进入：虚构主管看到了页面就答应审批同日交付，缺少解释新日期的依据。学习完成时，你应能指出“目前能承诺什么、还需要什么证据、谁来决定变化”。</p>
+<h2>1. 启动之前，先选值得解决的场景</h2>
+<p>先分别问使用者、业务负责人和验收人：现在怎样完成任务、哪一步最费时或最易出错、什么改善能被观察、不能失败的环节是什么。再评估数据与环境是否可获得、任务能否拆小、是否有人能审查与接管。</p>
+<p>入门试点优先选择范围有限、反馈快、结果可检查的工作，例如既有工具的小功能或可核对的数据整理。不要仅以“生成代码快”选择场景。先用<a href="../../templates/scenario-baseline.html">场景模板</a>形成目标、范围、异常例子和验收责任，再决定是否进入实现。</p>
+<p>会议室教学案例的价值链是“减少反复询问 → 查看所选日期 → R01/A01”；“避免重复占用 → 相邻允许、重叠拒绝 → R03/A03 和 R08/A08”。真实收益必须另行采集，不能从教学功能倒推出节约人数。</p>
+<h2>2. 用证据管理进度与阶段汇报</h2>
+<p>每周看一页<a href="../../templates/weekly-milestone.html">状态报告</a>，里程碑看可运行演示与验收证据。你至少需要五项信息：原承诺与当前批准承诺、已验证成果、剩余任务与依赖、最新预测及假设、需要你作出的决定。</p>
+<p>把实现、验证、接受分开问：页面能打开属于实现证据；相邻/重叠与刷新检查属于验证；指定验收人同意试用才属于接受。测试全绿并不代表客户已经接受。检查日志的版本和日期，避免把旧版本结果用于新变更。</p>
+<p>不要要求每项任务给出没有依据的“完成 80%”。场景完成数量适合显示覆盖，剩余工期需考虑任务依赖和资源。黄色状态应带具体行动，例如“并发验证未完成，开发甲明日给结果”；红色状态应带可选决策，不把报告变成报喜或追责仪式。</p>
+<p>参考<a href="../case/weekly-report-example.html">已填周报</a>，其中所有进度是模拟数据。真实项目将其替换为实际版本、检查记录和确认依据。</p>
+<h2>3. 给任务分配适当的控制力度</h2>
+<p>以下是初始裁剪建议；部门已有制度优先。</p>
+<table>
+<thead>
+<tr>
+<th>任务影响</th>
+<th>典型例子</th>
+<th>需要的责任与证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本地、可恢复</td>
+<td>教学页面、虚构数据、小文案调整</td>
+<td>明确任务边界，自查并保留恢复方式</td>
+</tr>
+<tr>
+<td>共享业务逻辑</td>
+<td>预约冲突、数据修改、接口行为</td>
+<td>技术负责人审查，独立验收与回归，业务接受</td>
+</tr>
+<tr>
+<td>对外或高后果</td>
+<td>生产发布、权限、敏感数据、不可逆迁移</td>
+<td>相应授权人决定，按部门规定验证、发布与接管</td>
+</tr>
+</tbody></table>
+<p>规则写进文档只是开始；实际权限、检查和人员职责要能执行。主管指定可接受的风险与责任，技术负责人解释可验证性，业务验收人确认价值；不能让 AI 自行批准客户承诺。</p>
+<h2>4. 面对需求变化，给出选择与依据</h2>
+<p>先区分新增需求、原缺陷、理解偏差、估算偏差和外部阻塞。再检查业务、应用、数据、技术四个视图的影响，以及验证、环境、文档和培训返工。</p>
+<p>使用<a href="../../templates/change-control.html">变更模板</a>比较：按原日期交核心范围、完整范围调整日期、分期、替换低优先级项、增加确实适合的资源。必要的正确性和验收条件保持明确。新增人日不直接等于延期，人数也不能消除依赖链。</p>
+<p>在<a href="../case/change-example.html">审批演练</a>中，原剩余计划 4 日，变更后依赖网络需要 6—8 日，因此预测比原承诺晚 2—4 个工作日；前提不成立就要重排。预测只是决策输入，授权人的书面确认才更新承诺。未决定期间继续不依赖该决定的已授权工作，明确等待会影响什么。</p>
+<h2>5. 培养能够接管和指导的人</h2>
+<p>先做一次任务基线，再安排不同强度的练习：新手描述并验收；工程师拆分、实现与独立审查；种子导师帮助别人定位问题；技术负责人负责较高影响的交付。</p>
+<p>能力阶梯按行为判断：能描述需求 → 在指导下完成 → 独立验证小任务 → 承担适当交付责任 → 指导他人。使用<a href="../../templates/capability-pilot.html">能力模板</a>记录实际任务、协助程度与证据；培训出席、生成行数、AI 使用次数不能替代能力评估。</p>
+<p>建议为首轮安排至少一名业务联络人、一名技术把关人和可分担答疑的种子导师；具体人数依规模确定。给导师保留指导时间，不能只增加责任却不调整原有排期。每次答疑沉淀一条可复现问题或材料修订，按<a href="mentoring.html">指导流程</a>分流。</p>
+<h2>6. 管理工具依赖与成本</h2>
+<p>让需求、架构、源代码、测试、运行方法、状态与恢复说明保存在可接管的项目资产中。确认工具准入、数据边界、费用承担、版本变化和不可用时的负责人。别把唯一的知识留在某个人的聊天窗口。</p>
+<p>执行<a href="../../training/exercises.html">练习 L6</a>：下一位维护者不读完整对话，仅凭文件验证一个关键行为。它能发现接管缺口，但不能证明任意工具完全等价。总成本计入模型/工具、人力审查、返工和运行资源，避免把生成时间等同于总交付时间。</p>
+<h2>7. 本次主管作业与完成标准</h2>
+<p>完成练习 L1、L5、L6，并提交一页决策卡：目标与原基线、当前证据、至少两种方案、预测及假设、决策权限、下一次检查点。用<a href="../../training/answer-key.html">参考答案</a>在讨论后复核。</p>
+<p>达标：能说明为何接受或暂缓；能区分范围变化和缺陷；能说清预测为何变化；不自动承诺延期；为人员能力与工具接管安排明确动作。真实试点结束，再结合实际数据决定继续、收缩或扩大范围。</p>
+</main></body></html>

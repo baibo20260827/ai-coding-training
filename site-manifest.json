@@ -1,0 +1,223 @@
+{
+  "builtAt": "2026-10-04T03:17:35.129Z",
+  "markdownPages": 43,
+  "sourceFiles": 189,
+  "entries": [
+    {
+      "path": "AGENTS.html",
+      "source": "AGENTS.md",
+      "title": "项目工作约定"
+    },
+    {
+      "path": "README.html",
+      "source": "README.md",
+      "title": "软件工程 Harness 与 AI Coding 能力建设"
+    },
+    {
+      "path": "STATUS.html",
+      "source": "STATUS.md",
+      "title": "当前状态"
+    },
+    {
+      "path": "demo/AGENTS.html",
+      "source": "demo/AGENTS.md",
+      "title": "教学案例工作约定"
+    },
+    {
+      "path": "demo/README.html",
+      "source": "demo/README.md",
+      "title": "会议室预约：可运行的 Harness 教学案例"
+    },
+    {
+      "path": "demo/REQUIREMENTS.html",
+      "source": "demo/REQUIREMENTS.md",
+      "title": "会议室预约需求与验收追踪"
+    },
+    {
+      "path": "demo/WALKTHROUGH.html",
+      "source": "demo/WALKTHROUGH.md",
+      "title": "讲师演示与故障恢复脚本"
+    },
+    {
+      "path": "docs/IMPROVEMENTS.html",
+      "source": "docs/IMPROVEMENTS.md",
+      "title": "改进日志"
+    },
+    {
+      "path": "docs/PROJECT_PLAN.html",
+      "source": "docs/PROJECT_PLAN.md",
+      "title": "建设方案"
+    },
+    {
+      "path": "docs/PUBLISH_GITHUB.html",
+      "source": "docs/PUBLISH_GITHUB.md",
+      "title": "在自己的 GitHub 发布完整学习网站"
+    },
+    {
+      "path": "docs/case/architecture.html",
+      "source": "docs/case/architecture.md",
+      "title": "会议室预约：4A 架构与关键决策"
+    },
+    {
+      "path": "docs/case/change-example.html",
+      "source": "docs/case/change-example.md",
+      "title": "已填案例：新增审批怎样影响交付承诺"
+    },
+    {
+      "path": "docs/case/requirements.html",
+      "source": "docs/case/requirements.md",
+      "title": "会议室预约：需求与验收基线"
+    },
+    {
+      "path": "docs/case/weekly-report-example.html",
+      "source": "docs/case/weekly-report-example.md",
+      "title": "已填案例：一页阶段汇报"
+    },
+    {
+      "path": "docs/guides/README.html",
+      "source": "docs/guides/README.md",
+      "title": "实践材料入口"
+    },
+    {
+      "path": "docs/guides/beginner.html",
+      "source": "docs/guides/beginner.md",
+      "title": "新手指南：从一句想法走到可以验收的小功能"
+    },
+    {
+      "path": "docs/guides/engineer.html",
+      "source": "docs/guides/engineer.md",
+      "title": "工程师指南：把怀疑转成约束、反例与交付证据"
+    },
+    {
+      "path": "docs/guides/manager.html",
+      "source": "docs/guides/manager.md",
+      "title": "主管指南：让 AI coding 的进度、风险和人才培养可判断"
+    },
+    {
+      "path": "docs/guides/mentoring.html",
+      "source": "docs/guides/mentoring.md",
+      "title": "答疑分诊与导师指导流程"
+    },
+    {
+      "path": "evidence/VALIDATION.html",
+      "source": "evidence/VALIDATION.md",
+      "title": "培训包 v1.0 验证记录"
+    },
+    {
+      "path": "evidence/demo/BROWSER.html",
+      "source": "evidence/demo/BROWSER.md",
+      "title": "浏览器与服务重启验证"
+    },
+    {
+      "path": "evidence/demo/VALIDATION.html",
+      "source": "evidence/demo/VALIDATION.md",
+      "title": "教学案例工程验证记录"
+    },
+    {
+      "path": "evidence/publishing/VALIDATION.html",
+      "source": "evidence/publishing/VALIDATION.md",
+      "title": "全量学习站本地发布检查"
+    },
+    {
+      "path": "evidence/slides/QA.html",
+      "source": "evidence/slides/QA.md",
+      "title": "课件检查记录"
+    },
+    {
+      "path": "faq/README.html",
+      "source": "faq/README.md",
+      "title": "FAQ：从第一次起步到交付与变更"
+    },
+    {
+      "path": "scripts/README.html",
+      "source": "scripts/README.md",
+      "title": "材料维护与重建"
+    },
+    {
+      "path": "templates/capability-pilot.html",
+      "source": "templates/capability-pilot.md",
+      "title": "模板：能力考核与真实试点复盘"
+    },
+    {
+      "path": "templates/change-control.html",
+      "source": "templates/change-control.md",
+      "title": "模板：需求变更影响、选项与书面确认"
+    },
+    {
+      "path": "templates/deployment-alignment.html",
+      "source": "templates/deployment-alignment.md",
+      "title": "模板：部署环境与交付约束对齐表"
+    },
+    {
+      "path": "templates/dfx-matrix.html",
+      "source": "templates/dfx-matrix.md",
+      "title": "模板：简明 DfX 规划与验收矩阵"
+    },
+    {
+      "path": "templates/scenario-baseline.html",
+      "source": "templates/scenario-baseline.md",
+      "title": "模板：客户场景与验收基线"
+    },
+    {
+      "path": "templates/task-review.html",
+      "source": "templates/task-review.md",
+      "title": "模板：任务委派、审查与接受"
+    },
+    {
+      "path": "templates/weekly-milestone.html",
+      "source": "templates/weekly-milestone.md",
+      "title": "模板：一页周报与里程碑评审"
+    },
+    {
+      "path": "training/00-opening.html",
+      "source": "training/00-opening.md",
+      "title": "培训开篇：三个小失败，三种真实困难"
+    },
+    {
+      "path": "training/README.html",
+      "source": "training/README.md",
+      "title": "培训使用入口"
+    },
+    {
+      "path": "training/ai-task-cards.html",
+      "source": "training/ai-task-cards.md",
+      "title": "AI 协作任务卡"
+    },
+    {
+      "path": "training/answer-key.html",
+      "source": "training/answer-key.md",
+      "title": "讲师参考答案与评分"
+    },
+    {
+      "path": "training/exercises.html",
+      "source": "training/exercises.md",
+      "title": "学员练习册"
+    },
+    {
+      "path": "training/facilitator-guide.html",
+      "source": "training/facilitator-guide.md",
+      "title": "讲师运行手册"
+    },
+    {
+      "path": "training/slides/README.html",
+      "source": "training/slides/README.md",
+      "title": "分层培训课件"
+    },
+    {
+      "path": "training/slides/beginner-notes.html",
+      "source": "training/slides/beginner-notes.md",
+      "title": "新手版逐页讲师备注"
+    },
+    {
+      "path": "training/slides/engineer-notes.html",
+      "source": "training/slides/engineer-notes.md",
+      "title": "工程师版逐页讲师备注"
+    },
+    {
+      "path": "training/slides/manager-notes.html",
+      "source": "training/slides/manager-notes.md",
+      "title": "主管版逐页讲师备注"
+    }
+  ],
+  "publishingStatus": "prepared locally; not deployed"
+}

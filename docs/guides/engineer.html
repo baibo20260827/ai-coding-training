@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工程师指南：把怀疑转成约束、反例与交付证据 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="engineer.md" download>下载 Markdown 源文件</a></nav><main><h1>工程师指南：把怀疑转成约束、反例与交付证据</h1>
+<p>版本：1.0；日期：2026-10-03。适用：具备开发经验的工程师与技术导师。目标：在合理审查成本下委派任务、识别错误、验证结果、处理回归并接管软件。</p>
+<p>先读<a href="../../training/00-opening.html">共同开篇</a>中的虚构案例：相邻预约修好了，重叠预约却被放过，测试预期也一起被改错。合理的质疑应落成独立业务例子与差异审查，不需要预先相信或否定所有 AI 输出。</p>
+<h2>1. harness 怎样围绕一个任务工作</h2>
+<p>任务上下文包含需求、现有结构、业务边界、可用工具与权限；执行过程产生小范围变更；自动检查和独立验收提供反馈；状态与恢复材料让下一人接管。<code>AGENTS.md</code> 是工作约定入口，真正的约束还要由代码检查、数据约束、工具权限和人的决策实现。</p>
+<p>每个任务用<a href="../../templates/task-review.html">委派审查模板</a>：明确目标、允许修改范围、需求编号、输入输出例子、不能擅自改变的预期、验证与恢复方法。复用<a href="../../training/ai-task-cards.html">AI 任务卡</a>，避免把整个项目一次交给模型后仅等待“完成”。</p>
+<h2>2. 阅读案例的顺序</h2>
+<p>先看<a href="../case/requirements.html">需求</a>，独立写出 A03 相邻与重叠的判断；再看<a href="../case/architecture.html">4A</a>了解职责、数据与运行边界；最后阅读实现和测试。这样业务预期不会仅来自当前实现。</p>
+<p>代码契约为本地接口：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>接口</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查看</td>
+<td><code>GET /api/bookings?date=YYYY-MM-DD</code></td>
+<td>查询所选日期</td>
+</tr>
+<tr>
+<td>预约</td>
+<td><code>POST /api/bookings</code></td>
+<td>JSON 字段 <code>date,start,end,name,purpose</code>，使用虚构姓名与主题</td>
+</tr>
+<tr>
+<td>取消</td>
+<td><code>DELETE /api/bookings/{id}</code></td>
+<td>使用查询返回的标识；不要猜测标识格式</td>
+</tr>
+<tr>
+<td>健康检查</td>
+<td><code>GET /api/health</code></td>
+<td>服务响应不等于所有业务验收完成</td>
+</tr>
+</tbody></table>
+<p>本地启动：</p>
+<pre><code class="language-bash">python3 demo/app.py --port 8765
+</code></pre>
+<p>浏览器访问 <code>http://127.0.0.1:8765</code>。查看<a href="../../demo/README.html">案例运行说明</a>确认数据库位置、环境要求、恢复方法和已知限制。服务仅供本机练习，没有登录、审批或生产承诺。</p>
+<h2>3. 用半开区间建立独立预期</h2>
+<p>同日区间 <code>[s1,e1)</code> 与 <code>[s2,e2)</code> 重叠，当且仅当 <code>s1 &lt; e2</code> 且 <code>s2 &lt; e1</code>。边界上 11:00 等于已有结束时刻，允许相邻。业务先限定半小时格与 09:00—18:00，再讨论重叠；非法时间不能通过“没有重叠”而被接受。</p>
+<p>至少从需求推导五类例子：左相邻、右相邻、部分相交、完全包含、完全位于内部，再补不同日期。测试用例可以由 AI 草拟，但工程师要检查预期的来源及缺失的失败路径。</p>
+<p>并发问题不能只靠“先查没有冲突，再写入”：两个请求可能都看到空闲。案例用 SQLite 事务与日期/半小时格唯一约束保护一致性；创建占用中途冲突应整体回滚。数据库约束、代码错误处理和用户反馈必须对应同一规则。</p>
+<h2>4. 审查什么，怎样控制成本</h2>
+<p>先看差异是否只为当前任务服务，再看预期变化和数据路径。重点追问：修改了哪些业务假设？是否删除检查或放宽预期？异常路径会不会留下残数据？页面校验之外服务端是否仍执行规则？文档或架构是否被改变？</p>
+<p>检查力度跟随影响：小文字修改按显示结果检查；时间规则修改要验证相关边界与原功能；数据约束修改要关注并发、事务与恢复。不为低影响修改机械扩展所有测试，也不因代码少就忽略高后果逻辑。</p>
+<p>独立审查可以由另一人或 AI 提供建议，但建议仍要有可复现依据。实现者与审查者复述同一错误假设并不会增加证据强度。</p>
+<h2>5. 故障、修复与恢复演练</h2>
+<p>在项目根目录运行：</p>
+<pre><code class="language-bash">python3 demo/labs/failure_lab.py
+python3 -m unittest discover -s demo/tests -v
+</code></pre>
+<p>故障脚本是预设教学逻辑，不是模型真实行为统计。读输出时分别判断“故障被检查发现”和“实现通过验收”；脚本整体成功可能表示成功展示了预期失败。不能仅凭退出码为零就认为所有被展示版本正确。</p>
+<p>发现问题后先记录步骤、输入、预期、实际结果、代码版本和数据环境；缩小复现，再一次检查一个假设。修复后验证原失败与相关回归。恢复优先在独立练习副本中回到已知版本，按说明恢复教学数据；不要对他人未保存工作或未知数据库直接执行清理。</p>
+<h2>6. 把新需求交付完整</h2>
+<p>完成<a href="../../training/exercises.html">练习 L4</a>：午休 12:00—13:00 不可预约，11:30—12:00 和 13:00—13:30 仍允许。先确认已有预约怎样处理；在未答复时记录演练假设，不默默删数据。分析 BA 规则、AA 校验/提示、DA 旧数据影响、TA 是否变化，再小步实现和验证。</p>
+<p>提交任务卡、差异、实际命令、结果、限制和恢复方法。把相关验收映射回需求，向主管说明还剩什么。若变更会影响已确认日期，提供任务依赖和工期区间，由授权人调整承诺。</p>
+<h2>7. 工程师完成标准</h2>
+<p>独立完成 L3、L4 与 L6，能发现一个未原样讲过的缺陷或边界，解释测试预期为何正确，证明旧功能保留，说明当前证据不能支持的结论。真实试点再验证审查/返工时间和总交付成本；当前本地案例不证明生产性能、安全或团队效率收益。</p>
+</main></body></html>

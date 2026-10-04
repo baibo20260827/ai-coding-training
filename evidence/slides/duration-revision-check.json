@@ -1,0 +1,23 @@
+[
+  {
+    "deck": "manager",
+    "unchanged_visible_slide_xml": 14,
+    "changed_visible_slide_xml": [],
+    "normalization": "Remove auto-generated Office creationId elements only",
+    "change": "Cover speaker note course duration only"
+  },
+  {
+    "deck": "engineer",
+    "unchanged_visible_slide_xml": 18,
+    "changed_visible_slide_xml": [],
+    "normalization": "Remove auto-generated Office creationId elements only",
+    "change": "Cover speaker note course duration only"
+  },
+  {
+    "deck": "beginner",
+    "unchanged_visible_slide_xml": 18,
+    "changed_visible_slide_xml": [],
+    "normalization": "Remove auto-generated Office creationId elements only",
+    "change": "Cover speaker note course duration only"
+  }
+]

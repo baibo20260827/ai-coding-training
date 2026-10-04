@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教学案例工程验证记录 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="VALIDATION.md" download>下载 Markdown 源文件</a></nav><main><h1>教学案例工程验证记录</h1>
+<p>日期：2026-10-03。执行者：本项目 AI 开发代理。适用对象：讲师、评审者、复核工程师。</p>
+<p>这是实际本地执行记录；不代表客户接受、生产准入、培训效果或性能容量结论。</p>
+<h2>环境</h2>
+<p>实际查询：<code>python3 -c &#39;import sys,sqlite3,platform; print(sys.version); print(&quot;SQLite&quot;,sqlite3.sqlite_version); print(platform.platform())&#39;</code></p>
+<pre><code class="language-text">3.9.6 (default, Aug 25 2026, 21:26:21)
+[Clang 21.0.0 (clang-2100.3.34.2)]
+SQLite 3.51.0
+macOS-26.6.2-arm64-arm-64bit
+</code></pre>
+<p>以上版本用于记录重现条件。项目没有将本机 Python 版本作为生产推荐；团队应使用准入且仍受维护的版本。Windows/Linux 和其他 Python 版本尚未执行平台验证。</p>
+<h2>自动检查</h2>
+<p>命令：<code>python3 -m unittest discover -s demo/tests -v</code>，从项目根目录运行。</p>
+<p>首轮在受限沙箱执行：15 项数据库、业务、并发与恢复测试通过；6 项 HTTP 测试因 <code>socket.bind</code> 返回 <code>PermissionError: [Errno 1] Operation not permitted</code> 未能开始。记录为执行环境限制，未改写为通过。</p>
+<p>随后获准在本机回环地址运行临时 HTTP 测试服务，重新执行完整命令。实际终端摘要：</p>
+<pre><code class="language-text">Ran 21 tests in 0.241s
+
+OK
+</code></pre>
+<p>结果：21/21 通过、exit code 0。0.241 秒只记录该轮运行耗时，不作为性能基准。</p>
+<p>覆盖：</p>
+<ul>
+<li>日期过滤和排序、建立与取消、SQLite 重新连接后持久化。</li>
+<li>相邻允许；相同、部分重叠、包含时段拒绝；失败事务不残留占用。</li>
+<li>无效日期、时间、类型、字数、控制字符、JSON 和请求大小；参数化 SQL 将输入作为数据。</li>
+<li>HTTP 页面与资源、健康接口、201/200/400/403/404/409/413/415 等主要行为。</li>
+<li>本地绑定、Host/Origin 限制、无跨站 OPTIONS 与路径白名单。</li>
+<li>8 个数据库并发竞争：1 成功、7 冲突；3 个相邻并发均成功。</li>
+<li>4 个 HTTP 并发竞争：1 个 201、3 个 409，最终仅 1 条预约。</li>
+<li>新文件备份与恢复、拒绝覆盖已有目标、拒绝接管其他 SQLite 数据库。</li>
+</ul>
+<p>完整可执行定义：<a href="../../demo/tests/test_app.py">test_app.py</a>。</p>
+<h2>预设故障演练</h2>
+<p>命令：<code>python3 demo/labs/failure_lab.py</code>。实际输出：</p>
+<pre><code class="language-text">虚构教学故障演练｜不会修改主应用、持久数据或测试预期
+
+1. 期待：10:00–11:00 后，应允许 11:00–12:00。
+   旧实现独立验收失败：相邻允许
+
+2. 预设错误修复：只检查两段时间完全相同。
+   弱测试 3/3 通过：其中一条把『重叠拒绝』改成『允许』。
+   需求独立验收发现：部分重叠拒绝、包含已有时段拒绝
+
+3. 正确规则：[开始, 结束)，相邻不重叠。
+   正确区间判定：独立验收 4/4 通过。
+   主应用 SQLite 行为：相邻成功，重叠被拒绝，数据库仅保留 2 条。
+
+4. 新手情境：页面内存重建后，临时记录消失。
+   内存模型重建：0 条；重新连接主应用数据库：2 条。
+   此步骤是内存模型模拟；真实浏览器刷新另按 README 操作验证。
+
+演练 PASS：预设缺陷被稳定发现，正确实现通过。退出码 0 表示演练成功，不表示错误实现正确。
+</code></pre>
+<p>结果：exit code 0。故障是教学预置，不能据此推断任意 AI 模型的失误比例。</p>
+<h2>备份恢复演练</h2>
+<p>命令：<code>python3 demo/backup.py exercise</code>。实际输出：</p>
+<pre><code class="language-text">PASS：备份含 1 条预约；取消后原库 0 条；恢复到新库 1 条。
+PASS：原库保持 0 条，覆盖已有目标被拒绝。
+演练完成：仅使用自动清理的临时目录，未触碰 demo/data 或用户文件。
+</code></pre>
+<p>结果：exit code 0。验证了教学数据库快照恢复和拒绝覆盖；没有执行生产数据迁移、跨版本 schema 恢复或用户数据库恢复。</p>
+<h2>后续补充</h2>
+<p>本轮随后已完成实际浏览器操作与 CLI 停止/同库重启验证，见 <a href="BROWSER.html">浏览器验证记录</a>。包括页面内取消确认、重新预约、停服失败提示及重启后的记录保留。</p>
+<h2>尚未证明的事项</h2>
+<ul>
+<li>客户环境兼容性、容量、安全评估、生产运维、高可用、身份认证、审批、跨时区和数据迁移：不在本教学实现范围。</li>
+<li>学员独立完成新变更、真实试讲、客户验收与收益：待团队实际参与，不能由工程测试替代。</li>
+</ul>
+<h2>复核方法</h2>
+<p>按 <a href="../../demo/README.html">README</a> 在获准运行本地服务的环境执行三条命令；测试只使用临时目录。记录自己实际环境与输出，有差异时保留原记录并另加新记录，不覆盖过去结果。</p>
+</main></body></html>

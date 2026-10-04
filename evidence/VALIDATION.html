@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>培训包 v1.0 验证记录 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="VALIDATION.md" download>下载 Markdown 源文件</a></nav><main><h1>培训包 v1.0 验证记录</h1>
+<p>日期：2026-10-03。范围：已制作的培训材料、教学案例和交付文件。真实授课效果、客户接受与生产准入另行取得。</p>
+<h2>已执行的检查</h2>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>实际检查与结果</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>业务与接口</td>
+<td>21/21 自动测试通过，含真实 HTTP 并发与数据库并发、相邻/重叠、输入、持久化和恢复</td>
+<td><a href="demo/VALIDATION.html">工程验证</a></td>
+</tr>
+<tr>
+<td>预设教学故障</td>
+<td>旧错误、弱测试全绿和独立验收对照稳定复现，正确实现通过</td>
+<td><a href="demo/VALIDATION.html">故障记录</a></td>
+</tr>
+<tr>
+<td>备份与恢复</td>
+<td>新路径快照恢复、拒绝覆盖通过</td>
+<td><a href="demo/VALIDATION.html">恢复记录</a></td>
+</tr>
+<tr>
+<td>页面与服务生命周期</td>
+<td>实际浏览器创建、刷新、相邻、冲突、保留/取消/重约、停服失败提示、同库重启持久化通过</td>
+<td><a href="demo/BROWSER.html">交互记录与截图</a></td>
+</tr>
+<tr>
+<td>三套 PPTX</td>
+<td>共 50 页，结构/原生对象/完整备注检查通过；50 页渲染及逐页视觉检查通过</td>
+<td><a href="slides/QA.html">课件报告</a></td>
+</tr>
+<tr>
+<td>交付文件</td>
+<td>本地链接存在性、4 SVG XML、3 PPTX 页数与 50 页非空备注检查</td>
+<td><a href="delivery-check.json">机器结果</a></td>
+</tr>
+<tr>
+<td>内容一致性</td>
+<td>受众、开篇、课时、需求编号、实际命令、数据/事务、变更假设、学习任务与代码交叉审阅</td>
+<td>见下方修订记录</td>
+</tr>
+</tbody></table>
+<p>文档检查命令：<code>python3 scripts/check_delivery.py</code>。精确文件数、链接数和检查时间保存在 JSON 中。打包后另在临时目录解压检查路径和清单哈希，不依赖原目录。</p>
+<h2>内容修订与覆盖</h2>
+<ul>
+<li>三套课程统一从主管、高手、新手各自的小失败开篇，明确故事为虚构教学情境。</li>
+<li>课时统一为 75/150/150 分钟；学习效果与实际时长保持待试讲。</li>
+<li>BA/AA/DA/TA 对齐案例实现，数据主键为字符串 id，占用格以 <code>(day,start_minute)</code> 唯一约束，事务内整体写入/回滚。</li>
+<li>需求基线到 A01—A08 验收、代码、自动检查及演示形成对应。</li>
+<li>变更演练区分工作量和历时，原 D10、新预测 D12—D14 仅为已标注假设，并非真实获批延期。</li>
+<li>午休变更练习保留原检查目的，按获准新规则适配受影响输入；没有修改原工程基线或冒充学员完成练习。</li>
+<li>部署只列客户对齐事项，DfX 只说明目标、负责人、验证和证据，按用户要求保持概要。</li>
+</ul>
+<h2>验证限制与真实状态</h2>
+<ul>
+<li>初次 HTTP 测试因沙箱绑定限制受阻，获准本机回环执行后 21 项通过；原记录保留。</li>
+<li>HTML 手册完成静态结构、目录/链接与生成内容检查。当前 Browser 的 URL 策略拒绝 <code>file://</code>，未绕过；离线手册的浏览器视觉、查找交互和打印分页未实测。实际教学应用通过正常本机 HTTP 入口完成了浏览器验证。</li>
+<li>PPTX 已做 Artifact Tool 导入和渲染；没有在 PowerPoint 或 Google Slides 应用内打开、编辑与保存。</li>
+<li>工程实测环境为 macOS；Windows/Linux 操作入口给出说明，但未执行平台验证。</li>
+<li>尚无真实客户批准、部门人员能力考核、试讲反馈、收益或正式部署数据。相关模板和建议不能代替这些事实。</li>
+</ul>
+<p>上述限制用于指导试讲前的检查，不改变本轮材料与本地案例已形成的状态。后续验证保留新环境、实际命令、结果和日期，不覆盖既有历史。</p>
+</main></body></html>

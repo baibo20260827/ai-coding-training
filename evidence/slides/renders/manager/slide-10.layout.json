@@ -1,0 +1,724 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/m90b6t0r",
+    "id": "m90b6t0r",
+    "slide": 10,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAF8F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial Unicode MS",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzu5c32t",
+      "id": "7",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        45,
+        1152,
+        70
+      ],
+      "geometry": "rect",
+      "text": "新增审批的影响分析",
+      "textPreview": "新增审批的影响分析",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "新增审批的影响分析"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "新增审批的影响分析",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "新增审批的影响分析",
+              "fontSize": 44,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xc3mho32",
+      "id": "2",
+      "name": "slide-lead",
+      "bbox": [
+        64,
+        137,
+        1152,
+        62
+      ],
+      "geometry": "rect",
+      "text": "先澄清规则，再评估返工与计划影响",
+      "textPreview": "先澄清规则，再评估返工与计划影响",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "先澄清规则，再评估返工与计划影响"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "先澄清规则，再评估返工与计划影响",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "先澄清规则，再评估返工与计划影响",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbu58j2h",
+      "id": "3",
+      "name": "footer-audience",
+      "bbox": [
+        64,
+        683,
+        580,
+        25
+      ],
+      "geometry": "rect",
+      "text": "主管版",
+      "textPreview": "主管版",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "主管版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "主管版",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "主管版",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zelojyl8",
+      "id": "4",
+      "name": "footer-page",
+      "bbox": [
+        1080,
+        683,
+        136,
+        25
+      ],
+      "geometry": "rect",
+      "text": "10 / 14",
+      "textPreview": "10 / 14",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "10 / 14"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "10 / 14",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10 / 14",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/21cby9on",
+      "id": "8",
+      "bbox": [
+        64,
+        210,
+        1152,
+        380
+      ],
+      "text": "受影响部分 | 需要补充的工作\n业务与验收 | 谁审批，驳回怎么办，何时占用时段\n4A 与实现 | 身份权限、审批状态、接口及数据变化\n验证与交付 | 权限和状态测试、迁移、演示与材料更新\n工期与依赖 | 关键路径、可并行任务、人员与外部等待",
+      "textPreview": "受影响部分 | 需要补充的工作 | 业务与验收 | 谁审批，驳回怎么办，何时占用时段 | 4A 与实现 | 身份权限、审批状态、接口及数据变化 | 验证与交付 | 权限和状态测试、迁移、演示与材料更新 | 工期与依赖 | 关键路径、可并行任务、人员与外部等待",
+      "rows": 5,
+      "cols": 2,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            64,
+            210,
+            315,
+            76
+          ],
+          "text": "受影响部分",
+          "textPreview": "受影响部分",
+          "fillColor": "#0C7777",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "受影响部分",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "受影响部分",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            379,
+            210,
+            837,
+            76
+          ],
+          "text": "需要补充的工作",
+          "textPreview": "需要补充的工作",
+          "fillColor": "#0C7777",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "需要补充的工作",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "需要补充的工作",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            64,
+            286,
+            315,
+            76
+          ],
+          "text": "业务与验收",
+          "textPreview": "业务与验收",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "业务与验收",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "业务与验收",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            379,
+            286,
+            837,
+            76
+          ],
+          "text": "谁审批，驳回怎么办，何时占用时段",
+          "textPreview": "谁审批，驳回怎么办，何时占用时段",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "谁审批，驳回怎么办，何时占用时段",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "谁审批，驳回怎么办，何时占用时段",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            64,
+            362,
+            315,
+            76
+          ],
+          "text": "4A 与实现",
+          "textPreview": "4A 与实现",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4A 与实现",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4A 与实现",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            379,
+            362,
+            837,
+            76
+          ],
+          "text": "身份权限、审批状态、接口及数据变化",
+          "textPreview": "身份权限、审批状态、接口及数据变化",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "身份权限、审批状态、接口及数据变化",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "身份权限、审批状态、接口及数据变化",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            64,
+            438,
+            315,
+            76
+          ],
+          "text": "验证与交付",
+          "textPreview": "验证与交付",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "验证与交付",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "验证与交付",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            379,
+            438,
+            837,
+            76
+          ],
+          "text": "权限和状态测试、迁移、演示与材料更新",
+          "textPreview": "权限和状态测试、迁移、演示与材料更新",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "权限和状态测试、迁移、演示与材料更新",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "权限和状态测试、迁移、演示与材料更新",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            64,
+            514,
+            315,
+            76
+          ],
+          "text": "工期与依赖",
+          "textPreview": "工期与依赖",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "工期与依赖",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "工期与依赖",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            379,
+            514,
+            837,
+            76
+          ],
+          "text": "关键路径、可并行任务、人员与外部等待",
+          "textPreview": "关键路径、可并行任务、人员与外部等待",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "关键路径、可并行任务、人员与外部等待",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "关键路径、可并行任务、人员与外部等待",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l036l83y",
+      "id": "6",
+      "name": "takeaway",
+      "bbox": [
+        64,
+        619,
+        1152,
+        50
+      ],
+      "geometry": "rect",
+      "text": "新增人日不能直接等同于延期天数",
+      "textPreview": "新增人日不能直接等同于延期天数",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "新增人日不能直接等同于延期天数"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "新增人日不能直接等同于延期天数",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial Unicode MS",
+            "color": "#0C7777",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "新增人日不能直接等同于延期天数",
+              "fontSize": 24,
+              "typeface": "Arial Unicode MS",
+              "color": "#0C7777"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

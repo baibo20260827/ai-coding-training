@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>分层培训课件 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="README.md" download>下载 Markdown 源文件</a></nav><main><h1>分层培训课件</h1>
+<p>版本 1.0，2026-10-03。用于培训赋能、案例演示与讨论。授课时长为建议，真实试讲与学习效果尚待验证。</p>
+<table>
+<thead>
+<tr>
+<th>受众</th>
+<th>课件</th>
+<th>逐页讲师备注</th>
+<th>建议安排</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>部门主管</td>
+<td><a href="manager.pptx">manager.pptx</a>，14 页</td>
+<td><a href="manager-notes.html">manager-notes.md</a></td>
+<td>整课 75 分钟</td>
+</tr>
+<tr>
+<td>资深开发者</td>
+<td><a href="engineer.pptx">engineer.pptx</a>，18 页</td>
+<td><a href="engineer-notes.html">engineer-notes.md</a></td>
+<td>整课 150 分钟</td>
+</tr>
+<tr>
+<td>无编码经验者</td>
+<td><a href="beginner.pptx">beginner.pptx</a>，18 页</td>
+<td><a href="beginner-notes.html">beginner-notes.md</a></td>
+<td>整课 150 分钟</td>
+</tr>
+</tbody></table>
+<p>整课包含环境准备、共同开篇、讲解操作、练习及反馈，具体安排以 <a href="../README.html">培训总索引</a> 为准。备注中的逐页时间是讲师节奏参考，不代替整课排期。</p>
+<p>每套第 2—4 页为共同开篇的三个虚构小失败。完整开篇材料见 <a href="../00-opening.html">00-opening.md</a>。讲师备注同时嵌入 PPTX，包含用时建议、讲解要点、提问、演示节点、边界及适用的官方资料链接。原生文本、表格与 4A 图可继续编辑。</p>
+<p>先按案例运行说明准备本地环境，在授课时运行真实命令并展示真实结果。课件没有预填任何客户接受、真实培训反馈或生产成效数字。审批与午休禁约都是新增变更练习，基线应用尚未实现。</p>
+<h2>内容维护</h2>
+<p><a href="source/content.json">source/content.json</a> 保存三套课件文字、备注、来源及共同开篇。<a href="source/build.mjs">source/build.mjs</a> 使用 <code>@oai/artifact-tool</code> JavaScript ES modules 构建可编辑 PPTX。</p>
+<p>修改内容后，检查需求编号、案例规则、4A、代码、命令和讲师手册是否一致。<code>decks[].expectedCount</code> 是总页数，包含封面和共同开篇。受众色分别为青绿、蓝色与棕色。正文采用 Arial Unicode MS，主要标题 33 pt，封面标题 49.5 pt，表格正文 18 pt，其余正文至少 17.25 pt，页码为辅助字号。</p>
+<h2>重建</h2>
+<p>在项目根目录执行。使用当前 Codex 提供的捆绑运行时，不安装替代依赖。以下路径对应本次制作环境。若换环境，先通过 <code>load_workspace_dependencies</code> 重新定位 Node.js、Python 与 Node packages，并相应设置 <code>RUNTIME_NODE_MODULES</code>、<code>RUNTIME_PYTHON</code>、<code>PRESENTATIONS_SKILL_DIR</code>。</p>
+<pre><code class="language-bash">mkdir -p evidence/slides/build
+ln -s /Users/baibo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules evidence/slides/build/node_modules
+cp training/slides/source/build.mjs evidence/slides/build/build.mjs
+SLIDE_REVISION=v5 /Users/baibo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node evidence/slides/build/build.mjs
+</code></pre>
+<p>若已有 <code>node_modules</code> 链接，确认其目标正确后跳过 <code>ln -s</code>。每次重建使用新的 <code>SLIDE_REVISION</code>，避免覆盖留存的已检查文件。构建器在 <code>evidence/slides/finalized/</code> 生成已校验版本，再将相同字节复制到本目录三个固定文件名，并同步讲师备注。设置 <code>DECK_ID=manager</code>、<code>engineer</code> 或 <code>beginner</code> 可只构建其中一套。</p>
+<p>每次以 AI 创建或编辑课件时，仍应遵循当前 presentations 技能的操作标记与验证要求。脚本本身不代替逐页视觉检查。</p>
+<pre><code class="language-bash">/Users/baibo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 evidence/slides/inspect_submission.py
+</code></pre>
+<p>渲染、检查结果与适用边界见 <a href="../../evidence/slides/QA.html">视觉检查记录</a>。当前使用 Artifact Tool 对最终 PPTX 重新导入并渲染，未在 PowerPoint 或 Google Slides 中进行应用级操作检查。</p>
+</main></body></html>

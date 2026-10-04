@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>软件工程 Harness 与 AI Coding 培训包</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f7f8fa;color:#173047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}header{padding:64px max(5vw,24px) 45px;background:#102b3f;color:white}header small{color:#9ed8d1;font-size:17px}h1{max-width:950px;font-size:clamp(32px,5vw,54px);line-height:1.25;margin:18px 0}header p{max-width:820px;color:#cbdde8;font-size:19px}main{max-width:1120px;margin:auto;padding:35px 24px 70px}h2{font-size:28px;margin-top:42px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}table{border-collapse:collapse;width:100%;background:white}td,th{padding:18px;border-bottom:1px solid #d5e0e5;text-align:left;vertical-align:top}th{background:#eaf0f4}p,li{font-size:18px}code{font-size:16px;background:#e9eef2;padding:3px 6px}pre{padding:20px;background:#102b3f;color:white;overflow:auto}pre code{background:none;color:inherit}footer{margin-top:45px;color:#53697b}.note{border-left:4px solid #1b786e;padding-left:20px}.links{display:flex;flex-wrap:wrap;gap:24px}@media(max-width:680px){table{display:block;overflow:auto}td,th{padding:12px}header{padding-top:32px}}</style></head>
+<body><header><small>部门能力建设 · 培训交付包 v1.0</small><h1>让 AI 参与软件交付<br>让团队掌握判断依据</h1><p>从三个小失败开始，沿同一个会议室预约案例，练习需求、架构、实现、验证、汇报与变更管理。</p></header>
+<main><div class="links"><a href="materials.html">浏览全量材料目录</a><a href="downloads/harness-ai-coding-training-v1.0.zip" download>下载完整培训包（含全部案例源码）</a><a href="docs/PUBLISH_GITHUB.html">GitHub 发布说明</a></div><p class="note">本包包含虚构教学案例与可运行的本地练习。技术检查结果见验证记录；真实客户确认、人员能力提升和业务收益需通过试讲与实际试点取得。</p>
+<h2>选择你的学习路径</h2><table><thead><tr><th>受众</th><th>最大的困难</th><th>课件与阅读</th></tr></thead><tbody>
+<tr><td>部门主管</td><td>依据什么判断进度、作出承诺</td><td><a href="training/slides/manager.pptx">主管 PPT</a> · <a href="学习手册.html#doc-docs-guides-manager-md">主管指南</a></td></tr>
+<tr><td>资深开发者</td><td>怎样控制验证成本、判断修改可信</td><td><a href="training/slides/engineer.pptx">工程师 PPT</a> · <a href="学习手册.html#doc-docs-guides-engineer-md">工程师指南</a></td></tr>
+<tr><td>无编码经验者</td><td>怎样把想法变成可验收的小任务</td><td><a href="training/slides/beginner.pptx">新手 PPT</a> · <a href="学习手册.html#doc-docs-guides-beginner-md">新手指南</a></td></tr>
+</tbody></table>
+<h2>阅读与授课</h2><div class="links"><a href="学习手册.html">学员学习手册（可查找、打印）</a><a href="讲师手册.html">讲师手册与答案</a><a href="training/README.html">课程安排源文件</a><a href="evidence/VALIDATION.html">验证与使用边界</a></div>
+<p>讲师先检查案例能够运行，再按共同开篇和分层路线授课。学员在练习后提交需求、实际检查结果和未验证范围。手册中的模板同时提供已填教学案例，便于复用。</p>
+<h2>运行端到端案例</h2><p>安装部门准入的 Python 3，在项目根目录打开终端。案例无需额外安装 Python 包。</p><pre><code>python3 demo/app.py --port 8765</code></pre><p>预约应用需要在自己的电脑运行 Python 服务。GitHub Pages 提供阅读与下载；在线页面不会启动预约后端。<a href="demo/README.html">查看本地运行、Windows 启动和备份恢复步骤</a>。</p>
+<pre><code>python3 -m unittest discover -s demo/tests -v
+python3 demo/labs/failure_lab.py</code></pre>
+<h2>四类架构视图</h2><div class="links"><a href="docs/architecture-views/ba.svg">业务 BA</a><a href="docs/architecture-views/aa.svg">应用 AA</a><a href="docs/architecture-views/da.svg">数据 DA</a><a href="docs/architecture-views/ta.svg">技术 TA</a><a href="学习手册.html#doc-docs-case-architecture-md">完整架构与决策</a></div>
+<h2>持续改进</h2><p>把试讲、练习与真实任务中的问题登记为反馈，修改相关材料，验证效果，再提炼长期规则。项目入口、工作约定、状态和改进日志保留为可维护源文件。</p><div class="links"><a href="README.html">项目 README</a><a href="AGENTS.html">AGENTS.md</a><a href="STATUS.html">当前状态</a><a href="docs/IMPROVEMENTS.html">改进日志</a></div>
+<footer>离线阅读不需要账号或网络；本地应用仅用于教学，采用虚构数据。PPT 可编辑，图源与材料生成脚本随包保留。</footer></main></body></html>

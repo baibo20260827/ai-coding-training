@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教学案例工作约定 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="AGENTS.md" download>下载 Markdown 源文件</a></nav><main><h1>教学案例工作约定</h1>
+<p>先读本目录 <a href="README.html">README</a>、<a href="REQUIREMENTS.html">需求与追踪</a>，并遵循根目录规则。</p>
+<ul>
+<li>基线 R01–R08：单会议室、09:00–18:00、30 分钟粒度、单条预约限一天、本地单时区。使用虚构数据。无登录、审批、多租户与生产部署承诺。</li>
+<li>Python 标准库 HTTP + SQLite + 原生 HTML/CSS/JS；本版无第三方依赖、CDN 或后台外联。代码兼容 Python 3.9+；实际选用组织准入且仍受维护的版本。</li>
+<li>默认且仅绑定 <code>127.0.0.1</code>。不得为方便演示改成公网或 <code>0.0.0.0</code>。本机访问保护不等于身份认证。</li>
+<li>主应用以事务和占用时段唯一约束保证冲突规则；不要用无事务的“先查再插”替代。取消须同时释放占用时段。</li>
+<li>测试预期来源于需求基线。改动测试预期须说明业务依据；区分单元/接口检查、浏览器操作、客户接受与学习效果。</li>
+<li>故障代码只放 <code>labs/</code> 并明确标注，主应用保持正确基线。练习答案不得未经需求决策合并到主基线。</li>
+<li>仅对临时目录或本轮明确创建的数据做演练。备份与恢复必须输出到新路径，已有目标拒绝覆盖。不要删除未知数据库或用 Git 命令清理用户变更。</li>
+<li>修改后执行适用检查：<code>python3 -m unittest discover -s demo/tests -v</code>；故障与恢复分别为 <code>python3 demo/labs/failure_lab.py</code>、<code>python3 demo/backup.py exercise</code>。从项目根目录执行。</li>
+<li>证据维护在 <a href="../evidence/demo/VALIDATION.html">验证记录</a>，如实记录环境限制。运行时用户数据 <code>data/</code> 不作为教材提交。</li>
+</ul>
+</main></body></html>

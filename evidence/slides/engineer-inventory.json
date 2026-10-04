@@ -1,0 +1,17 @@
+{
+  "deck": "engineer",
+  "slides": 18,
+  "tableSlides": [
+    6,
+    11,
+    16
+  ],
+  "diagramSlides": [
+    7
+  ],
+  "font": "Arial Unicode MS",
+  "finalPath": "/Users/baibo/Documents/ChatGPT/软件harness研究/evidence/slides/finalized/engineer-v4.pptx",
+  "deliveredPath": "/Users/baibo/Documents/ChatGPT/软件harness研究/training/slides/engineer.pptx",
+  "renderDir": "/Users/baibo/Documents/ChatGPT/软件harness研究/evidence/slides/renders/engineer",
+  "renderedFromFinalFile": true
+}

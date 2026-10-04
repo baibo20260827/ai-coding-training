@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+.venv/
+node_modules/
+dist/
+*.tmp

@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模板：客户场景与验收基线 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="scenario-baseline.md" download>下载 Markdown 源文件</a></nav><main><h1>模板：客户场景与验收基线</h1>
+<p>适用：选择试点、启动新需求、确认范围。完成标准：业务负责人能解释价值，使用者能走通例子，验收人知道如何判断，项目负责人知道依赖与承诺边界。</p>
+<p><strong>填写方法：</strong> 复制此文件；保留字段，删除教学示例后填写。<code>待填写</code> 表示未收集；<code>待确认</code> 必须补责任人和处理时间。沉默、AI 推断或一张原型不能作为客户确认。</p>
+<h2>1. 基本信息与访谈</h2>
+<p>项目/场景编号：待填写。版本：待填写。状态：草拟/评审中/已确认。业务负责人、使用者代表、验收人、技术负责人、授权人及其权限：待填写。</p>
+<table>
+<thead>
+<tr>
+<th>访谈问题</th>
+<th>教学示例（虚构）</th>
+<th>真实记录、来源和待确认项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>谁在什么情况下做什么？频率与数量？</td>
+<td>员工预约一间会议室；真实频率未测</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>现在怎样完成？哪一步最困难？</td>
+<td>在聊天中询问，容易漏看重复时段</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>改善如何被看见？</td>
+<td>能查所选日期；重叠请求被拒绝</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>错误会带来什么影响？谁负责处理？</td>
+<td>教学影响是重复占用；真实损失待访谈</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>什么必须保留，什么本期不做？</td>
+<td>保留冲突与持久化；本期无审批</td>
+<td>待填写</td>
+</tr>
+<tr>
+<td>谁确认规则、环境与最终接受？</td>
+<td>业务/IT/验收负责人分别明确</td>
+<td>待填写</td>
+</tr>
+</tbody></table>
+<p>需求调查记录来源、时间与原话要点；区分实际观察和转述。若使用个人或客户数据，应按已有授权和环境规定处理；课堂采用虚构数据。</p>
+<h2>2. 场景卡与流程</h2>
+<ul>
+<li>场景编号、目标和触发：待填写。</li>
+<li>前置条件与输入：待填写。</li>
+<li>正常步骤与可见输出：待填写。</li>
+<li>异常/边界：待填写，至少包括非法输入和失败后的数据状态。</li>
+<li>业务规则与术语：待填写，例如 <code>[开始,结束)</code> 表示结束时刻不再占用。</li>
+<li>原型或输入输出例子位置：待填写；客户观察/反馈：待填写。</li>
+</ul>
+<p>教学示例：选择日期 → 提交 10:00—11:00 → 列表出现预约 → 刷新仍存在；再提交 10:30—11:30 → 拒绝且原记录不变。</p>
+<h2>3. 范围与追踪</h2>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>需求编号/规则</th>
+<th>本期/后续/排除</th>
+<th>验收编号：给定、动作、预期</th>
+<th>任务/实现</th>
+<th>证据/状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>教学：避免重复占用</td>
+<td>R03 重叠拒绝、相邻允许</td>
+<td>本期</td>
+<td>A03：已有10—11；申请10:30—11:30；拒绝</td>
+<td>待关联真实任务</td>
+<td>未执行；示例</td>
+</tr>
+<tr>
+<td>待填写</td>
+<td>待填写</td>
+<td>待填写</td>
+<td>待填写</td>
+<td>待填写</td>
+<td>待填写</td>
+</tr>
+</tbody></table>
+<p>约束：数据、权限、环境、准入、运行质量、接口与运维分工，链接对应确认表。外部依赖记录提供方、内容、就绪时间、未就绪影响和替代办法。</p>
+<h2>4. 基线确认</h2>
+<p>待确认事项及责任人：待填写。评审意见与处理：待填写。确认范围版本：待填写。确认人/权限、日期与确认载体：待填写。批准前状态保持“待确认”。</p>
+<p>确认后保留原文件版本；新增规则进入<a href="change-control.html">变更流程</a>。验收条件调整时同步实现、测试、架构和培训材料。参考<a href="../docs/case/requirements.html">已填需求案例</a>。</p>
+</main></body></html>

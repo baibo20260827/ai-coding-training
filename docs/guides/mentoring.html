@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>答疑分诊与导师指导流程 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="mentoring.md" download>下载 Markdown 源文件</a></nav><main><h1>答疑分诊与导师指导流程</h1>
+<p>版本：1.0；日期：2026-10-03。适用：建设负责人、种子导师、业务联络人与技术把关人。目标：让问题得到合适处理，并把一次答疑转化为可复用材料。建议试点先集中记录问题，约定答疑时段和紧急联系渠道；具体人员与服务时间尚待部门确定。</p>
+<h2>1. 问题提交最小信息</h2>
+<p>记录提问人/角色、希望完成的事情、需求或练习编号、代码/材料版本、环境、操作步骤、预期、实际、错误文本、已尝试方法、影响与截止需求。使用虚构或允许用于该环境的数据，敏感内容按既有制度处理。</p>
+<p>示例（虚构）：“新手，L2/A05；创建后刷新看不到记录；同一日期，服务未重启；附真实操作和终端文本。需要导师帮助区分保存与查询问题。”不要仅提交“AI 不行”或“系统坏了”。若尚不知道如何提供信息，导师先协助记录，不以表格不全拒绝帮助。</p>
+<h2>2. 分诊与升级</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>首先检查</th>
+<th>主要处理人</th>
+<th>何时升级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求/验收</td>
+<td>是否有范围与例子、谁能确认规则</td>
+<td>业务联络人＋导师</td>
+<td>影响客户范围/日期交授权人</td>
+</tr>
+<tr>
+<td>环境/工具</td>
+<td>根目录、版本、启动输出、端口、准入</td>
+<td>工具支持/导师</td>
+<td>需要额外权限或环境提供方处理</td>
+</tr>
+<tr>
+<td>代码/数据缺陷</td>
+<td>最小复现、差异、错误、是否影响数据</td>
+<td>技术导师</td>
+<td>影响共享/生产数据按部门事件机制处理</td>
+</tr>
+<tr>
+<td>估算/变更</td>
+<td>原基线、依赖、预测假设与方案</td>
+<td>项目负责人＋技术负责人</td>
+<td>日期、预算或范围调整交授权人</td>
+</tr>
+<tr>
+<td>学习/材料</td>
+<td>哪个词或步骤不理解，能否独立完成</td>
+<td>种子导师/课程负责人</td>
+<td>多人重复误解时修订课程与考核</td>
+</tr>
+</tbody></table>
+<p>影响范围与可恢复性决定优先级：阻塞课程或影响多人优先处理；单人练习可排入答疑；实际生产事件进入部门既有应急流程。不要把教学支持流程当成生产响应承诺。</p>
+<h2>3. 一次答疑的处理步骤</h2>
+<ol>
+<li>用提问人的话复述目标，确认双方理解相同。</li>
+<li>一起复现并保存证据；不能复现时记录条件差异，先保留为原因假设。</li>
+<li>把问题缩小到业务规则、页面、服务、数据或环境；每次检查一个假设。</li>
+<li>给出最小可执行下一步，说明目的与预期结果。新手由导师陪同操作；工程师独立提出反例。</li>
+<li>修正后验证原问题及相关旧功能；需求变化走变更流程，不通过修改预期掩盖缺陷。</li>
+<li>请提问者复述原因和下一步，独立做一次同类但不同的操作。</li>
+<li>记录结论、实际检查、未解决项和责任人。需要客户或授权人确认的事项保持待决。</li>
+</ol>
+<h2>4. 真实任务陪跑的四个检查点</h2>
+<p><strong>接入：</strong> 业务价值、范围、验收人、技术把关人、工具/数据/环境就绪，填写场景卡和必要约束。缺少关键业务规则时可以先做澄清和原型，不能伪造确认。</p>
+<p><strong>委派前：</strong> 学员能说清任务和例子；AI 获得足够上下文；允许修改边界可审查。导师审任务卡，不直接替学员完成所有思考。</p>
+<p><strong>提交时：</strong> 对照需求查代码差异和验证证据。追问“如果这个行为错了，你怎样发现？”把提示下完成与独立完成分开记录。</p>
+<p><strong>复盘时：</strong> 对照原基线、实际成本和缺陷，找出一条可复用改进。学员做一个新的小变更或故障任务，验证能否迁移方法。</p>
+<h2>5. 知识沉淀与关闭条件</h2>
+<p>FAQ 条目包含问题、适用场景、回答、下一步验证及关联材料。重复问题先判断是知识缺失还是材料难用：若多数人都找不到启动步骤，应修改入口，而不是只添加更多 FAQ。</p>
+<p>问题关闭条件：提问者确认目标已经达成，或有明确的转交对象、依据与后续动作；关闭不等于客户接受整个项目。未验证答案标“待验证”，工具变化后复核适用版本。</p>
+<p>参考<a href="../../faq/README.html">FAQ</a>、<a href="../../templates/capability-pilot.html">能力与复盘模板</a>、<a href="../../training/facilitator-guide.html">讲师手册</a>。实际问答与试讲观察进入项目改进日志；长期有效原则才提议更新 AGENTS.md，避免规则文件变成流水账。</p>
+</main></body></html>

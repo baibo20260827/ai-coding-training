@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>培训使用入口 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="README.md" download>下载 Markdown 源文件</a></nav><main><h1>培训使用入口</h1>
+<p>本套材料用于部门软件工程 harness 与 AI coding 能力建设。版本 v1.0，制作日期 2026-10-03。案例及管理演练为虚构教学场景；实际运行检查见项目证据目录，真实客户验收与培训成效需在试点中取得。</p>
+<h2>先选学习路径</h2>
+<table>
+<thead>
+<tr>
+<th>受众</th>
+<th>PPT</th>
+<th>阅读与实践</th>
+<th>建议时长与目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>部门主管</td>
+<td><a href="slides/manager.pptx">主管课件</a></td>
+<td><a href="../docs/guides/manager.html">主管指南</a>、练习 L1/L5/L6</td>
+<td>75 分钟；能依据证据决定范围、日期、资源与推广</td>
+</tr>
+<tr>
+<td>资深开发者</td>
+<td><a href="slides/engineer.pptx">工程师课件</a></td>
+<td><a href="../docs/guides/engineer.html">工程师指南</a>、练习 L2/L3/L4</td>
+<td>150 分钟；能委派、独立验证、定位与恢复</td>
+</tr>
+<tr>
+<td>无编码经验者</td>
+<td><a href="slides/beginner.pptx">新手课件</a></td>
+<td><a href="../docs/guides/beginner.html">新手指南</a>、练习 L1/L2/L4</td>
+<td>150 分钟；能拆分小需求、验收结果和说明问题</td>
+</tr>
+</tbody></table>
+<p>时长是备课建议，需要按试讲结果调整。三套课程均从<a href="00-opening.html">三个小失败</a>开始。同一批学员连续参加多条路线时，共同开篇只讲一次。</p>
+<h2>讲师按此顺序准备</h2>
+<ol>
+<li>阅读<a href="facilitator-guide.html">讲师运行手册</a>，确定学习对象、时间、协助人员和验收方式。</li>
+<li>按<a href="../demo/README.html">案例运行说明</a>启动本地应用并检查功能；练习使用专用教学数据库。</li>
+<li>备好对应 PPT、<a href="exercises.html">学员练习</a>、<a href="answer-key.html">参考答案</a>和<a href="ai-task-cards.html">AI 任务卡</a>。参考答案在练习完成后讲解。</li>
+<li>使用<a href="../docs/guides/README.html">材料与模板索引</a>找到需求、4A、部署、DfX、周报、变更及能力考核材料。</li>
+<li>将实际问题送入<a href="../faq/README.html">FAQ</a>所述流程，试讲改动记录到<a href="../docs/IMPROVEMENTS.html">改进日志</a>。</li>
+</ol>
+<h2>学员需要准备什么</h2>
+<ul>
+<li>可运行 Python 3 的电脑和浏览器。案例无需 pip/npm 安装，具体版本与命令以案例 README 为准。</li>
+<li>一个能够阅读和编辑项目文件的工具；使用部门准入的 AI coding 工具参与练习。代码运行本身不依赖模型服务。</li>
+<li>Windows 中若没有 <code>python3</code>，按案例说明使用 <code>py -3</code> 或相应启动文件。所有命令都在项目根目录执行。</li>
+<li>不方便运行代码的主管，可以用已填的虚构周报、变更示例和演示观察记录完成决策练习。</li>
+</ul>
+<h2>三条路径的安排</h2>
+<table>
+<thead>
+<tr>
+<th>课程</th>
+<th>时间分配（含互动）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主管 75 分钟</td>
+<td>开篇 10；交付依据与客户场景 15；进度与变更演练 25；人才和工具 15；决策提交与反馈 10</td>
+</tr>
+<tr>
+<td>工程师 150 分钟</td>
+<td>开篇 10；需求/4A/任务边界 20；案例运行与故障演示 25；独立验收与修改练习 45；审查/恢复/变更 30；交接与反馈 20</td>
+</tr>
+<tr>
+<td>新手 150 分钟</td>
+<td>开篇 10；软件基础和场景拆分 25；环境与首次运行 20；逐项验收 30；AI 小变更练习 35；求助和交接 20；反馈 10</td>
+</tr>
+</tbody></table>
+<p>课后提交物和评分见练习文件。练习表现只用于识别后续指导需求，不自动授予生产系统操作权限。</p>
+</main></body></html>

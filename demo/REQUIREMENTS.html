@@ -1,0 +1,94 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>会议室预约需求与验收追踪 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="REQUIREMENTS.md" download>下载 Markdown 源文件</a></nav><main><h1>会议室预约需求与验收追踪</h1>
+<p>版本：1.0，2026-10-03。性质：教学基线，非客户已批准需求。实际客户、验收人、日期与环境待真实项目确认。</p>
+<p>教学目标：让学员能够将“预约一个会议室”变成可验证的行为，用独立证据判断实现，再处理变更和恢复。主要使用者为演示同事；讲师承担演练组织，学员承担观察和复核。</p>
+<h2>需求、验收与证据</h2>
+<table>
+<thead>
+<tr>
+<th>需求 / 验收</th>
+<th>场景与成功条件</th>
+<th>实现位置</th>
+<th>自动检查 / 人工检查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R01 / A01 查看</td>
+<td>指定有效日期时只显示该日预约，按开始时间排序；空列表有提示</td>
+<td><code>BookingStore.list_bookings</code>、GET 接口、页面列表</td>
+<td><code>test_R01_empty_and_date_filtered_order</code>；<code>test_R01_static_assets_and_health</code>；浏览器更换日期</td>
+</tr>
+<tr>
+<td>R02 / A02 建立预约</td>
+<td>有效输入返回 ID、日期、时段、姓名、主题，并能在列表中找到</td>
+<td><code>validate_booking</code>、<code>create_booking</code>、POST 接口、表单</td>
+<td><code>test_R02_create_returns_saved_fields</code>；HTTP 创建读取测试</td>
+</tr>
+<tr>
+<td>R03 / A03 相邻与冲突</td>
+<td>已有 10:00–11:00；11:00–12:00 允许，10:30–11:30 拒绝且不残留部分写入</td>
+<td><code>slots</code> 主键、事务、409 反馈</td>
+<td><code>test_R03_adjacent_on_both_sides_allowed</code>、<code>test_R03_overlap_variations_rejected_and_no_partial_rows</code>、HTTP 冲突测试；故障演练</td>
+</tr>
+<tr>
+<td>R04 / A04 取消</td>
+<td>取消后列表不再出现该预约，可重新预约原时段；重复取消明确告知不存在</td>
+<td>外键 <code>ON DELETE CASCADE</code>、DELETE 接口、页面确认</td>
+<td><code>test_R04_cancel_releases_slots_and_missing_is_false</code>；HTTP 创建取消测试</td>
+</tr>
+<tr>
+<td>R05 / A05 持久化</td>
+<td>成功预约在刷新或服务重启后仍存在；取消也持久化</td>
+<td>SQLite 文件与重新查询</td>
+<td><code>test_R05_reopen_preserves_booking_and_cancel</code>；HTTP 重新连接；浏览器刷新与 CLI 重启步骤</td>
+</tr>
+<tr>
+<td>R06 / A06 输入边界</td>
+<td>09:00–18:00，30 分钟粒度，结束晚于开始；日期有效，姓名1–30字、主题1–80字，非法请求无写入</td>
+<td><code>validate_date</code>、<code>parse_time</code>、<code>validate_booking</code>、参数化SQL、页面 <code>textContent</code></td>
+<td><code>test_R06_*</code>：非法输入、边界、文本作为数据；人工检查提示易懂</td>
+</tr>
+<tr>
+<td>R07 / A07 本地边界</td>
+<td>仅回环地址；限制 Host/跨站写入；页面明确虚构数据、无登录、可取消全部记录</td>
+<td><code>make_server</code>、Host/Origin检查、页面标识</td>
+<td><code>test_R07_bind_loopback_origin_and_host_guards</code>；人工检查教学标识；不等于全面安全评估</td>
+</tr>
+<tr>
+<td>R08 / A08 同时预约一致性</td>
+<td>同日同一时段并发竞争最多一条成功，其他收到冲突；相邻并发均可成功</td>
+<td>独立连接、<code>BEGIN IMMEDIATE</code>、唯一时段约束</td>
+<td><code>test_R08_simultaneous_identical_requests_exactly_one_success</code>、相邻并发测试、HTTP 并发测试</td>
+</tr>
+</tbody></table>
+<p>完整测试命名与逻辑见 <a href="tests/test_app.py">test_app.py</a>。数据文件保护、备份恢复是案例交付支持检查，见 <code>test_backup_restore_new_path_and_refuse_overwrite</code> 与 <code>test_unrelated_database_is_not_adopted</code>。</p>
+<p>R06 的字符数按 Python 字符串长度计数；不处理姓名真实性。默认主题只是虚构示例。R07 的本地边界不提供业务身份与授权；需要客户权限管理时属于新的需求设计。</p>
+<h2>数据及边界</h2>
+<table>
+<thead>
+<tr>
+<th>数据</th>
+<th>字段</th>
+<th>关系与用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bookings</code></td>
+<td><code>id</code>、<code>day</code>、<code>start_minute</code>、<code>end_minute</code>、<code>name</code>、<code>purpose</code></td>
+<td>一条业务预约；ID 为随机 UUID 十六进制串</td>
+</tr>
+<tr>
+<td><code>slots</code></td>
+<td><code>day</code>、<code>start_minute</code>、<code>booking_id</code></td>
+<td>每个占用半小时一行；<code>(day,start_minute)</code> 唯一；多行属于一个预约</td>
+</tr>
+</tbody></table>
+<p>每天起止边界为 <code>[09:00,18:00)</code>，如 17:30–18:00 可预约。预约不跨日，日期不做服务器时区换算。所有环境均为本地教学，允许不同日期使用同一时间段。</p>
+<h2>变更练习与基线隔离</h2>
+<ul>
+<li>“午休 12:00–13:00 不可预约”：用于未原样讲过的小变更考核，需要补边界用例和回归；不属于当前已实现基线。</li>
+<li>“增加主管审批”：用于管理者影响分析与延期沟通，不属于当前应用功能。需要重新确定业务、角色、数据状态、架构和验收条件。</li>
+<li>任何范围扩展都先登记需求差异，再更新验收、设计、实现、检查和相关材料。不得仅因 AI 改写测试预期就认为基线已经变化。</li>
+</ul>
+<h2>验收记录使用方式</h2>
+<p>自动检查实际结果见 <a href="../evidence/demo/VALIDATION.html">工程验证记录</a>。讲师还应填写日期、环境、操作者、步骤、观察结果和证据位置；客户接受、学员独立能力与真实业务收益分别留待相应人员确认。不要将本表存在视作所有验收已完成。</p>
+</main></body></html>

@@ -1,0 +1,152 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>讲师参考答案与评分 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="answer-key.md" download>下载 Markdown 源文件</a></nav><main><h1>讲师参考答案与评分</h1>
+<p>供讲师复核与练习后讲评。以下是可接受解法示例，允许有依据的不同方案。未亲自执行的检查不能记为通过。</p>
+<h2>L1：需求与验收</h2>
+<p>合格答案先澄清：谁使用/谁验收、可预约时间与冲突定义、记录保存要求。可限定本期查看/建立/取消，待确认登录、审批、通知和跨日。</p>
+<p>正常例子：空时段 10:00—11:00 成功；已有 10:00—11:00 时 11:00—12:00 成功。异常例子：10:30—11:30 重叠被拒；结束早于开始被拒。持久化例子：成功建立后重新查看同日期仍存在。</p>
+<p>“界面美观、功能正常、性能很好”本身不足以指导验收；需进一步说明场景、观察方法与目标。客户未给答复时记录假设与待确认事项，不替客户签字。</p>
+<h2>L2：实际行为</h2>
+<p>按提交表核对输入与观察结果；需要保存记录而没有刷新/重新读取检查的，不能认定持久化已验收。冲突被拒后还需确认旧记录没有变化。取消后再次预约成功，才能证明占用释放。</p>
+<p>参考需求对应：查看 A01；建立 A02；相邻/重叠 A03；取消 A04；持久化 A05；输入边界 A06。浏览器人工检查没有覆盖全部 A07 本地边界与 A08 并发一致性，不应填“全部通过”。</p>
+<h2>L3：边界与独立验收</h2>
+<p>已有 [10:00,11:00) 时，下表应作为业务判断依据。右端点不包含在占用区间内，因此相邻允许。</p>
+<table>
+<thead>
+<tr>
+<th>新预约</th>
+<th>结果</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>09:00—10:00</td>
+<td>允许</td>
+<td>左侧相邻</td>
+</tr>
+<tr>
+<td>11:00—12:00</td>
+<td>允许</td>
+<td>右侧相邻</td>
+</tr>
+<tr>
+<td>10:30—11:30</td>
+<td>拒绝</td>
+<td>部分相交</td>
+</tr>
+<tr>
+<td>09:30—11:30</td>
+<td>拒绝</td>
+<td>完全包含原预约</td>
+</tr>
+<tr>
+<td>10:00—10:30</td>
+<td>拒绝</td>
+<td>位于原预约内</td>
+</tr>
+<tr>
+<td>不同日期 10:00—11:00</td>
+<td>允许</td>
+<td>日期是冲突条件之一</td>
+</tr>
+</tbody></table>
+<p>如果同一 AI 既改实现又调整预期，检查结果可能自洽却不符合原需求。审查应说明业务依据、对比测试预期变化，并用需求导出的独立用例核对。不同模型复核可补充观察，但不替代行为检查。</p>
+<h2>L4：午休变更</h2>
+<p>核心条件：预约开始早于 13:00，且预约结束晚于 12:00，则与午休区间重叠，应拒绝。时间必须先按既有规则校验，转换成可比较的分钟或同等规范表示。</p>
+<p>参考纯函数（只说明规则，不是主应用已实现功能）：</p>
+<pre><code class="language-python">def overlaps_lunch(start_minutes, end_minutes):
+    return start_minutes &lt; 13 * 60 and end_minutes &gt; 12 * 60
+</code></pre>
+<p>至少覆盖：11:30—12:00 允许、12:00—12:30 拒绝、12:30—13:00 拒绝、13:00—13:30 允许、11:30—13:30 拒绝。保留既有相邻、重叠、取消、持久化、输入与并发的检查目的；获准的新需求改变了旧输入的合法性时，应适配测试数据或预期，并记录业务依据。</p>
+<h3>当前基线测试的具体影响</h3>
+<p>以下为对当前 <code>demo/tests/test_app.py</code> 及教学脚本的静态复核，不是午休功能已实现或已通过测试的证明。修改只发生在学员的独立练习副本。</p>
+<table>
+<thead>
+<tr>
+<th>现有用例/脚本</th>
+<th>当前输入与影响</th>
+<th>练习中的处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>test_R08_simultaneous_adjacent_requests_all_succeed</code></td>
+<td>循环生成 10—11、11—12、12—13，原预期三条全部成功；12—13 与新午休规则冲突</td>
+<td>把三个合法相邻输入移到14—15、15—16、16—17，保留并发全部成功的目的与记录数检查；另加午休重叠拒绝用例</td>
+</tr>
+<tr>
+<td><code>test_R01_empty_and_date_filtered_order</code></td>
+<td>有13—14，恰好从午休结束开始，仍合法</td>
+<td>保留日期筛选、排序和成功预期</td>
+</tr>
+<tr>
+<td><code>test_R03_adjacent_on_both_sides_allowed</code>、<code>test_R03_http_conflict_is_409_adjacent_is_201</code></td>
+<td>有11—12，恰好在午休开始结束，仍合法</td>
+<td>保留相邻成功以及 HTTP 201 预期</td>
+</tr>
+<tr>
+<td><code>test_R03_overlap_variations_rejected_and_no_partial_rows</code></td>
+<td>包含09—12；它不与午休重叠，但与已有10—11冲突</td>
+<td>仍应按预约冲突拒绝，并检查没有部分写入；不要改成午休校验失败</td>
+</tr>
+<tr>
+<td><code>test_R06_invalid_inputs_rejected_without_writes</code></td>
+<td>有默认10点开始、18:30结束的非法输入，区间也经过午休</td>
+<td>仍需首先满足原输入范围校验的要求；不能用午休拒绝来掩盖营业时间校验被删除</td>
+</tr>
+<tr>
+<td><code>demo/labs/failure_lab.py</code>、<code>demo/backup.py</code> 的预约操作</td>
+<td>正常操作为10—11、11—12；故障/冲突例子在午休前</td>
+<td>当前输入不需因午休变更而调整；保留原演练目的</td>
+</tr>
+</tbody></table>
+<p>本次静态检查中，唯一明确“原先有效、预期成功、现在被午休禁止”的既有自动用例是相邻并发测试中的第三条。未来测试变化后需重新检查，不能把本表当成永久清单。检查应覆盖共用数据构造、动态生成和跨区间输入，不能只搜索一个时间字符串。</p>
+<p>合格做法既保护旧的测试目的，也加入新的业务判定；删除并发测试、把全部失败笼统改成预期失败、或修改主基线来迁就练习，都不合格。不同错误原因需要区分时，可增加有明确目的的检查，避免所有拒绝都只看同一异常类型而遗漏规则回归。</p>
+<p>应用侧应在服务端执行业务规则，并给页面可理解的错误；界面可减少误操作，但不能作为唯一限制。数据模型可能不需要新增字段，不过已有合法记录会受到规则变化影响，必须确认是否保留、迁移或人工协调；不能静默删除。</p>
+<p>验收允许多种结构设计，依据项目实际代码审查。合格交接说明修改边界、检查结果、原数据处理假设和如何恢复练习副本。没有修改代码的学员只能得到需求设计部分的评价。</p>
+<h2>L5：日期沟通</h2>
+<p>合格答案应沿变更示例中的依赖重排工作，说明哪些可并行、哪些会延长交付链、还有多少可用缓冲。数字需明确为教学估算，外部等待和未解决规则需纳入前提。</p>
+<p>可接受选项包括原范围先试用、审批后交付；或确认完整范围的新日期；如果替换低优先级功能，应明确替换对象并重新排程。审批人需具备调整相应范围/日期/预算的权限，不能由 AI 自动批准。</p>
+<p>沟通示例：</p>
+<blockquote>
+<p>新增审批会影响角色、状态流转和验收。我们已列出受影响任务，当前预测及前提见影响表。建议原范围按原计划试用，审批另设里程碑；如果审批是首次使用的必要条件，请确认调整整体范围和日期。请在约定决策时间前选择方案，关键依赖确认后更新承诺。原日期、当前预测和待决事项会分别展示。</p>
+</blockquote>
+<p>不要把“客户提了新要求”当作所有既有延误的理由，缺陷、估算偏差、外部等待仍需分别说明。</p>
+<h2>L6：可接管性</h2>
+<p>合格记录能定位 requirements、architecture、demo README、当前状态和验证证据。运行项目不需要模型服务，但重新设计或修改时仍需要工具与能力支持。发现路径错误、缺少运行前提、未记录规则或恢复方法，均是有效改进项。</p>
+<h2>评分建议</h2>
+<p>每项适用练习使用相同五维度，总分 100；这是本次培训建议的反馈工具，部门可校准。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th align="right">分值</th>
+<th>可观察依据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需求与范围</td>
+<td align="right">20</td>
+<td>场景明确，假设与确认分开，验收可操作</td>
+</tr>
+<tr>
+<td>设计与边界</td>
+<td align="right">15</td>
+<td>影响与职责清楚，知道未覆盖部分</td>
+</tr>
+<tr>
+<td>行为或决策正确性</td>
+<td align="right">25</td>
+<td>实测行为符合规则；管理方案依据依赖而非臆测</td>
+</tr>
+<tr>
+<td>验证证据</td>
+<td align="right">25</td>
+<td>实际检查、有反例、可复核，说明限制</td>
+</tr>
+<tr>
+<td>交接与表达</td>
+<td align="right">15</td>
+<td>他人能接手，说明结果、遗留问题与下一步</td>
+</tr>
+</tbody></table>
+<p>建议达到 80 分且关键行为/证据项无重大遗漏，记为“本练习达到目标”；60—79 分安排定向补练；其余先由导师带练。每次均标注独立或协助完成。伪造结果或把未验证写成通过，需要先纠正记录，再重新评价。</p>
+<p>主管的“行为正确性”评估决策与承诺逻辑，工程师评估修改和验证，新手评估需求、操作与求助。完成这份练习不自动代表具备生产发布权限。</p>
+</main></body></html>

@@ -1,0 +1,135 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>会议室预约：需求与验收基线 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../../index.html">培训首页</a><a href="../../materials.html">全量材料目录</a><a href="requirements.md" download>下载 Markdown 源文件</a></nav><main><h1>会议室预约：需求与验收基线</h1>
+<p>版本：1.0；日期：2026-10-03；案例编号：CASE-ROOM-01。</p>
+<p><strong>性质：虚构教学案例。</strong> 下述业务背景、角色及范围由课程设计者设定，未经真实客户确认。本文是教学实现基线，不构成生产需求或交付承诺。实际执行证据应另行记录，不能用本表替代测试报告。</p>
+<h2>1. 场景与目标</h2>
+<p>虚构部门只有一个用于培训的会议室。员工目前在聊天中询问空闲时段，容易看漏已经存在的预约。教学目标是把“看空闲、提交预约、发现冲突、取消后再用”形成可验证的软件行为，串联需求、设计、实现、测试、汇报与变更。</p>
+<p>业务目标 G01：查看指定日期的预约，减少重复询问。G02：同一会议室同一时段至多保留一个有效预约。G03：预约结果在刷新与服务重启后仍可查看，取消后时段重新可用。上述目标是教学目标；减少沟通次数等真实收益尚未测量。</p>
+<p>角色采用教学占位：使用者“员工甲”，业务负责人“行政负责人”，验收人“行政代表＋技术负责人”，里程碑批准人“项目授权人”。真实试点必须填写姓名、权限和确认依据。</p>
+<h2>2. 范围、规则与边界</h2>
+<ul>
+<li>单会议室；浏览器与服务均在本机使用，仅监听 <code>127.0.0.1</code>。采用 Python 3 标准库 HTTP 服务、SQLite 和原生网页。</li>
+<li>预约日期由用户选择；开始和结束处于同一日期内，不跨日。“同日”不表示只能预约今天。</li>
+<li>时间为本地单时区墙上时间；09:00—18:00，开始早于结束，开始/结束均在半小时刻度。10:00—11:00 占用 10:00 和 10:30 两个半小时段。</li>
+<li>区间采用 <code>[开始,结束)</code>：10:00—11:00 与 11:00—12:00 可相邻；与 10:30—11:30 冲突。</li>
+<li>所有进入服务端的输入仍需校验；页面控件不能替代服务端规则。</li>
+<li>使用虚构预约信息。没有账号、角色、审批、跨部门权限、邮件通知、多会议室、跨时区或生产运维能力。</li>
+<li>本地任何能操作此页面的人均可查看和取消预约；这是教学边界，不满足多人共享系统的身份与授权需求。</li>
+</ul>
+<p>当前实现的预约输入契约：<code>date</code> 为有效 <code>YYYY-MM-DD</code> 日期，<code>start</code>/<code>end</code> 为 <code>HH:MM</code> 字符串，<code>name</code> 为去除首尾空白后 1—30 个字符的虚构姓名，<code>purpose</code> 为去除首尾空白后 1—80 个字符的主题。预约请求恰好包含这五个字段；缺少、多出或类型不符的字段应拒绝。此契约用于教学代码核对，真实项目的姓名/主题规则需重新确认。</p>
+<h2>3. 正常与异常流程</h2>
+<p>正常：选择日期 → 查看预约 → 输入预约信息与时段 → 提交 → 看见成功及预约列表 → 刷新后再次查看 → 取消 → 原时段可以重新预约。</p>
+<p>异常：时间非法或缺少必填内容 → 显示可理解的错误且不写入记录；与已有预约重叠 → 拒绝新增且保留原预约；两个请求同时竞争相同半小时段 → 最多一个成功，失败请求得到冲突结果；取消不存在的预约 → 返回明确失败且不影响其他预约。</p>
+<h2>4. 需求与验收追踪表</h2>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>可观察行为</th>
+<th>验收编号与操作</th>
+<th>预期结果</th>
+<th>关联目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R01 查看预约</td>
+<td>按所选日期显示有效预约</td>
+<td>A01：日期甲创建一条，分别查看日期甲和日期乙</td>
+<td>甲显示该预约，乙不显示；空列表可理解</td>
+<td>G01</td>
+</tr>
+<tr>
+<td>R02 建立预约</td>
+<td>有效输入产生一条预约</td>
+<td>A02：所选日期提交 10:00—11:00 与虚构预约信息</td>
+<td>成功，列表出现准确起止时间，能识别待取消记录</td>
+<td>G01/G02</td>
+</tr>
+<tr>
+<td>R03 相邻与冲突</td>
+<td>相邻允许，部分/完全重叠拒绝</td>
+<td>A03：已有 10:00—11:00，依次尝试 11:00—12:00、10:30—11:30、10:00—11:00</td>
+<td>相邻成功；后两项拒绝，原记录不变</td>
+<td>G02</td>
+</tr>
+<tr>
+<td>R04 取消</td>
+<td>指定记录被取消，时段释放</td>
+<td>A04：取消已建预约，再预约相同时间；另尝试取消不存在记录</td>
+<td>原记录消失；重订成功；不存在记录的取消失败且无其他改动</td>
+<td>G02</td>
+</tr>
+<tr>
+<td>R05 持久化</td>
+<td>数据保存在本地数据库</td>
+<td>A05：创建后刷新，停止并用同一数据文件重启服务，再查看</td>
+<td>预约仍存在；取消结果重启后也保留</td>
+<td>G03</td>
+</tr>
+<tr>
+<td>R06 输入边界</td>
+<td>服务端拒绝非法数据</td>
+<td>A06：测试反向时间、08:30 开始、18:30 结束、09:15、无效日期及缺失必填字段</td>
+<td>每项被拒绝，无半条预约或残留占用；09:00—09:30 与 17:30—18:00 可用</td>
+<td>G02</td>
+</tr>
+<tr>
+<td>R07 本地边界</td>
+<td>服务仅供本机教学，页面清楚呈现限制</td>
+<td>A07：检查启动地址与页面说明；停止服务后确认页面不能继续写入</td>
+<td>地址为 127.0.0.1；无共享、登录或生产能力承诺；停止后不出现成功写入假象</td>
+<td>教学约束</td>
+</tr>
+<tr>
+<td>R08 同时预约一致性</td>
+<td>并发争用也遵守唯一占用规则</td>
+<td>A08：在隔离测试库中同时提交两个相同日期与时段请求</td>
+<td>最多一条有效预约；另一个得到冲突结果；数据库无残留半条记录</td>
+<td>G02</td>
+</tr>
+</tbody></table>
+<p>每次执行须登记：需求/验收编号、代码版本、实际命令或步骤、数据文件、环境、结果、日志位置、执行人和未覆盖项。验收编号不等同于自动化测试函数名，映射由执行记录补充。</p>
+<h2>5. 边界例子与判定依据</h2>
+<table>
+<thead>
+<tr>
+<th>已存在</th>
+<th>新申请</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10:00—11:00</td>
+<td>09:30—10:00</td>
+<td>允许，相邻</td>
+</tr>
+<tr>
+<td>10:00—11:00</td>
+<td>10:30—11:30</td>
+<td>拒绝，部分重叠</td>
+</tr>
+<tr>
+<td>10:00—11:00</td>
+<td>09:30—11:30</td>
+<td>拒绝，包含原时段</td>
+</tr>
+<tr>
+<td>日期甲 10:00—11:00</td>
+<td>日期乙 10:00—11:00</td>
+<td>允许，不同日期</td>
+</tr>
+<tr>
+<td>无</td>
+<td>17:30—18:00</td>
+<td>允许，结束等于营业边界</td>
+</tr>
+<tr>
+<td>无</td>
+<td>18:00—18:30</td>
+<td>拒绝，超过营业边界</td>
+</tr>
+</tbody></table>
+<p>半开区间使“前一个结束的时刻”可以成为“后一个开始的时刻”。固定半小时刻度也允许把每条预约转换成若干占用格，用数据库唯一约束维护冲突规则；具体设计见<a href="architecture.html">4A 架构</a>。</p>
+<h2>6. 本期验收与后续变更</h2>
+<p>教学完成条件：代码可本地运行；A01—A08 有对应验证方式与实际证据；故障练习能稳定出现失败再恢复；参与者能解释检查的边界。测试完成、讲师审阅、学员完成和真实客户接受分别记录。</p>
+<p>新增审批属于本期范围外的需求变化，使用<a href="change-example.html">变更案例</a>练习评估，不修改本文来伪装成原始要求。真实试点用<a href="../../templates/scenario-baseline.html">客户场景模板</a>重新确认背景、角色和边界，不能直接把教学基线当作客户确认结果。</p>
+</main></body></html>

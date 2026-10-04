@@ -1,0 +1,16 @@
+{
+  "deck": "beginner",
+  "slides": 18,
+  "tableSlides": [
+    7,
+    16
+  ],
+  "diagramSlides": [
+    8
+  ],
+  "font": "Arial Unicode MS",
+  "finalPath": "/Users/baibo/Documents/ChatGPT/软件harness研究/evidence/slides/finalized/beginner-v4.pptx",
+  "deliveredPath": "/Users/baibo/Documents/ChatGPT/软件harness研究/training/slides/beginner.pptx",
+  "renderDir": "/Users/baibo/Documents/ChatGPT/软件harness研究/evidence/slides/renders/beginner",
+  "renderedFromFinalFile": true
+}

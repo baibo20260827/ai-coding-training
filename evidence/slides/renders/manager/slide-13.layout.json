@@ -1,0 +1,724 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/hgzapcr6",
+    "id": "hgzapcr6",
+    "slide": 13,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAF8F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial Unicode MS",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32ponyts",
+      "id": "7",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        45,
+        1152,
+        70
+      ],
+      "geometry": "rect",
+      "text": "部署与 DfX 的客户对齐",
+      "textPreview": "部署与 DfX 的客户对齐",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "部署与 DfX 的客户对齐"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "部署与 DfX 的客户对齐",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "部署与 DfX 的客户对齐",
+              "fontSize": 44,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q50nydsj",
+      "id": "2",
+      "name": "slide-lead",
+      "bbox": [
+        64,
+        137,
+        1152,
+        62
+      ],
+      "geometry": "rect",
+      "text": "本课程只建立清单和验收口径",
+      "textPreview": "本课程只建立清单和验收口径",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本课程只建立清单和验收口径"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本课程只建立清单和验收口径",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本课程只建立清单和验收口径",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bq9orito",
+      "id": "3",
+      "name": "footer-audience",
+      "bbox": [
+        64,
+        683,
+        580,
+        25
+      ],
+      "geometry": "rect",
+      "text": "主管版",
+      "textPreview": "主管版",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "主管版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "主管版",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "主管版",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o3i5w3ad",
+      "id": "4",
+      "name": "footer-page",
+      "bbox": [
+        1080,
+        683,
+        136,
+        25
+      ],
+      "geometry": "rect",
+      "text": "13 / 14",
+      "textPreview": "13 / 14",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "13 / 14"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "13 / 14",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "13 / 14",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/9sfu5cby",
+      "id": "8",
+      "bbox": [
+        64,
+        210,
+        1152,
+        380
+      ],
+      "text": "对齐项 | 需要说清楚的内容\n部署条件 | 位置、环境、准入、数据连接、就绪日期\n交付与运维 | 发布窗口、监控备份、恢复与责任人\nDfX 目标 | 按场景选择性能、安全、可靠性等目标\n验证与限制 | 目标阈值、环境、证据、确认人及遗留问题",
+      "textPreview": "对齐项 | 需要说清楚的内容 | 部署条件 | 位置、环境、准入、数据连接、就绪日期 | 交付与运维 | 发布窗口、监控备份、恢复与责任人 | DfX 目标 | 按场景选择性能、安全、可靠性等目标 | 验证与限制 | 目标阈值、环境、证据、确认人及遗留问题",
+      "rows": 5,
+      "cols": 2,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            64,
+            210,
+            280,
+            76
+          ],
+          "text": "对齐项",
+          "textPreview": "对齐项",
+          "fillColor": "#0C7777",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "对齐项",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "对齐项",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            344,
+            210,
+            872,
+            76
+          ],
+          "text": "需要说清楚的内容",
+          "textPreview": "需要说清楚的内容",
+          "fillColor": "#0C7777",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "需要说清楚的内容",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "需要说清楚的内容",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            64,
+            286,
+            280,
+            76
+          ],
+          "text": "部署条件",
+          "textPreview": "部署条件",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "部署条件",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "部署条件",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            344,
+            286,
+            872,
+            76
+          ],
+          "text": "位置、环境、准入、数据连接、就绪日期",
+          "textPreview": "位置、环境、准入、数据连接、就绪日期",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "位置、环境、准入、数据连接、就绪日期",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "位置、环境、准入、数据连接、就绪日期",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            64,
+            362,
+            280,
+            76
+          ],
+          "text": "交付与运维",
+          "textPreview": "交付与运维",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "交付与运维",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "交付与运维",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            344,
+            362,
+            872,
+            76
+          ],
+          "text": "发布窗口、监控备份、恢复与责任人",
+          "textPreview": "发布窗口、监控备份、恢复与责任人",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "发布窗口、监控备份、恢复与责任人",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "发布窗口、监控备份、恢复与责任人",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            64,
+            438,
+            280,
+            76
+          ],
+          "text": "DfX 目标",
+          "textPreview": "DfX 目标",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "DfX 目标",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "DfX 目标",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            344,
+            438,
+            872,
+            76
+          ],
+          "text": "按场景选择性能、安全、可靠性等目标",
+          "textPreview": "按场景选择性能、安全、可靠性等目标",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "按场景选择性能、安全、可靠性等目标",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "按场景选择性能、安全、可靠性等目标",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            64,
+            514,
+            280,
+            76
+          ],
+          "text": "验证与限制",
+          "textPreview": "验证与限制",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "验证与限制",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "验证与限制",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            344,
+            514,
+            872,
+            76
+          ],
+          "text": "目标阈值、环境、证据、确认人及遗留问题",
+          "textPreview": "目标阈值、环境、证据、确认人及遗留问题",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "目标阈值、环境、证据、确认人及遗留问题",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "目标阈值、环境、证据、确认人及遗留问题",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/21gnuts7",
+      "id": "6",
+      "name": "takeaway",
+      "bbox": [
+        64,
+        619,
+        1152,
+        50
+      ],
+      "geometry": "rect",
+      "text": "本地练习使用标准库 HTTP 服务，真实部署需另行评审",
+      "textPreview": "本地练习使用标准库 HTTP 服务，真实部署需另行评审",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本地练习使用标准库 HTTP 服务，真实部署需另行评审"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本地练习使用标准库 HTTP 服务，真实部署需另行评审",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial Unicode MS",
+            "color": "#0C7777",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本地练习使用标准库 HTTP 服务，真实部署需另行评审",
+              "fontSize": 24,
+              "typeface": "Arial Unicode MS",
+              "color": "#0C7777"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

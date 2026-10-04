@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模板：部署环境与交付约束对齐表 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="deployment-alignment.md" download>下载 Markdown 源文件</a></nav><main><h1>模板：部署环境与交付约束对齐表</h1>
+<p>用途：让客户、研发、IT 和运维在计划前对齐环境与责任。本材料保持概要，不提供产品选型教程。表内教学示例为虚构设定，真实项目逐项确认后才形成基线。</p>
+<p>项目/版本/日期/技术负责人：待填写。客户环境确认人/运维接受人/发布授权人：待填写。</p>
+<table>
+<thead>
+<tr>
+<th>事项</th>
+<th>需要确认的内容</th>
+<th>本地教学示例</th>
+<th>真实结论、提供方、就绪时间、证据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>位置与阶段</td>
+<td>本机/客户内网/其他；开发、测试、生产分别在哪</td>
+<td>仅教学电脑，无生产环境</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>网络与访问</td>
+<td>网络边界、离线、域名/证书、访问范围</td>
+<td>仅 127.0.0.1，本机浏览器</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td>OS、Python/运行时版本、计算存储、容器/虚拟机约束</td>
+<td>Python 3；可写本地目录</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>数据库/中间件</td>
+<td>准入、版本、授权、兼容、备份与容量</td>
+<td>Python 所带 SQLite，无外部中间件</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>数据与系统连接</td>
+<td>来源、权限、接口、测试数据、迁移与回滚</td>
+<td>仅虚构数据，无外部连接</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>账号与责任</td>
+<td>谁提供环境/账号，谁发布、验收、值守和处理故障</td>
+<td>讲师启动；学员本机练习</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>就绪与窗口</td>
+<td>环境最晚就绪时间、联调/发布/验收窗口</td>
+<td>上课前完成本机启动检查</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>运行交接</td>
+<td>启停、日志、备份、升级回退、故障联系与已知限制</td>
+<td>本地说明书与演练恢复步骤</td>
+<td>待确认</td>
+</tr>
+</tbody></table>
+<p>未满足项、对日期的影响和替代方案：待填写。确认结论与载体：待填写。更改部署位置或开放给其他人使用，应重新评估身份、权限、数据与运行质量；不能仅修改监听地址就宣布可生产使用。</p>
+<p>交付检查：约束表、必要运行说明、实际验证证据、遗留限制及接收人的确认齐全。关联<a href="dfx-matrix.html">DfX 矩阵</a>和<a href="../docs/case/architecture.html">4A 示例</a>。</p>
+</main></body></html>

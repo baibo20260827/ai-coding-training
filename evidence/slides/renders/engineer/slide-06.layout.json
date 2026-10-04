@@ -1,0 +1,957 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/x8f69ofe",
+    "id": "x8f69ofe",
+    "slide": 6,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAF8F3",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial Unicode MS",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7m98ru9g",
+      "id": "7",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        45,
+        1152,
+        70
+      ],
+      "geometry": "rect",
+      "text": "验收例子定义正确行为",
+      "textPreview": "验收例子定义正确行为",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "验收例子定义正确行为"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "验收例子定义正确行为",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "typeface": "Arial Unicode MS",
+            "color": "#17333C",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "验收例子定义正确行为",
+              "fontSize": 44,
+              "typeface": "Arial Unicode MS",
+              "color": "#17333C",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhg7epsj",
+      "id": "2",
+      "name": "slide-lead",
+      "bbox": [
+        64,
+        137,
+        1152,
+        62
+      ],
+      "geometry": "rect",
+      "text": "会议室每天 09:00—18:00，每半小时一个边界",
+      "textPreview": "会议室每天 09:00—18:00，每半小时一个边界",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "会议室每天 09:00—18:00，每半小时一个边界"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "会议室每天 09:00—18:00，每半小时一个边界",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "会议室每天 09:00—18:00，每半小时一个边界",
+              "fontSize": 26,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zi98nu94",
+      "id": "3",
+      "name": "footer-audience",
+      "bbox": [
+        64,
+        683,
+        580,
+        25
+      ],
+      "geometry": "rect",
+      "text": "工程师版",
+      "textPreview": "工程师版",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "工程师版"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "工程师版",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "工程师版",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87ipkzal",
+      "id": "4",
+      "name": "footer-page",
+      "bbox": [
+        1080,
+        683,
+        136,
+        25
+      ],
+      "geometry": "rect",
+      "text": "06 / 18",
+      "textPreview": "06 / 18",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "06 / 18"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "06 / 18",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#5D6B70",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "06 / 18",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#5D6B70"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/pc3mlove",
+      "id": "8",
+      "bbox": [
+        64,
+        210,
+        1152,
+        396
+      ],
+      "text": "需求 | 输入或操作 | 预期\nR03 / A03 | 已有 10:00—11:00，再约 11:00—12:00 | 允许\nR03 / A03 | 已有 10:00—11:00，再约 10:30—11:30 | 拒绝\nR05 / A05 | 提交后刷新并重启服务 | 记录仍存在\nR06 / A06 | 倒序、越界、非半小时时间 | 拒绝并说明原因\nR08 / A08 | 同时提交同一日期同一时段 | 仅一次成功",
+      "textPreview": "需求 | 输入或操作 | 预期 | R03 / A03 | 已有 10:00—11:00，再约 11:00—12:00 | 允许 | R03 / A03 | 已有 10:00—11:00，再约 10:30—11:30 | 拒绝 | R05 / A05 | 提交后刷新并重启服...",
+      "rows": 6,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            64,
+            210,
+            210,
+            66
+          ],
+          "text": "需求",
+          "textPreview": "需求",
+          "fillColor": "#3767AA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "需求",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "需求",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            274,
+            210,
+            725,
+            66
+          ],
+          "text": "输入或操作",
+          "textPreview": "输入或操作",
+          "fillColor": "#3767AA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "输入或操作",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "输入或操作",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            999,
+            210,
+            217,
+            66
+          ],
+          "text": "预期",
+          "textPreview": "预期",
+          "fillColor": "#3767AA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "预期",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "预期",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#FFFFFF",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            64,
+            276,
+            210,
+            66
+          ],
+          "text": "R03 / A03",
+          "textPreview": "R03 / A03",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "R03 / A03",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "R03 / A03",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            274,
+            276,
+            725,
+            66
+          ],
+          "text": "已有 10:00—11:00，再约 11:00—12:00",
+          "textPreview": "已有 10:00—11:00，再约 11:00—12:00",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "已有 10:00—11:00，再约 11:00—12:00",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "已有 10:00—11:00，再约 11:00—12:00",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            999,
+            276,
+            217,
+            66
+          ],
+          "text": "允许",
+          "textPreview": "允许",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "允许",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "允许",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            64,
+            342,
+            210,
+            66
+          ],
+          "text": "R03 / A03",
+          "textPreview": "R03 / A03",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "R03 / A03",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "R03 / A03",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            274,
+            342,
+            725,
+            66
+          ],
+          "text": "已有 10:00—11:00，再约 10:30—11:30",
+          "textPreview": "已有 10:00—11:00，再约 10:30—11:30",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "已有 10:00—11:00，再约 10:30—11:30",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "已有 10:00—11:00，再约 10:30—11:30",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            999,
+            342,
+            217,
+            66
+          ],
+          "text": "拒绝",
+          "textPreview": "拒绝",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "拒绝",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "拒绝",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            64,
+            408,
+            210,
+            66
+          ],
+          "text": "R05 / A05",
+          "textPreview": "R05 / A05",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "R05 / A05",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "R05 / A05",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            274,
+            408,
+            725,
+            66
+          ],
+          "text": "提交后刷新并重启服务",
+          "textPreview": "提交后刷新并重启服务",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "提交后刷新并重启服务",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "提交后刷新并重启服务",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            999,
+            408,
+            217,
+            66
+          ],
+          "text": "记录仍存在",
+          "textPreview": "记录仍存在",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "记录仍存在",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "记录仍存在",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            64,
+            474,
+            210,
+            66
+          ],
+          "text": "R06 / A06",
+          "textPreview": "R06 / A06",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "R06 / A06",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "R06 / A06",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            274,
+            474,
+            725,
+            66
+          ],
+          "text": "倒序、越界、非半小时时间",
+          "textPreview": "倒序、越界、非半小时时间",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "倒序、越界、非半小时时间",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "倒序、越界、非半小时时间",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            999,
+            474,
+            217,
+            66
+          ],
+          "text": "拒绝并说明原因",
+          "textPreview": "拒绝并说明原因",
+          "fillColor": "#FAF8F3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "拒绝并说明原因",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "拒绝并说明原因",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            64,
+            540,
+            210,
+            66
+          ],
+          "text": "R08 / A08",
+          "textPreview": "R08 / A08",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "R08 / A08",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "R08 / A08",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            274,
+            540,
+            725,
+            66
+          ],
+          "text": "同时提交同一日期同一时段",
+          "textPreview": "同时提交同一日期同一时段",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "同时提交同一日期同一时段",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "同时提交同一日期同一时段",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            999,
+            540,
+            217,
+            66
+          ],
+          "text": "仅一次成功",
+          "textPreview": "仅一次成功",
+          "fillColor": "#FFFFFF",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "仅一次成功",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "仅一次成功",
+                  "fontSize": 24,
+                  "typeface": "Arial Unicode MS",
+                  "color": "#17333C"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ml07i9sv",
+      "id": "6",
+      "name": "takeaway",
+      "bbox": [
+        64,
+        619,
+        1152,
+        50
+      ],
+      "geometry": "rect",
+      "text": "一次预约不跨日期，时间区间采用 [开始, 结束)",
+      "textPreview": "一次预约不跨日期，时间区间采用 [开始, 结束)",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "一次预约不跨日期，时间区间采用 [开始, 结束)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "一次预约不跨日期，时间区间采用 [开始, 结束)",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial Unicode MS",
+            "color": "#3767AA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "一次预约不跨日期，时间区间采用 [开始, 结束)",
+              "fontSize": 24,
+              "typeface": "Arial Unicode MS",
+              "color": "#3767AA"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

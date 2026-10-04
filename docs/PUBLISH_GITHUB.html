@@ -1,0 +1,127 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在自己的 GitHub 发布完整学习网站 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="PUBLISH_GITHUB.md" download>下载 Markdown 源文件</a></nav><main><h1>在自己的 GitHub 发布完整学习网站</h1>
+<p>版本：1.0；日期：2026-10-04。适用：在 Mac 上维护本项目，并将完整学习材料发布为 GitHub Pages 网站。</p>
+<p><strong>当前状态：用户已确认账号 baibo20260827，允许公开全量材料，并同意使用 ai-coding-training 仓库名。</strong> 目标为 <code>https://github.com/baibo20260827/ai-coding-training</code>，当前正在准备认证与发布；只有实际推送和站点检查完成后才记为上线。</p>
+<h2>1. 本次发布什么</h2>
+<p>本网站提供培训入口、学员与讲师手册、完整材料的网页阅读、3 套 PPT、讲师备注、6 项练习与答案、AI 任务卡、分层指南、FAQ、7 份模板、4A 图源与图片、案例源码和验证记录，并提供完整学习包下载。</p>
+<p>本地生成位置：</p>
+<ul>
+<li><code>dist/github-pages/</code>：静态网站，包含 <code>index.html</code>、<code>.nojekyll</code>、材料 HTML、PPT、源码和下载包；保持整个目录结构。</li>
+<li><code>dist/github-pages-full.zip</code>：完整网站发布压缩包，用于分发或转移。</li>
+<li><code>dist/harness-ai-coding-training-v1.0.zip</code>：可离线学习、运行 Python 示例的完整培训包。</li>
+</ul>
+<p><code>dist/</code> 是生成产物目录，会在重建时更新。<strong>不要在 <code>dist/github-pages/</code> 中初始化 Git，也不要把它当作长期维护的发布仓库。</strong> 使用一个独立发布目录保存 Git 历史；重建后把新产物同步进去。构建器若发现输出目录内已有 <code>.git</code>，会拒绝覆盖，应先保留并迁移该仓库。</p>
+<p>Pages 用于托管 HTML、CSS、JavaScript 等静态文件；本项目的学习页面适合这种方式。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages 官方介绍</a></p>
+<h2>2. 先明确访问范围与仓库</h2>
+<p>本轮已确认：账号 <code>baibo20260827</code>、仓库名 <code>ai-coding-training</code>、全量培训材料允许公开。维护责任由用户所在团队落实。以下命令使用本轮目标地址；应用到其他项目时先核对自己的仓库。</p>
+<p><strong>普通 Pages 发布按公开访问安排；私有代码仓库并不自动等同于内部学习网站。</strong> 如果材料仅允许部门内部访问，先确认组织可用的访问控制和托管方式，不执行本篇的普通公开发布路径。Pages 的可用方式及访问控制还受账户、组织和套餐条件影响。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub 发布来源与公开访问说明</a></p>
+<p>对于允许公开的材料，建议新建一个专门保存网站文件的空仓库。首次建仓时不要额外生成 README、许可证或 <code>.gitignore</code>，这样下面的首次推送路径不需要合并两套初始历史。已有仓库请用第 5 节的克隆与增量同步方式，保留原有历史和内容。</p>
+<h2>3. 从项目生成和预览网站</h2>
+<p>在终端进入本项目：</p>
+<pre><code class="language-bash">cd &quot;/Users/baibo/Documents/ChatGPT/软件harness研究&quot;
+python3 scripts/package_delivery.py
+node scripts/build_github_pages.mjs
+</code></pre>
+<p>顺序有意义：先更新完整培训包，再把最新下载包和全部材料纳入网站。若项目已能解析 <code>marked</code> 模块，第二条命令直接运行；若提示找不到模块，使用实际安装位置替换下方占位路径：</p>
+<pre><code class="language-bash">MARKED_MODULE=&quot;/替换为实际安装位置/marked&quot; node scripts/build_github_pages.mjs
+</code></pre>
+<p><code>MARKED_MODULE</code> 必须指向本机真实模块位置。原制作环境可通过 Codex 的 workspace dependencies 工具查到捆绑运行时；换电脑不能直接沿用他人的绝对路径。依赖只用于生成网页，访问已生成网站和运行 Python 教学程序不需要 <code>marked</code>。材料重建的其余说明见<a href="../scripts/README.html">维护说明</a>。</p>
+<p>生成成功后，可从项目根目录启动静态预览：</p>
+<pre><code class="language-bash">python3 -m http.server 8080 --bind 127.0.0.1 --directory dist/github-pages
+</code></pre>
+<p>打开浏览器访问 <code>http://127.0.0.1:8080</code>，检查首页、三类学习入口、完整材料目录、PPT 与学习包下载，以及多级目录之间的链接。终端保持运行，结束时按 <code>Ctrl+C</code>。这是静态材料预览，不是会议室预约后端。</p>
+<h2>4. 新建专用空仓库时的首次发布</h2>
+<p>下面使用独立目录 <code>/Users/baibo/Documents/ChatGPT/ai-coding-training-site</code>。可以替换为自己选定的新目录。若该目录已经存在，先确认其用途；不要对已有仓库重复执行初始化，改按下一节处理。</p>
+<p>先复制生成的网站文件，包含 <code>.nojekyll</code>，不要只复制可见文件或单独的首页：</p>
+<pre><code class="language-bash">cd &quot;/Users/baibo/Documents/ChatGPT/软件harness研究&quot;
+mkdir &quot;../ai-coding-training-site&quot;
+rsync -av --exclude=&#39;.git&#39; dist/github-pages/ ../ai-coding-training-site/
+cd &quot;../ai-coding-training-site&quot;
+pwd
+</code></pre>
+<p>确认 <code>pwd</code> 显示的是独立发布目录，且其中存在 <code>index.html</code> 和 <code>.nojekyll</code>，再初始化提交。以下 <code>git add .</code> 仅在这个专用网站目录执行：</p>
+<pre><code class="language-bash">git init -b main
+git status --short
+git add .
+git diff --cached --stat
+git commit -m &quot;Publish AI coding training materials&quot;
+</code></pre>
+<p>在 GitHub 创建本轮目标空仓库后，使用其 HTTPS 地址：</p>
+<pre><code class="language-bash">git remote add origin &quot;https://github.com/baibo20260827/ai-coding-training.git&quot;
+git remote -v
+git push -u origin main
+</code></pre>
+<p>推送使用自己的 GitHub 登录与 Git 身份配置；若认证失败，按本机已有 GitHub 登录方式处理，不把令牌写进文档、命令中的仓库 URL 或网站文件。推送成功只说明文件已经进入仓库，还需配置 Pages。</p>
+<p>在该仓库的 <strong>Settings → Pages → Build and deployment</strong> 中选择：</p>
+<ol>
+<li><strong>Source：Deploy from a branch</strong>。</li>
+<li><strong>Branch：main</strong>。</li>
+<li><strong>Folder：/(root)</strong>，然后保存。</li>
+</ol>
+<p>保留根目录的 <code>.nojekyll</code>，让这套预先生成的网站直接作为静态文件发布。本方案无需自行编写工作流。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">发布来源配置</a></p>
+<p>等待 GitHub 显示部署结果，再从 Pages 设置页复制实际网址。专用项目站点通常形如 <code>https://用户名.github.io/仓库名/</code>，账户主页仓库和自定义域名会不同，以实际显示结果为准。打开网站后再次检查材料目录、深层网页、图片和下载；不要把本机预览成功直接记成线上发布成功。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">创建 GitHub Pages 网站</a></p>
+<h2>5. 已有仓库与后续更新</h2>
+<p>已有仓库先克隆到独立目录，不能在当前完整源项目里直接添加远端并推送所有文件。以下为本轮目标地址，目标目录需尚不存在：</p>
+<pre><code class="language-bash">cd &quot;/Users/baibo/Documents/ChatGPT&quot;
+git clone &quot;https://github.com/baibo20260827/ai-coding-training.git&quot; ai-coding-training-site
+cd ai-coding-training-site
+git status --short
+</code></pre>
+<p>先确认当前分支、Pages 发布来源及仓库原有用途。若不是专用空白网站仓库，检查生成文件是否会与已有文件同名；有同名内容先决定整合方式，不直接覆盖。下列同步流程假定该目录已经专用于本培训网站，且当前处于实际发布分支。</p>
+<p>每次更新先在源项目改 Markdown、PPT、代码或材料，再重建：</p>
+<pre><code class="language-bash">cd &quot;/Users/baibo/Documents/ChatGPT/软件harness研究&quot;
+python3 scripts/package_delivery.py
+MARKED_MODULE=&quot;/替换为实际安装位置/marked&quot; node scripts/build_github_pages.mjs
+</code></pre>
+<p>如果 <code>marked</code> 已能直接解析，最后一行用 <code>node scripts/build_github_pages.mjs</code> 即可。若更改的是本地示例行为，先按<a href="../demo/README.html">运行说明</a>完成相关验证；网页重建不能替代工程检查。</p>
+<p>然后进入独立发布仓库，确认没有未处理的本地改动，并拉取现有历史：</p>
+<pre><code class="language-bash">cd &quot;/Users/baibo/Documents/ChatGPT/ai-coding-training-site&quot;
+git status --short
+git pull --ff-only
+</code></pre>
+<p>若拉取提示分支分叉或有本地改动，先解决当前状态，不使用强制推送覆盖历史。状态确认后同步网站产物：</p>
+<pre><code class="language-bash">rsync -av --exclude=&#39;.git&#39; &quot;/Users/baibo/Documents/ChatGPT/软件harness研究/dist/github-pages/&quot; ./
+git status --short
+git diff --stat
+git add .
+git diff --cached --stat
+git commit -m &quot;Update AI coding training materials&quot;
+git push
+</code></pre>
+<p><code>rsync</code> 源目录结尾的 <code>/</code> 表示复制目录内容；<code>.git</code> 被排除，历史保留。这里不使用 <code>--delete</code>，因此旧版已停用页面可能仍在发布目录。根据本次变更逐项审查后删除确实废弃的网页或附件，再提交删除；不要把整仓清空来实现更新。如果没有文件变化，无需空提交。</p>
+<p>推送后在 Pages 部署记录确认成功，并实际检查修改过的页面及下载包。维护记录可写入<a href="IMPROVEMENTS.html">改进日志</a>，明确源材料版本、发布提交与线上验证结果。</p>
+<h2>6. Python 预约程序为什么不能直接在 Pages 运行</h2>
+<p>本项目包含两种不同用途的内容：</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>Pages 上能做什么</th>
+<th>运行方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>学习网页、架构图、练习、FAQ</td>
+<td>在线阅读、查看图表</td>
+<td>浏览器打开网站</td>
+</tr>
+<tr>
+<td>PPT、模板和完整学习包</td>
+<td>下载与离线使用</td>
+<td>下载后用对应工具打开</td>
+</tr>
+<tr>
+<td>Python、SQLite 预约程序</td>
+<td>查看或下载源码；不在 Pages 上启动 Python 服务</td>
+<td>下载完整包后在自己的电脑运行</td>
+</tr>
+</tbody></table>
+<p>案例启动命令保持为：</p>
+<pre><code class="language-bash">python3 demo/app.py --port 8765
+</code></pre>
+<p><code>http://127.0.0.1:8765</code> 指向<strong>当前读者自己的电脑</strong>；只有该读者已启动程序时才可用，它不是 GitHub 上的在线预约服务。程序仅监听本机，并通过本地 HTTP 接口读写 SQLite；这些后端功能不会随上传 HTML 自动出现。</p>
+<p>也不要把 <code>demo/static/index.html</code> 单独设为网站首页：它引用 <code>/assets/</code> 并请求 <code>/api/</code>，需要案例 Python 服务提供路径和处理逻辑。在项目 Pages 子路径下这些地址没有相应服务，页面不能完成预约。</p>
+<p>若将来希望不同员工在线共享预约数据，那是新增应用托管任务，需要另行确定身份、权限、后端运行环境与业务交付范围。当前发布交付的是完整学习网站和可下载的本地案例，不应将它标成已上线的共享预约系统。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">静态托管边界</a></p>
+<h2>7. 发布完成记录</h2>
+<p>目标仓库 URL：<code>https://github.com/baibo20260827/ai-coding-training</code>。公开决定：用户于 2026-10-04 明确允许公开全部材料。实际站点：尚未发布；预计项目站点路径为 <code>https://baibo20260827.github.io/ai-coding-training/</code>，需以真实部署结果确认。发布提交及线上检查：待登录后执行。</p>
+<p>完成实际操作后再填写这些字段。保留发布提交与材料版本的对应关系，使团队能知道自己使用的是哪一版课程。</p>
+</main></body></html>

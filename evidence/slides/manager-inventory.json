@@ -1,0 +1,18 @@
+{
+  "deck": "manager",
+  "slides": 14,
+  "tableSlides": [
+    7,
+    9,
+    10,
+    13
+  ],
+  "diagramSlides": [
+    8
+  ],
+  "font": "Arial Unicode MS",
+  "finalPath": "/Users/baibo/Documents/ChatGPT/软件harness研究/evidence/slides/finalized/manager-v4.pptx",
+  "deliveredPath": "/Users/baibo/Documents/ChatGPT/软件harness研究/training/slides/manager.pptx",
+  "renderDir": "/Users/baibo/Documents/ChatGPT/软件harness研究/evidence/slides/renders/manager",
+  "renderedFromFinalFile": true
+}

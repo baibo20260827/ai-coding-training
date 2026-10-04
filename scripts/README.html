@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>材料维护与重建 · AI Coding 学习站</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}</style></head><body><nav><a href="../index.html">培训首页</a><a href="../materials.html">全量材料目录</a><a href="README.md" download>下载 Markdown 源文件</a></nav><main><h1>材料维护与重建</h1>
+<p>现成 HTML、SVG 和 PPTX 可直接使用。运行教学应用仅需要 Python 标准库，不需要以下材料构建依赖。</p>
+<h2>Markdown → 离线手册</h2>
+<p>修改相关 Markdown 后，在项目根目录运行：</p>
+<pre><code class="language-bash">node scripts/build_reader.mjs
+</code></pre>
+<p>构建脚本需要已安装的 <code>marked</code> Node 模块；也可设置 <code>MARKED_MODULE</code> 为模块所在的绝对路径。Codex 环境可先通过 <code>load_workspace_dependencies</code> 获取捆绑 Node.js 与模块目录。生成的 HTML 不联网、不依赖该模块。</p>
+<h2>4A SVG</h2>
+<pre><code class="language-bash">python3 scripts/build_architecture.py
+</code></pre>
+<p>图源在脚本，业务说明及 Mermaid 源在 <code>docs/case/architecture.md</code>。两者与代码、课件架构需要同步审查。</p>
+<h2>PPTX</h2>
+<p>可直接编辑 PPTX；使用内容源重建时见 <a href="../training/slides/README.html">课件维护说明</a>。依赖 Codex presentations 技能与 Artifact Tool，不属于案例应用依赖。</p>
+<h2>交付检查与打包</h2>
+<pre><code class="language-bash">python3 scripts/check_delivery.py
+python3 scripts/package_delivery.py
+</code></pre>
+<p>先修复检查失败再打包。打包包括文档、HTML、PPTX、图源、代码与验证记录，排除运行数据库、缓存、依赖目录和临时构建目录。<code>MANIFEST.json</code> 记录包内文件 SHA-256，压缩包写入 <code>dist/</code>。解压后保持目录结构，从 <code>START_HERE.html</code> 开始。</p>
+<p>材料改动还需人工复核教学一致性；链接检查不能证明内容正确，代码测试不能证明真实培训有效。</p>
+<h2>GitHub Pages 全量学习站</h2>
+<p>先重建完整培训包，再运行：</p>
+<pre><code class="language-bash">node scripts/build_github_pages.mjs
+</code></pre>
+<p>该脚本同样需要 <code>marked</code>，可使用 <code>MARKED_MODULE</code> 指定模块路径。输出 <code>dist/github-pages/</code> 与 <code>dist/github-pages-full.zip</code>，将 Markdown 转为带导航的 HTML，保留 PPT/图源/源码和完整下载包，添加 <code>index.html</code> 与 <code>.nojekyll</code>，检查相对链接。脚本只做本地构建，不上传。</p>
+<p>发布目录使用独立 Git 工作副本，不要在生成目录中初始化 Git；生成器检测到 <code>.git</code> 会拒绝覆盖。发布步骤、更新方式与 Pages 适用边界见 <a href="../docs/PUBLISH_GITHUB.html">发布说明</a>。</p>
+</main></body></html>
