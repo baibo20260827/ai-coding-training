@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-04T03:46:12.225560+00:00",
+  "owner": "baibo20260827",
+  "repository": "ai-coding-training",
+  "public_authorized": true,
+  "repository_url": "https://github.com/baibo20260827/ai-coding-training",
+  "repository_created": false,
+  "pushed": false,
+  "pages_enabled": false,
+  "prepared_commit": "82cd7e64c570fa2e2dabf990b5cf0b4cf04a5fea",
+  "prepared_file_count": 238,
+  "checkout": "dist/github-pages-repo",
+  "remote": "https://github.com/baibo20260827/ai-coding-training.git",
+  "next_step": "Complete GitHub CLI device login, then create repository, push and enable Pages.",
+  "status": "awaiting_github_login",
+  "authentication_notes": [
+    "Initial flow ended with OAuth token endpoint network timeout.",
+    "Second code was rejected by the website with not_found; no proven root cause.",
+    "Stopped the previous local flow and started one new official CLI flow; user code is not saved in artifacts."
+  ]
+}

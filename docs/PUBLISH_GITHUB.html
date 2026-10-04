@@ -112,12 +112,13 @@ git push
 <tr>
 <td>Python、SQLite 预约程序</td>
 <td>查看或下载源码；不在 Pages 上启动 Python 服务</td>
-<td>下载完整包后在自己的电脑运行</td>
+<td>下载完整包或克隆本发布仓库后，在自己的电脑运行</td>
 </tr>
 </tbody></table>
 <p>案例启动命令保持为：</p>
 <pre><code class="language-bash">python3 demo/app.py --port 8765
 </code></pre>
+<p>下载包解压后或 GitHub 仓库克隆完成后，在其根目录执行上述命令；完整运行、验证和恢复步骤见<a href="../demo/README.html">案例运行说明</a>。发布构建保持 <code>demo/static/index.html</code> 原始应用源码不变，以便克隆后仍能运行同一个案例。网站的全量材料目录提供本地运行说明与独立的 <code>demo/SOURCE.html</code> 源码预览入口。</p>
 <p><code>http://127.0.0.1:8765</code> 指向<strong>当前读者自己的电脑</strong>；只有该读者已启动程序时才可用，它不是 GitHub 上的在线预约服务。程序仅监听本机，并通过本地 HTTP 接口读写 SQLite；这些后端功能不会随上传 HTML 自动出现。</p>
 <p>也不要把 <code>demo/static/index.html</code> 单独设为网站首页：它引用 <code>/assets/</code> 并请求 <code>/api/</code>，需要案例 Python 服务提供路径和处理逻辑。在项目 Pages 子路径下这些地址没有相应服务，页面不能完成预约。</p>
 <p>若将来希望不同员工在线共享预约数据，那是新增应用托管任务，需要另行确定身份、权限、后端运行环境与业务交付范围。当前发布交付的是完整学习网站和可下载的本地案例，不应将它标成已上线的共享预约系统。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">静态托管边界</a></p>

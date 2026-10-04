@@ -29,9 +29,14 @@ const posix=path.posix;
 const homeFor=rel=>posix.relative(posix.dirname(rel),'index.html')||'index.html';
 const catalogFor=rel=>posix.relative(posix.dirname(rel),'materials.html')||'materials.html';
 const css=`*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#183047;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}nav{background:#102b3f;color:white;padding:15px max(5vw,20px);display:flex;gap:24px;flex-wrap:wrap}nav a{color:#c5eee7}main{max-width:1120px;margin:28px auto;padding:28px 40px;background:white;border:1px solid #dce6eb}h1{font-size:32px;line-height:1.35}h2{font-size:24px;border-bottom:1px solid #dce6eb;padding-bottom:8px}h3{font-size:20px}p,li{font-size:17px}a{color:#126c70;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f0f4f7;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}code{font-family:ui-monospace,monospace}table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid #cddde3;padding:9px 12px;text-align:left;vertical-align:top}th{background:#eef4f7}blockquote{border-left:4px solid #1b786e;margin:16px 0;padding:4px 20px;background:#f4f8f8}img{max-width:100%;height:auto}.note{color:#52687a;font-size:14px}.catalog{columns:2;column-gap:35px}.catalog li{break-inside:avoid}input{font:inherit;padding:8px;border:1px solid #9eb0bc;max-width:100%}@media(max-width:700px){main{padding:20px;margin:10px}.catalog{columns:1}}@media print{nav,.note{display:none}main{border:0;margin:0;padding:0}body{background:white}h1,h2,h3{break-after:avoid}p,li{font-size:11pt}}`;
-function rewrite(html){
+function rewrite(html,rel='index.html'){
  return html.replace(/href="([^"#?]+)\.md([#?][^"]*)?"/g,(match,base,tail='')=>/^[a-z]+:|^\/\//i.test(base)?match:`href="${base}.html${tail}"`)
- .replace(/<a href="http:\/\/(?:127\.0\.0\.1|localhost)(?::\d+)?[^\"]*">([\s\S]*?)<\/a>/g,'<span>$1（需先在本机启动案例服务）</span>');
+ .replace(/<a href="http:\/\/(?:127\.0\.0\.1|localhost)(?::\d+)?[^\"]*">([\s\S]*?)<\/a>/g,'<span>$1（需先在本机启动案例服务）</span>')
+ .replace(/href="([^"#?]+)([?#][^"]*)?"/g,(match,base)=>{
+  if(/^[a-z]+:|^\/\//i.test(base))return match;
+  const target=base.startsWith('/')?posix.normalize(base.slice(1)):posix.normalize(posix.join(posix.dirname(rel),base));
+  return target==='demo/static/index.html'?`href="${posix.relative(posix.dirname(rel),'demo/SOURCE.html')}"`:match;
+ });
 }
 function wrap(rel,title,body,extra=''){
  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} · AI Coding 学习站</title><style>${css}</style></head><body><nav><a href="${homeFor(rel)}">培训首页</a><a href="${catalogFor(rel)}">全量材料目录</a>${extra}</nav><main>${body}</main></body></html>`;
@@ -47,12 +52,12 @@ for(const rel of mdFiles){
   html=html.replace(/<pre><code class="language-mermaid">[\s\S]*?<\/code><\/pre>/g,()=>`<img src="../architecture-views/${views[n++]}.svg" alt="4A架构视图">`);
  }
  const htmlRel=rel.replace(/\.md$/,'.html');
- html=rewrite(html);
+ html=rewrite(html,htmlRel);
  fs.writeFileSync(path.join(out,htmlRel),wrap(htmlRel,title,html,`<a href="${esc(posix.basename(rel))}" download>下载 Markdown 源文件</a>`));
  entries.push({path:htmlRel,source:rel,title});
 }
 for(const rel of ['学习手册.html','讲师手册.html']){
- let html=rewrite(fs.readFileSync(path.join(root,rel),'utf8'));
+ let html=rewrite(fs.readFileSync(path.join(root,rel),'utf8'),rel);
  html=html.replace('<nav>','<nav><a href="materials.html">全量材料目录</a>');
  fs.writeFileSync(path.join(out,rel),html);
 }
@@ -66,6 +71,7 @@ const assigned=new Set();
 let list='<h1>全量学习材料</h1><p>可在线阅读全部文档，下载可编辑课件与完整工程。以下内容包含讲师答案。</p><p><a href="downloads/'+zipName+'" download>下载完整培训包</a> · <a href="学习手册.html">学员手册</a> · <a href="讲师手册.html">讲师手册</a></p><label>查找材料 <input id="search" type="search" placeholder="例如：变更、主管、验收"></label><p id="count" class="note"></p><h2>可编辑PPT与架构图</h2><ul class="catalog">';
 for(const [p,t] of [['training/slides/manager.pptx','主管 PPT（14页）'],['training/slides/engineer.pptx','工程师 PPT（18页）'],['training/slides/beginner.pptx','新手 PPT（18页）'],...['ba','aa','da','ta'].map(v=>['docs/architecture-views/'+v+'.svg',v.toUpperCase()+' 架构图'])])list+=`<li data-item><a href="${p}">${t}</a></li>`;
 list+='</ul>';
+list+='<section><h2>案例源码与本地运行</h2><p>预约程序需要本机 Python 服务。这里提供运行说明和源码阅读；在线材料页不提供预约功能。</p><ul class="catalog"><li data-item><a href="demo/README.html">案例本地运行说明（下载培训包或克隆仓库后使用）</a></li><li data-item><a href="demo/SOURCE.html">预约界面源码预览</a></li></ul></section>';
 for(const [label,prefix] of categories){
  const subset=entries.filter(e=>!assigned.has(e.path)&&e.source.startsWith(prefix));
  if(!subset.length)continue;
@@ -75,10 +81,12 @@ for(const [label,prefix] of categories){
 }
 list+=`<script>const items=[...document.querySelectorAll('[data-item]')];document.getElementById('search').addEventListener('input',e=>{let n=0;for(const item of items){const show=item.textContent.toLowerCase().includes(e.target.value.trim().toLowerCase());item.hidden=!show;if(show)n++;}document.getElementById('count').textContent=e.target.value?n+' 项匹配':'';});</script>`;
 fs.writeFileSync(path.join(out,'materials.html'),wrap('materials.html','全量学习材料',list));
-// The application's raw HTML expects a Python API. Show source, rather than a non-working live app.
+// Preserve demo/static/index.html from the byte-for-byte source copy above:
+// a cloned publication repository must still run the original Python application.
+// Put the online source preview on a separate page, never in the application's file.
 const demoRaw=fs.readFileSync(path.join(root,'demo/static/index.html'),'utf8');
-fs.writeFileSync(path.join(out,'demo/static/index.html'),wrap('demo/static/index.html','案例页面源码',
- '<h1>预约案例页面源码</h1><p>此处用于阅读源码。完整应用请下载培训包，在本机启动 Python 服务后访问。</p><p><a href="../README.html">运行说明</a></p><pre><code>'+esc(demoRaw)+'</code></pre>'));
+fs.writeFileSync(path.join(out,'demo/SOURCE.html'),wrap('demo/SOURCE.html','案例页面源码',
+ '<h1>预约案例页面源码</h1><p>本页用于阅读源码，不提供在线预约。请下载完整培训包或克隆仓库，在本机启动 Python 服务后使用原应用。</p><p><a href="README.html">本地运行说明</a> · <a href="../downloads/'+zipName+'" download>下载完整培训包</a></p><pre><code>'+esc(demoRaw)+'</code></pre>'));
 fs.mkdirSync(path.join(out,'downloads'),{recursive:true});
 fs.copyFileSync(path.join(root,'dist',zipName),path.join(out,'downloads',zipName));
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
